@@ -61,7 +61,7 @@ export function CardServices({
         </div>
 
         {cardDesc === "" ? "" : (
-          <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-center relative shadow-md text-lg">
+          <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
             {cardDesc}
           </div>
         )} 
@@ -69,7 +69,7 @@ export function CardServices({
 
       <div className={`flex flex-col desktop:hidden`}>
         {cardURL === "" ? 
-          <div className="text-center flex-1 mt-4 justify-center items-center text-xl font-bold card-service-text">
+          <div className="text-center flex-1 mt-6 justify-center items-center text-xl font-bold card-service-text">
             {cardTitle}
           </div>
         : (
@@ -80,7 +80,7 @@ export function CardServices({
         
 
         {cardDesc === "" ? "" : (
-          <div className="flex flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-center relative shadow-md text-lg">
+          <div className="flex flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
             {cardDesc}
           </div>
         )} 

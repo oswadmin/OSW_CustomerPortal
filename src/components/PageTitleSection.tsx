@@ -19,7 +19,7 @@ export function PageTitleSection({
 }: PageTitleSectionProps) {
   return (
     <>
-    <div className="container flex flex-col desktop:flex-row items-center p-2 gap-4">
+    <div className="container flex flex-col desktop:flex-row items-center p-2 gap-4 min-h-[425px]">
 
         <div className="flex-1 flex-col justify-center space-y-6 ">
             <h1 className="font-extrabold desktop:font-bold text-5xl desktop:text-7xl text-blue text-center desktop:text-left"> 
