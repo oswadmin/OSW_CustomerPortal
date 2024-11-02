@@ -65,14 +65,6 @@ export async function submitRequest(formData: FormData){
 
     const data = result.data
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if(error){
-            console.log('Error sending email:', error);
-        } else {
-            console.log('Email sent', info.messageId);
-        }
-
-    })
 
 
 

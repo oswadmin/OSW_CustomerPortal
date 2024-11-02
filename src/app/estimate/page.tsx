@@ -4,7 +4,7 @@ import { ButtonStandard } from "@/components/ButtonStandard";
 import { submitRequest } from "./_actions/requests";
 import { RequestForm } from "./_components/Form";
 import PageFooter from "@/components/PageFooter";
-import { ThankYou } from "./_components/FormThankYou";
+
 
 interface Request {
   custFirstName: string;

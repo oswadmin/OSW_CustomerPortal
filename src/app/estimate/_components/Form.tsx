@@ -5,7 +5,7 @@ import { CheckboxInput } from "./FormFieldCheckbox"
 import { submitRequest } from "../_actions/requests"
 import { Input } from "@/components/ui/input"
 import { servicesConfig } from "@/config"
-import { ThankYou } from "./FormThankYou"
+
 
 
   
@@ -76,7 +76,7 @@ export function RequestForm() {
         </div>
     </form>
 
-    <ThankYou className="hidden"/>
+    
 
     </>
 )}
