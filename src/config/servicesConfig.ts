@@ -7,8 +7,8 @@ export const servicesConfig = {
         activeService: true,
         name: 'Surfaces',
         url: '/services?service=surfaces',
-        src: siteConfig.OSW_IMG.SURFACE1,
-        className: "absolute scale-[3.0] left-[60px] top-[40px]",
+        src: siteConfig.OSW_IMG.SURFACE3,
+        className: "absolute scale-[2.2] left-[-100px] top-[40px]",
         service: {
             titleMsg: "Surface Pressure Washing",
             titleImg: siteConfig.OSW_IMG.SURFACE2,
@@ -41,7 +41,7 @@ export const servicesConfig = {
         name: 'Siding',
         url: '/services?service=siding',
         src: siteConfig.OSW_IMG.SIDING1,
-        className: "absolute scale-[3.0] left-[60px] top-[40px]",
+        className: "absolute scale-[2.5] left-[-120px] top-[40px]",
         service: {
             titleMsg: "Siding Soft Washing",
             titleImg: siteConfig.OSW_IMG.SIDING1,
@@ -74,7 +74,7 @@ export const servicesConfig = {
         name: 'Decks',
         url: '/services?service=decks',
         src: siteConfig.OSW_IMG.DECK1,
-        className: "absolute scale-[3.0] left-[60px] top-[-20px]",
+        className: "absolute scale-[4.3] left-[100px] top-[-100px]",
         service: {
             titleMsg: "Deck Soft  Washing",
             titleImg: siteConfig.OSW_IMG.DECK1,
@@ -100,8 +100,8 @@ export const servicesConfig = {
         activeService: true,
         name: 'Fences',
         url: '/services?service=fences',
-        src: siteConfig.OSW_IMG.Fence3,
-        className: "absolute scale-[1.7] left-[0px] top-[75px]",
+        src: siteConfig.OSW_IMG.FenceWood,
+        className: "absolute scale-[1.9] left-[0px] top-[60px]",
         service: {
             titleMsg: "Fence Washing",
             titleImg: siteConfig.OSW_IMG.Fence1,
@@ -133,8 +133,8 @@ export const servicesConfig = {
         activeService: true,
         name: 'Roofs',
         url: '/services?service=roofs',
-        src: siteConfig.OSW_IMG.Gutters1,
-        className: "absolute scale-[3.0] left-[60px] top-[40px]",
+        src: siteConfig.OSW_IMG.Roof1,
+        className: "absolute scale-[1.7] left-[-62px] top-[50px]",
         service: {
             titleMsg: "Roof Soft Washing",
             titleImg: siteConfig.OSW_IMG.SURFACE2,
@@ -155,7 +155,7 @@ export const servicesConfig = {
         name: 'Gutters',
         url: '/services?service=gutters',
         src: siteConfig.OSW_IMG.Gutters1,
-        className: "bsolute scale-[3.0] left-[60px] top-[40px]",
+        className: "absolute scale-[3.3] left-[-3 0px] top-[130px]",
         service: {
             titleMsg: "Gutter Rejuvenation",
             titleImg: siteConfig.OSW_IMG.Gutters1,
@@ -257,7 +257,7 @@ export const servicesConfig = {
         name: 'Commercial',
         url: '/services?service=commercial',
         src: siteConfig.OSW_IMG.Commercial1,
-        className: "absolute scale-[1.8] left-[-20px] top-[80px]",
+        className: "absolute scale-[1.8] left-[-20px] top-[60px]",
         service: {
             titleMsg: "Commercial Services",
             titleImg: siteConfig.OSW_IMG.Commercial1,

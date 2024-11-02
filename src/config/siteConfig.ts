@@ -22,9 +22,7 @@ export const siteConfig = {
         LOGO: "/OSW_Logo_2_Transparent.png",
         LOCATIONS: "/OSW_Locations.png",
     
-        SURFACE1: "/OSW_Surface1.jpg",
-        SURFACE2: "/OSW_Surface2.jpg",
-        SURFACE3: "/OSW_Surface3.jpg",
+    
     
         Birdbath1: "/OSW_Birdbath1.png",
 
@@ -52,7 +50,15 @@ export const siteConfig = {
 
         Paver1: "/OSW_Paver1.png",
 
+        Roof1: "/OSW_Roof1.png",
         SIDING1: "/OSW_Siding1.jpg",
+
+        SURFACE1: "/OSW_Surface1.jpg",
+        SURFACE2: "/OSW_Surface2.jpg",
+        SURFACE3: "/OSW_Surface3.jpg",
+        SURFACE4: "/OSW_Surface4.jpg",
+        SURFACE5: "/OSW_Surface5.jpg",
+        SURFACE6: "/OSW_Surface6.jpg",
         
         WasteBin1: "/OSW_WasteBin1.png",
         WasteBinBlue: "/OSW_WasteBinBlue.jpg",

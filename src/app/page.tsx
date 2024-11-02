@@ -1,5 +1,5 @@
 import { CardReviews } from "@/components/CardReviews";
-import { CardServices } from "@/components/CardServices";
+import { CardServices, CardServicesv2 } from "@/components/CardServices";
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge";
 import ModalOverlay from "@/components/ModalOverlay";
 import { PageEstimateSection } from "@/components/PageEstimateSection";
@@ -39,7 +39,7 @@ export default function HomePage() {
             servicesConfig.OSW_Services.map((obj, index) => {
               if (obj.activeService) {
                 return (
-                    <CardServices cardTitle={obj.name} cardURL={obj.url} key={`svc${obj.name}`}>
+                    <CardServicesv2 cardTitle={obj.name} cardURL={obj.url} key={`svc${obj.name}`}>
                       <Image
                         src={obj.src}
                         alt=""
@@ -47,7 +47,7 @@ export default function HomePage() {
                         height={600}
                         className={obj.className}
                       />
-                    </CardServices>
+                    </CardServicesv2>
                 );
               }
               return null;
