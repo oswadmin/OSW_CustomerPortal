@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+.custom-oval {
+    border-radius: 50% / 50%;
+}
+
+.footer-scalap {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.card-service-text {
+  text-shadow: 1px 1px 1px #FFAE00;
+}
+
+.form-input {
+  @apply rounded-[12px] text-blue p-2 text-xl border-[3px] border-blue_dark
+}
