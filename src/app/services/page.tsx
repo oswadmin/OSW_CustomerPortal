@@ -1,6 +1,6 @@
 "use client"
 
-import { CardServices } from "@/components/CardServices";
+import { CardServices, CardServicesv2 } from "@/components/CardServices";
 import ModalOverlay from "@/components/ModalOverlay";
 import { PageEstimateSection } from "@/components/PageEstimateSection";
 import PageFooter from "@/components/PageFooter";
@@ -53,7 +53,7 @@ function ServicePage() {
               {serviceData?.service.details.map((detail, index) => (
               <>
 
-                <CardServices
+                <CardServicesv2
                   cardTitle={detail.detailSummary}
                   cardDesc={detail.detailDescription}
                 >
@@ -64,7 +64,7 @@ function ServicePage() {
                     height={600}
                     className={detail.detailImageClass}
                   />
-                </CardServices>
+                </CardServicesv2>
 
                 </> 
               ))}

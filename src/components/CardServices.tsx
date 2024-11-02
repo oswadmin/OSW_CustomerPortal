@@ -110,22 +110,22 @@ export function CardServicesv2({
   
   return (
     <>
-      <div className={`hidden desktop:flex flex-col `}>
-        <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center'>
+      <div className={`hidden desktop:flex flex-col desktop:w-[230px] `}>
+        <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center bg-orange rounded-3xl border-4'>
           {cardURL === "" ? 
-            <div className="absolute w-full h-full text-center align-middle flex justify-center items-center text-4xl font-bold text-blue_dark z-10 card-service-text p-8 bg-orange bg-opacity-10 hover:scale-105">
+            <div className="absolute w-full h-full rounded-3xl text-center align-bottom flex justify-center items-end text-2xl font-bold text-blue_dark z-10 card-service-text px-8 pb-2 ">
               {cardTitle}
             </div>
           : (
-            <Button className="absolute w-full h-full rounded-3xl hover:scale-105 hover:bg-orange text-center align-bottom flex justify-center items-end text-4xl font-bold text-blue_dark card-service-text px-8 bg-orange border-4" asChild>
-              <Link href={cardURL} className='text-wrap' >
+            <Button className="absolute w-full h-full rounded-3xl  text-center align-bottom flex justify-center items-end text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-2" asChild>
+              <Link href={cardURL} className='text-wrap hover:scale-105' >
                   {cardTitle}
               </Link>
               
             </Button>
           )}
 
-          <div className='flex w-4/5 h-4/6 mt-6 rounded-2xl border-2 mr-1 border-white shadow-md  relative overflow-hidden'>
+          <div className='flex w-4/5 h-4/6 mt-6 rounded-2xl border-2 mr-1 border-white shadow-md  relative overflow-hidden '>
             {children}
           </div>
          
@@ -133,7 +133,7 @@ export function CardServicesv2({
         </div>
 
         {cardDesc === "" ? "" : (
-          <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
+          <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg ">
             {cardDesc}
           </div>
         )} 
