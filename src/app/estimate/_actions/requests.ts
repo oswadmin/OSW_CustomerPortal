@@ -3,15 +3,15 @@
 import { z } from "zod";
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-    host: '',
-    port: ,
-    secure: ,
-    auth: {
-        user: '',
-        pass: '',
-    },
-})
+// const transporter = nodemailer.createTransport({
+//     host: '',
+//     port: ,
+//     secure: ,
+//     auth: {
+//         user: '',
+//         pass: '',
+//     },
+// })
 
 const mailOptions = {
     from: 'scott@orangesoftwash.com',
