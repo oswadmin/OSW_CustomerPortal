@@ -59,6 +59,8 @@ export const siteConfig = {
         SURFACE4: "/OSW_Surface4.jpg",
         SURFACE5: "/OSW_Surface5.jpg",
         SURFACE6: "/OSW_Surface6.jpg",
+        SURFACE7: "/OSW_Surface7.png",
+        SURFACE8: "/OSW_Surface8.png",
         
         WasteBin1: "/OSW_WasteBin1.png",
         WasteBinBlue: "/OSW_WasteBinBlue.jpg",

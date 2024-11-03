@@ -117,7 +117,7 @@ export function CardServicesv2({
               {cardTitle}
             </div>
           : (
-            <Button className="absolute w-full h-full rounded-3xl  text-center align-bottom flex justify-center items-end text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-2" asChild>
+            <Button className="absolute w-full h-full rounded-3xl  text-center align-bottom flex justify-center items-end text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3" asChild>
               <Link href={cardURL} className='text-wrap hover:scale-105' >
                   {cardTitle}
               </Link>
