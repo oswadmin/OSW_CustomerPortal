@@ -28,7 +28,7 @@ export const servicesConfig = {
                     detailImageClass:  "absolute scale-[2.0] left-[10px] top-[65px]",
                 },
                 {
-                    detailSummary:"Pavers & Regrouting",
+                    detailSummary:"Paver Regrouting",
                     detailDescription: "We effectively strip unwanted paint and markings from various surfaces, restoring the original look of the affected area.",
                     detailImageURL: siteConfig.OSW_IMG.Paver1,
                     detailImageClass:  "absolute scale-[1.8] left-[0px] top-[65px]",
@@ -286,7 +286,7 @@ export const servicesConfig = {
         },
     },
     {
-        activeService: true,
+        activeService: false,
         name: 'Windows',
         url: '/services?service=siding',
         src: siteConfig.OSW_IMG.SIDING1,

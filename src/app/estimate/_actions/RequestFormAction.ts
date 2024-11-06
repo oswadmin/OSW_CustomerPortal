@@ -48,7 +48,7 @@ const requestFormSchema = z.object({
     custPromo: z.string().optional(),
   });
 
-export async function submitRequest(formData: FormData){
+export async function RequestFormAction(formData: FormData){
   
     try {
         requestFormSchema.parse(formData);

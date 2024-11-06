@@ -215,7 +215,10 @@ export default function PageFooter({
                <ButtonMedia strURL={`tel:${siteConfig.OSW_Phone}`}>
                 <PhoneIcon className="w-6 h-6 text-orange" />
               </ButtonMedia>
+              
+              <a href={`tel:${siteConfig.OSW_Phone}`} className='hover:scale-105'>
               {siteConfig.OSW_Phone}
+              </a>
             </div>
             
             <div className='flex items-center pl-6'>
@@ -223,7 +226,11 @@ export default function PageFooter({
               <ButtonMedia strURL={`mailto:${siteConfig.OSW_Email_Sales}`}>
                 <MailIcon className="w-6 h-6 text-orange" />
               </ButtonMedia>
-              {siteConfig.OSW_Email_Sales}
+              <a href={`mailto:${siteConfig.OSW_Email_Sales}`} className='hover:scale-105'>
+                {siteConfig.OSW_Email_Sales}
+              </a>
+              
+              
             </div>
 
           </div>

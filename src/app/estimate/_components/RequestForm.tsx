@@ -1,31 +1,45 @@
 "use client"
 
 import { ButtonStandard } from "@/components/ButtonStandard"
-import { CheckboxInput } from "./FormFieldCheckbox"
-import { submitRequest } from "../_actions/requests"
-import { Input } from "@/components/ui/input"
+import { CheckboxInput } from "./RequestFormCheckbox"
+import { RequestFormAction } from "../_actions/RequestFormAction"
 import { servicesConfig } from "@/config"
+import { useEffect, useRef, useState } from "react"
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 
+function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
-  
+
 export function RequestForm() {
+    const recaptchaRef = useRef(null);
+
+
+
+
+
+
+
+
+
     return (
     <>
-        <form className="container flex flex-col justify-center space-y-4 pb-20" action={submitRequest}>
+        <form className="container flex flex-col justify-center space-y-4 pb-20" action={RequestFormAction}>
 
         <div className="flex flex-col desktop:flex-row gap-4">
-            <input id="custFirstName" name="custFirstName" placeholder="First Name" className="form-input flex-1" required/>
-            <input id="custLastName" name="custLastName" placeholder="Last Name" className="form-input flex-1" required/>
+            <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
+            <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" required/>
         </div>
         
         <div className="flex flex-col desktop:flex-row sm:f gap-4">
-            <input id="custEmail" name="custEmail" placeholder="Email" type="email" className="form-input flex-1" required/>
-            <input id="custPhone" name="custPhone" placeholder="Phone" className="form-input lg:w-1/5" required/>        
+            <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" required/>
+            <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5" required/>        
         </div>
 
         <div className="flex flex-row">
-            <input id="custAddress" name="custAddress" placeholder="Property Address" className="form-input flex-1" required/>        
+            <input id="custAddress" name="custAddress" placeholder="Property Address*" className="form-input flex-1" required/>        
         </div>
         
 
@@ -54,8 +68,8 @@ export function RequestForm() {
             <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" className="form-input resize-none" rows={6}/>
         </div>
         <div className="flex flex-col desktop:flex-row  justify-start gap-4">
-            <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" >
-                <option value="">How did you find us? </option>
+            <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
+                <option value="">How did you find us?*</option>
                 <option value="Google">Google</option>
                 <option value="Nextdoor">Nextdoor</option>
                 <option value="Promotional">Promotional Flyer</option>
@@ -67,6 +81,9 @@ export function RequestForm() {
             </select>
             <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
         </div>
+
+
+        <ReCAPTCHA ref={recaptchaRef} sitekey="my key" onChange={onChange}/>
 
 
         <div className="flex justify-end">

@@ -210,8 +210,8 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* WHY SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-gradient-to-b from-bg_secondary to-orange">
-          <div className="container flex flex-wrap justify-center gap-4">
+        <PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-bg_secondary">
+          <div className="container flex flex-wrap justify-center gap-4 ">
             <CardWhyUsLarge 
               title='Quick & Easy'
               cardText="Customer experience is our #1 goal.  We make it a breaze to work with us" />
@@ -231,7 +231,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ESTIMATE SECTION */}
         {/*****************************************************************/}
-        <PageEstimateSection title="Orange ya ready for a new look?"/>
+        <PageEstimateSection className="bg-gradient-to-b from-bg_secondary to-orange" title="Orange ya ready for a new look?"/>
 
       </main>
       
