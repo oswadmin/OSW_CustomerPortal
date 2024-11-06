@@ -8,9 +8,9 @@ import { useEffect, useRef, useState } from "react"
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 
-function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+// function onChange(value) {
+//     console.log("Captcha value:", value);
+//   }
 
 
 export function RequestForm() {
@@ -83,7 +83,7 @@ export function RequestForm() {
         </div>
 
 
-        <ReCAPTCHA ref={recaptchaRef} sitekey="my key" onChange={onChange}/>
+        
 
 
         <div className="flex justify-end">
