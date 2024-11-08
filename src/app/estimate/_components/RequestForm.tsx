@@ -8,13 +8,38 @@ import { useEffect, useRef, useState } from "react"
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 
-// function onChange(value) {
-//     console.log("Captcha value:", value);
-//   }
 
 
 export function RequestForm() {
-    const recaptchaRef = useRef(null);
+    const [token, setToken] = useState('');
+    const [isVerified, setIsVerified] = useState(false);
+
+    const handleRecaptchaChange = async (value) => {
+        setToken(value);
+
+        // Verify the token with your backend
+        const response = await fetch('/api/verify-recaptcha', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ token })
+    });
+
+    const data = await response.json();
+    setIsVerified(data.success);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // If the token is verified, proceed with form submission
+    if (isVerified) {
+      // ... your form submission logic
+    } else {
+      // Handle the case where the token is not verified
+    }
+  };
 
 
 
@@ -82,8 +107,6 @@ export function RequestForm() {
             <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
         </div>
 
-
-        
 
 
         <div className="flex justify-end">

@@ -18,3 +18,10 @@
 .form-input {
   @apply rounded-[12px] text-blue p-2 text-xl border-[3px] border-blue_dark
 }
+
+.gradient-text {
+  background: linear-gradient(to bottom, #fea400, #f57305);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

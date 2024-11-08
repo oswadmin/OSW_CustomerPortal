@@ -29,7 +29,7 @@ export function PageTitleSection({
             <h2 className='font-bold text-lg desktop:text-2xl text-blue text-center desktop:text-left'>{messageConfig.OSW_MSG_TagLine}</h2>
             
 
-            <ButtonStandard strURL="/estimate" className="w-full h-[50px] bg-gradient-to-b from-yellow-300 to-orange hover:bg-orange text-xl desktop:text-2xl">
+            <ButtonStandard strURL="/estimate" className="w-full h-[50px] bg-gradient-to-b from-orange_light to-orange hover:bg-orange text-xl desktop:text-2xl">
               Request a free estimate
             </ButtonStandard>
     

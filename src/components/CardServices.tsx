@@ -111,7 +111,7 @@ export function CardServicesv2({
   return (
     <>
       <div className={`hidden desktop:flex flex-col desktop:w-[230px] `}>
-        <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center bg-orange rounded-3xl border-4'>
+        <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4'>
           {cardURL === "" ? 
             <div className="absolute w-full h-full rounded-3xl text-center align-bottom flex justify-center items-end text-2xl font-bold text-blue_dark z-10 card-service-text px-8 pb-2 ">
               {cardTitle}
@@ -145,7 +145,7 @@ export function CardServicesv2({
             {cardTitle}
           </div>
         : (
-          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-yellow-300 to-orange hover:bg-orange h-[50px] text-2xl">
+          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
             {cardTitle}
           </ButtonStandard>
         )}

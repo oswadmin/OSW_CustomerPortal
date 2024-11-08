@@ -8,7 +8,7 @@ export const servicesConfig = {
         name: 'Surfaces',
         url: '/services?service=surfaces',
         src: siteConfig.OSW_IMG.SURFACE3,
-        className: "absolute scale-[2.2] left-[-100px] top-[40px]",
+        className: "absolute scale-[2.2] left-[-90px] top-[40px]",
         service: {
             titleMsg: "Surface Pressure Washing",
             titleImg: siteConfig.OSW_IMG.SURFACE2,
@@ -155,7 +155,7 @@ export const servicesConfig = {
         name: 'Gutters',
         url: '/services?service=gutters',
         src: siteConfig.OSW_IMG.Gutters1,
-        className: "absolute scale-[3.3] left-[-3 0px] top-[130px]",
+        className: "absolute scale-[3.3] left-[-3 0px] top-[100px]",
         service: {
             titleMsg: "Gutter Rejuvenation",
             titleImg: siteConfig.OSW_IMG.Gutters1,
@@ -188,7 +188,7 @@ export const servicesConfig = {
         name: 'Waste Bins',
         url: '/services?service=waste bins',
         src: siteConfig.OSW_IMG.WasteBin1,
-        className: "absolute scale-[1.7] left-[00px] top-[75px]",
+        className: "absolute scale-[1.7] left-[00px] top-[55px]",
         service: {
             titleMsg: "Waste Bin Pressure Washing",
             titleImg: siteConfig.OSW_IMG.WasteBin1,

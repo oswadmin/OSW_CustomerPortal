@@ -46,7 +46,7 @@ function ServicePage() {
           {/*****************************************************************/}
           {/* PRESSURE WASHING SERVICES SECTION*/}
           {/*****************************************************************/}
-          <PageSection title={serviceData?.service.serviceMsg  || "Service Not Found"}  className="bg-gradient-to-b from-white to-bg_secondary">
+          <PageSection title={serviceData?.service.serviceMsg  || "Service Not Found"}  className="bg-white">
             
             <div className="flex flex-wrap justify-center desktop:space-x-4">
 
@@ -76,7 +76,7 @@ function ServicePage() {
           {/*****************************************************************/}
           {/* ESTIMATE SECTION */}
           {/*****************************************************************/}
-          <PageEstimateSection title={serviceData?.service.estimateMsg  || "Service Not Found"} className=" bg-gradient-to-b from-bg_secondary to-orange"/>
+          <PageEstimateSection title={serviceData?.service.estimateMsg  || "Service Not Found"} className=" bg-gradient-to-b from-white to-orange"/>
       </>
     )
   }

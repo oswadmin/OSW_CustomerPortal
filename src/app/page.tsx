@@ -61,7 +61,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* LOCATIONS SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-bg_secondary">
+        <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-white">
         <div className="container">
           <div className="flex-1">
             <p>Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!</p>
@@ -75,7 +75,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* LOCATIONS SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="Locations" title="Our Locations" subtitle="We are proudly serving..." className="bg-bg_secondary">
+        <PageSection sectionID="Locations" title="Our Locations" subtitle="We are proudly serving..." className="bg-white">
           
           <div className="flex flex-col desktop:flex-row">
             <div className="flex-1 flex flex-col justify-center items-center space-y-1 text-blue">
@@ -105,7 +105,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* REVIEWS SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="Reviews" title="Our Reviews..." subtitle="What people say about us" className="bg-bg_secondary ">
+        <PageSection sectionID="Reviews" title="Our Reviews..." subtitle="What people say about us" className="bg-white ">
           
         <div className="container flex flex-col desktop:flex-row desktop:items-start justify-center desktop:justify-around ">
 
@@ -156,7 +156,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ABOUT SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="AboutUs"  title="About us" subtitle=" " className="bg-bg_secondary">
+        <PageSection sectionID="AboutUs"  title="About us" subtitle=" " className="bg-white">
 
           {/*****************************************************************/}
           {/* OWNERS MESSAGE */}
@@ -210,7 +210,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* WHY SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-bg_secondary">
+        <PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-white">
           <div className="container flex flex-wrap justify-center gap-4 ">
             <CardWhyUsLarge 
               title='Quick & Easy'
@@ -231,7 +231,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ESTIMATE SECTION */}
         {/*****************************************************************/}
-        <PageEstimateSection className="bg-gradient-to-b from-bg_secondary to-orange" title="Orange ya ready for a new look?"/>
+        <PageEstimateSection className="bg-gradient-to-b from-white to-orange" title="Orange ya ready for a new look?"/>
 
       </main>
       

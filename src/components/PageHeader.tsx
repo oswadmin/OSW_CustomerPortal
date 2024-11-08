@@ -112,7 +112,7 @@ export default function PageHeader() {
         {/* PHONE BUTTON */}
         {/*****************************************************************/}
         <div className="hidden desktop:flex items-center ">
-          <ButtonStandard strURL={`tel:${siteConfig.OSW_Phone}`} className="w-[200px] h-[50px] bg-gradient-to-b from-yellow-300 to-orange hover:bg-orange">
+          <ButtonStandard strURL={`tel:${siteConfig.OSW_Phone}`} className="w-[200px] h-[50px] bg-gradient-to-b from-orange_light to-orange hover:bg-orange">
             <div className="relative flex items-center justify-center w-7 h-7 rounded-full bg-[#060082] " >
                   <PhoneIcon className="w-4 h-4 left text-[#FFAE00]" />
             </div>

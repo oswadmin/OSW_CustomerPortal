@@ -18,10 +18,10 @@ export function CardReviews({
   return (
     <>
 
-    <div className="flex justify-center items-center w-[250px] h-[250px] relative border-2 rounded-[12px] desktop:border-none desktop:rounded-none  bg-orange desktop:bg-transparent">
+    <div className="flex justify-center items-center w-[250px] h-[250px] relative border-2 desktop:border-none  rounded-[12px] desktop:rounded-none bg-gradient-to-b from-orange_light to-orange  desktop:bg-transparent desktop:bg-none !important">
 
       <span className="hidden desktop:flex text-blue text-[415px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">&#x2B22;</span>
-      <span className="hidden desktop:flex text-orange text-[400px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">&#x2B22;</span>
+      <span className="hidden desktop:flex gradient-text text-[400px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">&#x2B22;</span>
 
       <div className="relative w-200 flex flex-col items-center text-blue space-y-2">
         
