@@ -5,53 +5,52 @@ import { CheckboxInput } from "./RequestFormCheckbox"
 import { RequestFormAction } from "../_actions/RequestFormAction"
 import { servicesConfig } from "@/config"
 import { useEffect, useRef, useState } from "react"
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import ReCAPTCHA from "react-google-recaptcha"
+import GooglePlacesAutocomplete from "react-google-places-autocomplete"
+import { Fullscreen } from "lucide-react"
+
+
 
 
 
 
 export function RequestForm() {
-    const [token, setToken] = useState('');
+    const [recaptchaKey, setRecaptchaKey] = useState('');
+    //const [gMapsApiKey, setgMapsApiKey] = useState('');
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [recaptchToken, setRecaptchToken] = useState('');
     const [isVerified, setIsVerified] = useState(false);
+    
+    useEffect(() => {
+        const key = process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITEKEY;
+        console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
+        setRecaptchaKey(key ?? '');
 
-    const handleRecaptchaChange = async (value) => {
-        setToken(value);
+        // const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
+        // console.log('Server-side gMapsAPIKey:', gKey); // Log the key on the server-side
+        // setgMapsApiKey(gKey ?? '');
+    }, []);
 
-        // Verify the token with your backend
-        const response = await fetch('/api/verify-recaptcha', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ token })
-    });
+    const handleRecaptchaChange = (token: string | null) => {
+        // Handle recaptcha change
+        console.log('Recaptcha token:', token);
+        setRecaptchToken(token ?? '');
+    };
 
-    const data = await response.json();
-    setIsVerified(data.success);
-  };
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    // If the token is verified, proceed with form submission
-    if (isVerified) {
-      // ... your form submission logic
-    } else {
-      // Handle the case where the token is not verified
-    }
-  };
-
-
-
-
-
+    const handleSubmit = (e: React.FormEvent) => {
+        console.log('Recaptcha token:', recaptchToken);
+        if(!recaptchToken) {
+            e.preventDefault();
+        }
+                    
+    };
 
 
 
 
     return (
     <>
-        <form className="container flex flex-col justify-center space-y-4 pb-20" action={RequestFormAction}>
+        <form className="container flex flex-col justify-center space-y-4 pb-20" action={RequestFormAction} onSubmit={handleSubmit}>
 
         <div className="flex flex-col desktop:flex-row gap-4">
             <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
@@ -60,11 +59,42 @@ export function RequestForm() {
         
         <div className="flex flex-col desktop:flex-row sm:f gap-4">
             <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" required/>
-            <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5" required/>        
+            <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " required/>        
         </div>
 
         <div className="flex flex-row">
             <input id="custAddress" name="custAddress" placeholder="Property Address*" className="form-input flex-1" required/>        
+        </div>
+        <div className="flex flex-row">
+            
+            <GooglePlacesAutocomplete
+                apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
+                
+                selectProps={{
+                    placeholder: 'Property Address*',
+                    className: "flex w-full rounded-[12px] text-blue text-xl border-[3px] border-blue_dark ",
+                    styles: {
+                        container: (provided) => ({
+                            ...provided,
+                            width: '100%',
+                        }),
+                        control: (provided) => ({
+                            ...provided,
+                            width: '100%',
+                            borderWidth: '0px',
+                            borderColor: '#00008B', // blue_dark
+                            borderRadius: '12px',
+                            fontSize: '1.25rem', // text-xl
+                            color: 'blue',
+                        }),
+                        input: (provided) => ({
+                            ...provided,
+                            width: '100%',
+                        }),
+                    }
+                    
+                }}
+            />    
         </div>
         
 
@@ -108,7 +138,20 @@ export function RequestForm() {
         </div>
 
 
+        <div className="flex justify-center desktop:justify-end">
+            {recaptchaKey ? (<>
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    size="normal"
+                    sitekey={recaptchaKey}
+                    onChange={handleRecaptchaChange}
+                />
 
+                </>
+            ) : (
+                <p>ReCAPTCHA key not available: {recaptchaKey}</p>
+            )}
+        </div>
         <div className="flex justify-end">
         <button  type="submit" className="bg-blue text-orange `bg-orange  hover:scale-105 rounded-[12px]  border-2 border-white shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2">
             Submit

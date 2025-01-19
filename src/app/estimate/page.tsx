@@ -13,7 +13,7 @@ export default function EstimatePage() {
         {/*****************************************************************/}
         {/* ESTIMATE SECTION */}
         {/*****************************************************************/}
-        <PageSection title="Estimate Request" className="bg-gradient-to-b from-white to-orange -mt-20" >
+        <PageSection title="Estimate Request" className="bg-gradient-to-b from-white via-30% via-orange to-orange -mt-20" >
           
         <RequestForm/>
 

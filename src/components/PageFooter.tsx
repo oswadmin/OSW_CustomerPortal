@@ -128,14 +128,14 @@ export default function PageFooter({
  
 
 
-      <div className='relative flex-1 flex justify-center h-12 bg-orange bg-opacity-70 '>
+      <div className='relative flex-1 flex justify-center h-12 bg-orange bg-opacity-50 '>
       
-        <div className="flex-1 bg-orange footer-scalap" />
-        <div className="flex-1 bg-orange  footer-scalap" />
-        <div className="flex-1 bg-orange  footer-scalap" />
+        <div className="flex-1 bg-orange_light footer-scalap" />
+        <div className="flex-1 bg-orange_light  footer-scalap" />
+        <div className="flex-1 bg-orange_light  footer-scalap" />
       </div>
 
-      <div className='pt-20 z-20 w-auto min-h-[300px] bg-orange bg-opacity-70 '>
+      <div className='pt-20 z-20 w-auto min-h-[300px] bg-orange bg-opacity-50 '>
             
       <div className="container flex-1 flex justify-stretch items-start pb-6">
 

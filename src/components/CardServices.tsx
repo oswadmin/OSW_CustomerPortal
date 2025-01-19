@@ -163,3 +163,51 @@ export function CardServicesv2({
 
   
 };
+
+export function CardServicesv3({ 
+  cardTitle, 
+  cardURL = '',
+  cardDesc = '',
+  imgURL = '',
+  imgScale = '1.0',
+  imgLeft = '0px',
+  imgBottom = '0px',
+  children,
+  className = '' 
+
+}: CardServicesProps) {
+ 
+  //console.log(`URL:${imgURL} Scale:${imgScale} Left:${imgLeft} Bottom:${imgBottom}`)
+  
+  return (
+    <>
+      <div className={`desktop:flex flex-col desktop:w-[230px] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4`}>
+          <div className="w-full text-2xl h-[4em]  font-bold text-blue_dark card-service-text px-8 pb-2 ">
+            {cardTitle}  
+          </div>
+
+          <div className='flex m-2 p-2 h-72 rounded-2xl border-2 border-white shadow-md relative overflow-hidden '>
+            {children}
+          </div>
+
+
+
+          <div className="flex flex-1 items-start rounded-[12px] m-2 p-2 text-blue text-start relative  text-lg">
+            {cardDesc}
+          </div>
+         
+
+        
+
+      </div>
+
+
+
+        
+
+        
+    </>
+  );
+
+  
+};

@@ -30,7 +30,8 @@ const config = {
       colors: {
         white: '#FFFFFF',
         black: '#000000',
-        orange: '#f57305',
+        //orange: '#f57305',
+        orange: '#F77C00',
         orange_light: '#fea400',
         blue: '#060082',
         blue_dark: '#030041',

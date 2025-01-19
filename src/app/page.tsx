@@ -31,7 +31,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* SERVICES SECTION*/}
         {/*****************************************************************/}
-        <PageSection sectionID="Services" title="What we wash" subtitle="Click a service to dive deeper..." className="bg-gradient-to-b from-white to-bg_secondary">
+        <PageSection sectionID="Services" title="What we wash" subtitle="Click a service to dive deeper..." className="bg-white">
                    
           <div className="flex flex-col desktop:flex-row desktop:flex-wrap justify-center gap-4 px-4 desktop:px-0">
             
@@ -231,7 +231,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ESTIMATE SECTION */}
         {/*****************************************************************/}
-        <PageEstimateSection className="bg-gradient-to-b from-white to-orange" title="Orange ya ready for a new look?"/>
+        <PageEstimateSection className="bg-gradient-to-b from-white to-orange_light" title="Orange ya ready for a new look?"/>
 
       </main>
       
