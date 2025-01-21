@@ -121,21 +121,22 @@ export default function PageFooter({
       ref={footerRef} 
       className={`relative flex-1 flex-col mt-auto bg-cover bg-no-repeat`} 
       style={{
-        backgroundImage: `url(${siteConfig.OSW_IMG.SURFACE1})`,
-        willChange: 'background-position',
+        //backgroundImage: `url(${siteConfig.OSW_IMG.SURFACE1})`,
+        //willChange: 'background-position',
       }}>
 
  
 
 
-      <div className='relative flex-1 flex justify-center h-12 bg-orange bg-opacity-50 '>
+      {/* <div className='relative flex-1 flex justify-center h-12 bg-orange bg-opacity-50 '>
       
         <div className="flex-1 bg-orange_light footer-scalap" />
         <div className="flex-1 bg-orange_light  footer-scalap" />
         <div className="flex-1 bg-orange_light  footer-scalap" />
-      </div>
+      </div> */}
 
-      <div className='pt-20 z-20 w-auto min-h-[300px] bg-orange bg-opacity-50 '>
+      {/* <div className='pt-20 z-20 w-auto min-h-[300px] bg-orange bg-opacity-50 '> */}
+      <div className='pt-20 z-20 w-auto min-h-[300px] bg-gradient-to-b from-white to-orange_light'>
             
       <div className="container flex-1 flex justify-stretch items-start pb-6">
 

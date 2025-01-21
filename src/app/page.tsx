@@ -62,10 +62,21 @@ export default function HomePage() {
         {/* LOCATIONS SECTION */}
         {/*****************************************************************/}
         <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-white">
-        <div className="container">
+        <div className="flex flex-col desktop:flex-row">
           <div className="flex-1">
+                <Image 
+                  src="/OSW_PeaceOfMind.png"
+                  alt="" 
+                  width={700}
+                  height={700}
+                  className='w-auto h-auto'
+                />
+            
+            </div>
+            <div className="flex flex-1 flex-col justify-center items-center p-6">
             <p>Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!</p>
           </div>
+          
 
         </div>
 
@@ -78,15 +89,14 @@ export default function HomePage() {
         <PageSection sectionID="Locations" title="Our Locations" subtitle="We are proudly serving..." className="bg-white">
           
           <div className="flex flex-col desktop:flex-row">
-            <div className="flex-1 flex flex-col justify-center items-center space-y-1 text-blue">
-              <div className="flex flex-1 w-full justify-center text-3xl">Westerville, OH</div>
-              <div className="flex flex-1 justify-center text-3xl">Worthington, OH</div>
-              <div className="flex flex-1 w-full justify-center text-3xl">Lewis Center, OH</div>
-              <div className="flex flex-1 w-full justify-center text-3xl">Sunbury, OH</div>
-              <div className="flex flex-1 w-full justify-center text-3xl">New Albany, OH</div>
-              <p>&nbsp;</p>
-              <div className="flex flex-1 w-full justify-center text-3xl">+ Surrounding Areas</div>
-              <p>&nbsp;</p>
+            <div className="flex flex-1 flex-col justify-center items-center text-blue">
+
+              <p className="text-3xl pb-2">Westerville, OH</p>
+              <p className="text-3xl pb-2">Worthington, OH</p>
+              <p className="text-3xl pb-2">Lewis Center, OH</p>
+              <p className="text-3xl pb-2">Sunbury, OH</p>
+              <p className="text-3xl pb-2">New Albany, OH</p>
+              <p className="text-3xl pt-2 pb-2">+ Surrounding Areas</p>
             </div>
 
             <div className="flex-1">
@@ -222,7 +232,7 @@ export default function HomePage() {
               title='Licensed & Insured'
               cardText="Trust and confidence in the team you call" />
             <CardWhyUsLarge 
-              title='Satisfacion Guaranteed'
+              title='Satisfaction Guaranteed'
               cardText="We stand behind our services 100%" />
           </div>
         </PageSection>
@@ -231,7 +241,9 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ESTIMATE SECTION */}
         {/*****************************************************************/}
-        <PageEstimateSection className="bg-gradient-to-b from-white to-orange_light" title="Orange ya ready for a new look?"/>
+        {/* <PageEstimateSection className="bg-gradient-to-b from-white to-orange_light" title="Orange ya ready for a new look?"/> */}
+
+        <PageEstimateSection className="bg-white" title="Orange ya ready for a new look?"/>
 
       </main>
       

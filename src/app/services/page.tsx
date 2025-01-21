@@ -76,7 +76,8 @@ function ServicePage() {
           {/*****************************************************************/}
           {/* ESTIMATE SECTION */}
           {/*****************************************************************/}
-          <PageEstimateSection title={serviceData?.service.estimateMsg  || "Service Not Found"} className=" bg-gradient-to-b from-white to-orange"/>
+          {/* <PageEstimateSection title={serviceData?.service.estimateMsg  || "Service Not Found"} className=" bg-gradient-to-b from-white to-orange"/> */}
+          <PageEstimateSection title={serviceData?.service.estimateMsg  || "Service Not Found"} className="bg-white"/>
       </>
     )
   }

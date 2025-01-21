@@ -181,7 +181,7 @@ export function CardServicesv3({
   
   return (
     <>
-      <div className={`desktop:flex flex-col desktop:w-[230px] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4`}>
+      <div className={`desktop:flex flex-col desktop:w-[230px] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4 pb-4`}>
           <div className="w-full text-2xl h-[4em]  font-bold text-blue_dark card-service-text px-8 pb-2 ">
             {cardTitle}  
           </div>
