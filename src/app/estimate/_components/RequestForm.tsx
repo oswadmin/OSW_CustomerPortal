@@ -65,7 +65,7 @@ export function RequestForm() {
         {/* <div className="flex flex-row">
             <input id="custAddress" name="custAddress" placeholder="Property Address*" className="form-input flex-1" required/>        
         </div> */}
-        {/* <div className="flex flex-row">
+        <div className="flex flex-row">
             
             <GooglePlacesAutocomplete
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
@@ -95,7 +95,7 @@ export function RequestForm() {
                     
                 }}
             />    
-        </div> */}
+        </div>
         
 
 
