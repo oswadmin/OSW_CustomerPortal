@@ -26,8 +26,8 @@ export function RequestForm() {
         console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
         setRecaptchaKey(key ?? '');
 
-        // const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
-        // console.log('Server-side gMapsAPIKey:', gKey); // Log the key on the server-side
+        const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
+        console.log('Server-side gMapsAPIKey:', gKey); // Log the key on the server-side
         // setgMapsApiKey(gKey ?? '');
     }, []);
 
@@ -65,7 +65,7 @@ export function RequestForm() {
         {/* <div className="flex flex-row">
             <input id="custAddress" name="custAddress" placeholder="Property Address*" className="form-input flex-1" required/>        
         </div> */}
-        <div className="flex flex-row">
+        {/* <div className="flex flex-row">
             
             <GooglePlacesAutocomplete
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
@@ -95,7 +95,7 @@ export function RequestForm() {
                     
                 }}
             />    
-        </div>
+        </div> */}
         
 
 
@@ -142,7 +142,7 @@ export function RequestForm() {
 
 
         <div className="flex justify-center desktop:justify-end">
-            {/* {recaptchaKey ? (<>
+            {recaptchaKey ? (<>
                 <ReCAPTCHA
                     ref={recaptchaRef}
                     size="normal"
@@ -153,7 +153,7 @@ export function RequestForm() {
                 </>
             ) : (
                 <p>ReCAPTCHA key not available: {recaptchaKey}</p>
-            )} */}
+            )}
         </div>
         <div className="flex justify-end">
         <button  type="submit" className="bg-blue text-orange `bg-orange  hover:scale-105 rounded-[12px]  border-2 border-white shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2">
