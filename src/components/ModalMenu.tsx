@@ -22,7 +22,7 @@ export default function ModalMenu() {
   };
   
   useEffect(() => {
-    console.log("isDropDownOpen:" + isDropDownOpen)
+    //console.log("isDropDownOpen:" + isDropDownOpen)
     
     if(refService.current ) {
       if (isDropDownOpen) {

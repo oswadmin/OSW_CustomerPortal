@@ -23,11 +23,11 @@ export function RequestForm() {
     
     useEffect(() => {
         const key = process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITEKEY;
-        console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
+        //console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
         setRecaptchaKey(key ?? '');
 
-        const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
-        console.log('Server-side gMapsAPIKey:', gKey); // Log the key on the server-side
+        //const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
+       // console.log('Server-side gMapsAPIKey:', gKey); // Log the key on the server-side
         // setgMapsApiKey(gKey ?? '');
     }, []);
 
