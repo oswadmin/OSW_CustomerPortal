@@ -178,7 +178,7 @@ export default function PageFooter({
 
              {/* COPYWRIGHT TEXT */}
             <div className='flex text-sm text-center text-blue font-semibold'>
-              &copy; 2023 Orange Softwashing, LLC.<br/>All rights reserved.                
+              &copy; 2025 Orange Softwash, LLC.<br/>All rights reserved.                
             </div>
           </div>
           

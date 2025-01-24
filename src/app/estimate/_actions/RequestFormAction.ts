@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import nodemailer from 'nodemailer';
+import { redirect } from "next/navigation";
 
 // const transporter = nodemailer.createTransport({
 //     host: '',
@@ -35,23 +36,43 @@ const requestFormSchema = z.object({
       .min(1, { message: "At least one service must be selected" }),
     custDesc: z.string().optional(),
     custReferral: z.enum([
-      "Google",
-      "Nextdoor",
-      "Promotional",
+      "Angie",
+      "Business Card",
       "Facebook",
+      "Google",
       "Instagram",
+      "Nextdoor",
+      "Flyer",
       "Yard Sign",
       "Referral",
-      "Business Card",
-      "",
+      "Truck",
+      "Yard Sign"
     ]).optional(),
     custPromo: z.string().optional(),
   });
 
-export async function RequestFormAction(formData: FormData){
+export async function RequestFormAction(prevState: unknown, formData: FormData){
   
+    console.log(formData)
+    
+    //const fData = Object.fromEntries(formData.entries());
+
+    const fData = Array.from(formData.entries()).reduce<Record<string, string | string[]>>((acc, [key, value]) => {
+      if (!acc[key]) {
+        acc[key] = formData.getAll(key).length > 1 
+          ? formData.getAll(key) as string[]
+          : value as string;
+      }
+      return acc;
+    }, {});
+    console.log(fData)
+
+    const testData = { custFirstName: 'Scott' }
+
     try {
-        requestFormSchema.parse(formData);
+        //requestFormSchema.parse(testData);
+        //requestFormSchema.parse(formData);
+        requestFormSchema.parse(fData);
         console.log("Form is valid");
     } catch (e) {
         if (e instanceof z.ZodError) {
@@ -59,13 +80,17 @@ export async function RequestFormAction(formData: FormData){
         }
     }
 
-    const result = requestFormSchema.safeParse(Object.fromEntries(formData.entries()))
-
-    console.log(formData)
+    const result = requestFormSchema.safeParse(fData)
+    console.log("zod result:" + result);
+    
+    if(result.success === false){
+      //console.log("result failed")
+      return result.error.formErrors.fieldErrors
+    }
 
     const data = result.data
 
-
-
-
+    //TODO process the data
+    //console.log("let's go")
+    redirect("/estimate/thankyou")
 }

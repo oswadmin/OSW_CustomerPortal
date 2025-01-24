@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { Fullscreen } from "lucide-react"
+import { useFormState, useFormStatus } from "react-dom"
 
 
 
@@ -15,13 +16,25 @@ import { Fullscreen } from "lucide-react"
 
 
 export function RequestForm() {
-    const [recaptchaKey, setRecaptchaKey] = useState('');
+    const [error, action] = useFormState(RequestFormAction, {})
+    const [isDebugMode, setIsDebugMode] = useState(false);
+    
     //const [gMapsApiKey, setgMapsApiKey] = useState('');
     const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [recaptchaKey, setRecaptchaKey] = useState('');
     const [recaptchToken, setRecaptchToken] = useState('');
-    const [isVerified, setIsVerified] = useState(false);
     
+    const [selectedAddress, setSelectedAddress] = useState('');
+
+    const [errors, setErrors] = useState({});
+    const [submissionSuccess, setSubmissionSuccess] = useState(false);
+
     useEffect(() => {
+        const dMode = process.env.NEXT_PUBLIC_DEBUG_MODE;
+        //console.log("dMode:", dMode);
+        setIsDebugMode(dMode === 'true');
+        
+
         const key = process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITEKEY;
         //console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
         setRecaptchaKey(key ?? '');
@@ -38,9 +51,9 @@ export function RequestForm() {
     };
 
     const handleSubmit = (e: React.FormEvent) => {
-        console.log('Recaptcha token:', recaptchToken);
+        //console.log('Recaptcha token:', recaptchToken);
         if(!recaptchToken) {
-            e.preventDefault();
+           e.preventDefault();
         }
                     
     };
@@ -50,29 +63,35 @@ export function RequestForm() {
 
     return (
     <>
-        <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" action={RequestFormAction} onSubmit={handleSubmit}>
+        <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" action={action} onSubmit={handleSubmit}>
 
         <div className="flex flex-col desktop:flex-row gap-4">
-            <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
-            <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" required/>
+            <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" value={isDebugMode ? 'Scott' : ''} required/>
+            <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" value={isDebugMode ? 'Daly' : ''} required/>
         </div>
-        
         <div className="flex flex-col desktop:flex-row sm:f gap-4">
-            <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" required/>
-            <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " required/>        
+            <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" value={isDebugMode ? 'scott.daly1@gmail.com' : ''} required/>
+            {error?.custEmail && <div className="text-destructive">{error.custEmail}</div>}
+
+            <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " value={isDebugMode ? '614-805-1950' : ''} required/>        
         </div>
 
         {/* <div className="flex flex-row">
             <input id="custAddress" name="custAddress" placeholder="Property Address*" className="form-input flex-1" required/>        
         </div> */}
         <div className="flex flex-row">
-            
+            <input id="custAddress" name="custAddress" type="hidden" value={isDebugMode ? '7064 Hilmmar' : selectedAddress}/> 
             <GooglePlacesAutocomplete
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
                 
                 selectProps={{
                     placeholder: 'Property Address*',
                     className: "flex w-full rounded-[12px] text-blue text-xl border-[3px] border-blue_dark ",
+                    onChange: (selectedOption) => {
+                        if (selectedOption) {
+                          setSelectedAddress(selectedOption.label);
+                        }
+                      },
                     styles: {
                         container: (provided) => ({
                             ...provided,
@@ -120,7 +139,7 @@ export function RequestForm() {
         </div>           
 
         <div className="flex flex-col">
-            <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" className="form-input resize-none" rows={6}/>
+            <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" value={isDebugMode ? 'Clean Something' : ''} className="form-input resize-none" rows={6}/>
         </div>
         <div className="flex flex-col desktop:flex-row  justify-start gap-4">
             <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
@@ -131,13 +150,15 @@ export function RequestForm() {
                 <option value="Google">Google</option>
                 <option value="Instagram">Instagram</option>
                 <option value="Nextdoor">Nextdoor</option>
-                <option value="Promotional">Promotional Flyer</option>
+                <option value="Flyer">Promotional Flyer</option>
                 <option value="Referral">Referral</option>
-                <option value="Referral">Saw Your Truck</option>
+                <option value="Truck">Saw Your Truck</option>
                 <option value="Yard Sign">Yard Sign</option>
                 
             </select>
-            <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
+            {error?.custReferral && <div className="text-destructive">{error.custReferral}</div>}
+            <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " value={isDebugMode ? 'O123456' : ''}/> 
+            {error?.custEmail && <div className="text-destructive">{error.custEmail}</div>}
         </div>
 
 
@@ -156,9 +177,7 @@ export function RequestForm() {
             )}
         </div>
         <div className="flex justify-end">
-        <button  type="submit" className="bg-blue text-orange `bg-orange  hover:scale-105 rounded-[12px]  border-2 border-white shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2">
-            Submit
-        </button>
+        <SubmitButton />
         </div>
     </form>
 
@@ -167,3 +186,12 @@ export function RequestForm() {
     </>
 )}
 
+function SubmitButton(){
+    const {pending } = useFormStatus()
+
+    return (
+        <button  type="submit" className="bg-blue text-orange `bg-orange  hover:scale-105 rounded-[12px]  border-2 border-white shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2" disabled={pending}>
+            {pending ? "Saving..." : "Submit"}
+        </button>
+    )
+}
