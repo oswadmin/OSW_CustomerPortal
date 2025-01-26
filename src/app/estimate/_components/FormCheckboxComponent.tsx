@@ -13,7 +13,7 @@ interface InputFieldProps {
 }
 
 
-export function CheckboxInput({ 
+export function FormCheckboxComponent({ 
   fieldName, 
   fieldValue,
   placeHolder, 
