@@ -15,7 +15,7 @@ import { ThankYouComponent } from "./ThankYouComponent"
 export function FormComponent() {
     const [isDebugMode, setIsDebugMode] = useState(false);
     
-    const [error, action] = useFormState(FormAction, {})
+    const [formResult, action] = useFormState(FormAction, {})
 
     //const [gMapsApiKey, setgMapsApiKey] = useState('');
     const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -61,9 +61,9 @@ export function FormComponent() {
 
     return (
     <>
-        {submissionSuccess ? (
+        {/* {formResult.success ? (
             ThankYouComponent
-        ) : (
+        ) : ( */}
 
             <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" action={action} onSubmit={handleSubmit}>
 
@@ -180,7 +180,7 @@ export function FormComponent() {
         </form>
 
     
-    )}    
+    {/* )}     */}
     </>
     
 )}
