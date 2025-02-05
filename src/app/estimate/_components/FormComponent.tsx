@@ -3,19 +3,26 @@ import { servicesConfig } from "@/config"
 import { useEffect, useRef, useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
 
-import { FormAction } from "../_actions/FormAction"
+import { FormAction, ServerAction } from "../_actions/FormAction"
 
 import ReCAPTCHA from "react-google-recaptcha"
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 import { FormCheckboxComponent } from "./FormCheckboxComponent"
 
 import { ThankYouComponent } from "./ThankYouComponent"
+import { PageSection } from "@/components/PageSection"
 
 
 export function FormComponent() {
     const [isDebugMode, setIsDebugMode] = useState(false);
     
-    const [formResult, action] = useFormState(FormAction, {})
+    interface ActionResult {
+        success: boolean;
+        message?: string;
+        error?: string[];
+      }
+    const [actionResult, setActionResult] = useState<ActionResult>({} as ActionResult);
+    console.log(actionResult)
 
     //const [gMapsApiKey, setgMapsApiKey] = useState('');
     const recaptchaRef = useRef<ReCAPTCHA>(null);
@@ -24,8 +31,7 @@ export function FormComponent() {
     
     const [selectedAddress, setSelectedAddress] = useState('');
 
-    const [errors, setErrors] = useState({});
-    const [submissionSuccess, setSubmissionSuccess] = useState(false);
+   
 
     useEffect(() => {
         const dMode = process.env.NEXT_PUBLIC_DEBUG_MODE;
@@ -34,7 +40,6 @@ export function FormComponent() {
         
 
         const key = process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITEKEY;
-        //console.log('Server-side recaptchaKey:', key); // Log the key on the server-side
         setRecaptchaKey(key ?? '');
 
         //const gKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
@@ -49,138 +54,168 @@ export function FormComponent() {
     };
 
     const handleSubmit = (e: React.FormEvent) => {
-        //console.log('Recaptcha token:', recaptchToken);
+        console.log('handleSubmit');
         if(!recaptchToken) {
            e.preventDefault();
-        }
-                    
+        }    
     };
 
+    const handleScrollToTop = () => {
+        const scrollDuration = 500; // Adjust the duration as needed
+        const scrollStart = window.scrollY;
+        const scrollEnd = 0;
+        const startTime = Date.now();
+    
+        const animateScroll = () => {
+          const elapsedTime = Date.now() - startTime;
+          const progress = Math.min(elapsedTime / scrollDuration, 1);
+          const scrollPosition = scrollStart + (scrollEnd - scrollStart) * progress;
+          window.scrollTo(0, scrollPosition);
+    
+          if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+    
+        animateScroll();
+    };
 
+    async function handleAction(formData: FormData){
+        console.log('handleAction');
+        const result = await FormAction(formData)
+        console.log(actionResult)
+        setActionResult(result as ActionResult)
+        handleScrollToTop()
+    };
 
 
     return (
     <>
-        {/* {formResult.success ? (
-            ThankYouComponent
-        ) : ( */}
-
-            <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" action={action} onSubmit={handleSubmit}>
-
-            <div className="flex flex-col desktop:flex-row gap-4">
-                <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" value={isDebugMode ? 'Scott' : ''} required/>
-                <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" value={isDebugMode ? 'Daly' : ''} required/>
-            </div>
-            <div className="flex flex-col desktop:flex-row sm:f gap-4">
-                <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" value={isDebugMode ? 'scott.daly1@gmail.com' : ''} required/>
+        {actionResult.success ? (
+            <>
+                <PageSection title="Thank you!" className="bg-white -mt-20" >
+                    <ThankYouComponent/>
+                </PageSection>
                 
+            </>
+        ) : ( 
+            <PageSection title="Estimate Request" className="bg-white -mt-20" >
+                <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" onSubmit={handleSubmit} action={handleAction}>
 
-                <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " value={isDebugMode ? '614-805-1950' : ''} required/>        
-            </div>
-
-            <div className="flex flex-row">
-                <input id="custAddress" name="custAddress" type="hidden" value={isDebugMode ? '7064 Hilmmar' : selectedAddress}/> 
-                <GooglePlacesAutocomplete
-                    apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
+                <div className="flex flex-col desktop:flex-row gap-4">
+                    <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
+                    <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" required/>
+                </div>
+                <div className="flex flex-col desktop:flex-row sm:f gap-4">
+                    <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" required/>
                     
-                    selectProps={{
-                        placeholder: 'Property Address*',
-                        className: "flex w-full rounded-[12px] text-blue text-xl border-[3px] border-blue_dark ",
-                        onChange: (selectedOption) => {
-                            if (selectedOption) {
-                            setSelectedAddress(selectedOption.label);
+
+                    <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " required/>        
+                </div>
+
+                <div className="flex flex-row">
+                    <input id="custAddress" name="custAddress" type="hidden" value={selectedAddress}/> 
+                    <GooglePlacesAutocomplete
+                        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
+                        
+                        selectProps={{
+                            placeholder: 'Property Address*',
+                            className: "flex w-full rounded-[12px] text-blue text-xl border-[3px] border-blue_dark ",
+                            onChange: (selectedOption) => {
+                                if (selectedOption) {
+                                setSelectedAddress(selectedOption.label);
+                                }
+                            },
+                            styles: {
+                                container: (provided) => ({
+                                    ...provided,
+                                    width: '100%',
+                                }),
+                                control: (provided) => ({
+                                    ...provided,
+                                    width: '100%',
+                                    borderWidth: '0px',
+                                    borderColor: '#00008B', // blue_dark
+                                    borderRadius: '12px',
+                                    fontSize: '1.25rem', // text-xl
+                                    color: 'blue',
+                                }),
+                                input: (provided) => ({
+                                    ...provided,
+                                    width: '100%',
+                                }),
                             }
-                        },
-                        styles: {
-                            container: (provided) => ({
-                                ...provided,
-                                width: '100%',
-                            }),
-                            control: (provided) => ({
-                                ...provided,
-                                width: '100%',
-                                borderWidth: '0px',
-                                borderColor: '#00008B', // blue_dark
-                                borderRadius: '12px',
-                                fontSize: '1.25rem', // text-xl
-                                color: 'blue',
-                            }),
-                            input: (provided) => ({
-                                ...provided,
-                                width: '100%',
-                            }),
-                        }
-                        
-                    }}
-                />    
-            </div>
-            
-
-
-            <div className="flex-1 flex flex-col space-y-2 justify-start items-start">
-            <div className="text-blue text-xl font-bold ">
-                Services Requested?
-            </div>
-            <div className="flex flex-wrap gap-x-4 gap-y-4" >
-                {
-                    servicesConfig.OSW_Services.map((obj, index) => (
-                        
-                        obj.activeService ? (
-
-                        <FormCheckboxComponent key={`custService${index}`} fieldName="custServices" fieldValue={obj.name}/>
-                        
-                        ) : null
-                        
-                    ))              
-                }
-            </div>
-            
-            </div>           
-
-            <div className="flex flex-col">
-                <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" value={isDebugMode ? 'Clean Something' : ''} className="form-input resize-none" rows={6}/>
-            </div>
-            <div className="flex flex-col desktop:flex-row  justify-start gap-4">
-                <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
-                    <option value="">How did you find us?*</option>
-                    <option value="Angie">Angie&apos;s List</option>
-                    <option value="Business Card">Business Card</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Google">Google</option>
-                    <option value="Instagram">Instagram</option>
-                    <option value="Nextdoor">Nextdoor</option>
-                    <option value="Flyer">Promotional Flyer</option>
-                    <option value="Referral">Referral</option>
-                    <option value="Truck">Saw Your Truck</option>
-                    <option value="Yard Sign">Yard Sign</option>
-                    
-                </select>
+                            
+                        }}
+                    />    
+                </div>
                 
-                <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " value={isDebugMode ? 'O123456' : ''}/> 
-            </div>
 
 
-            <div className="flex justify-center desktop:justify-end">
-                {recaptchaKey ? (<>
-                    <ReCAPTCHA
-                        ref={recaptchaRef}
-                        size="normal"
-                        sitekey={recaptchaKey}
-                        onChange={handleRecaptchaChange}
-                    />
+                <div className="flex-1 flex flex-col space-y-2 justify-start items-start">
+                <div className="text-blue text-xl font-bold ">
+                    Services Requested?
+                </div>
+                <div className="flex flex-wrap gap-x-4 gap-y-4" >
+                    {
+                        servicesConfig.OSW_Services.map((obj, index) => (
+                            
+                            obj.activeService ? (
 
-                    </>
-                ) : (
-                    <p>ReCAPTCHA key not available: {recaptchaKey}</p>
-                )}
-            </div>
-            <div className="flex justify-end">
-                <SubmitButton />
-            </div>
-        </form>
+                            <FormCheckboxComponent key={`custService${index}`} fieldName="custServices" fieldValue={obj.name}/>
+                            
+                            ) : null
+                            
+                        ))              
+                    }
+                </div>
+                
+                </div>           
 
+                <div className="flex flex-col">
+                    <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" className="form-input resize-none" rows={6}/>
+                </div>
+                <div className="flex flex-col desktop:flex-row  justify-start gap-4">
+                    <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
+                        <option value="">How did you find us?*</option>
+                        <option value="Angie">Angie&apos;s List</option>
+                        <option value="Business Card">Business Card</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Google">Google</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Nextdoor">Nextdoor</option>
+                        <option value="Flyer">Promotional Flyer</option>
+                        <option value="Referral">Referral</option>
+                        <option value="Truck">Saw Your Truck</option>
+                        <option value="Yard Sign">Yard Sign</option>
+                        
+                    </select>
+                    
+                    <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
+                </div>
+
+
+                <div className="flex justify-center desktop:justify-end">
+                    {recaptchaKey ? (<>
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            size="normal"
+                            sitekey={recaptchaKey}
+                            onChange={handleRecaptchaChange}
+                        />
+
+                        </>
+                    ) : (
+                        <p>ReCAPTCHA key not available: {recaptchaKey}</p>
+                    )}
+                </div>
+                <div className="flex justify-end">
+                    <SubmitButton />
+                </div>
+            </form>
+        </PageSection>
     
-    {/* )}     */}
+    )}
     </>
     
 )}

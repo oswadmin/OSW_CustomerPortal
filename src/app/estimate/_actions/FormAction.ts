@@ -44,9 +44,7 @@ const requestFormSchema = z.object({
     custPromo: z.string().optional(),
   });
 
-export async function FormAction(
-    prevState: unknown, 
-    formData: FormData){
+export async function FormAction(formData: FormData){
   
     //console.log("formData:")
     //console.log(formData)
@@ -71,7 +69,7 @@ export async function FormAction(
     if(result.success === false){
       //console.log("result failed")
       //console.log(result.error.formErrors.fieldErrors)
-      return result.error.formErrors.fieldErrors
+      return {success: false, error: result.error.formErrors.fieldErrors}
       
     }
 
@@ -91,11 +89,11 @@ export async function FormAction(
 
       //console.log(data)
       if (data.error) {
-        return { error: "There was an error"}
+        return { success: false, error: "There was an error"}
       }
     }
 
 
-    redirect("/estimate/thankyou")
-    //return {success: true, message: "Form submitted successfully!"}
+    //redirect("/estimate/thankyou")
+    return {success: true, message: "Form submitted successfully!"}
 }

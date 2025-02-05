@@ -115,7 +115,7 @@ export default function PageFooter({
   return (
     <>
     
-    <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="600" height="600" className='hidden w-full h-auto'/>
+    {/* <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="600" height="600" className='hidden w-full h-auto'/> */}
 
     <footer 
       ref={footerRef} 
@@ -136,7 +136,7 @@ export default function PageFooter({
       </div> */}
 
       {/* <div className='pt-20 z-20 w-auto min-h-[300px] bg-orange bg-opacity-50 '> */}
-      <div className='pt-20 z-20 w-auto min-h-[300px] bg-gradient-to-b from-white to-orange_light'>
+      <div className='mt-8 pt-20 z-20 w-auto min-h-[300px] bg-gradient-to-b from-white to-orange_light'>
             
       <div className="container flex-1 flex justify-stretch items-start pb-6">
 
