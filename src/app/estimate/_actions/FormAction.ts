@@ -6,7 +6,6 @@ import { Resend } from "resend";
 import EstimateRequestEmail from "@/email/EstimateRequstEmail"
 import { request } from "http";
 
-console.log(`RESEND_API_KEY: ${process.env.RESEND_API_KEY}`)
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const singleServiceSchema = z.enum(["Surfaces", "Siding", "Decks", "Fences", "Roofs", "Gutters", "Waste Bins", "Commercial"]);
