@@ -28,7 +28,7 @@ export interface PlaceReviewAuthor {
 
 export async function getPlaceDetails(placeId: string): Promise<PlaceDetails> {
   
-  const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY;
+  const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_PLATFORM_APIKEY_SERVER_ONLY;
   
   if (!GOOGLE_MAPS_API_KEY) {
     throw new Error('Google Maps API key is not configured');
