@@ -32,7 +32,7 @@ export default function ModalMenu() {
       }
     }
     
-  }, [isDropDownOpen, refService.current])
+  }, [isDropDownOpen])
 
   const showMenu = () => {
     //console.log("hideModal")

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from './ui/button';
 import { CardWhyUsSmall } from './CardWhyUsSmall';
 import Image from 'next/image';
 import { ButtonStandard } from './ButtonStandard';

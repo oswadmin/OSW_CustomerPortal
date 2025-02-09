@@ -1,3 +1,4 @@
+"use client"
 import { CardReviews } from "@/components/CardReviews";
 import { CardServices, CardServicesv2 } from "@/components/CardServices";
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge";
@@ -8,9 +9,9 @@ import { PageSection } from "@/components/PageSection";
 import { PageTitleSection } from "@/components/PageTitleSection";
 import { servicesConfig, siteConfig } from "@/config";
 import Image from "next/image";
-
-
 import { map } from "zod";
+import { useState, useEffect } from 'react';
+import GoogelReviews from "@/components/GoogleReview";
 
 
 const imgH = "600";
@@ -18,10 +19,11 @@ let mapCount = 0;
 let printDiv = true;
 
 export default function HomePage() {
-  
+
   return (
     <>
       <main>
+        
 
         {/*****************************************************************/}
         {/* TITLE SECTION*/}
@@ -115,52 +117,11 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* REVIEWS SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="Reviews" title="Our Reviews..." subtitle="What people say about us" className="bg-white ">
+        <PageSection sectionID="Reviews" title="Our Reviews" subtitle="What people are saying..." className="bg-white ">
           
-        <div className="container flex flex-col desktop:flex-row desktop:items-start justify-center desktop:justify-around ">
+          <GoogelReviews placeId="ChIJQ7ge5FCdNKMRdhLJTP6maks"/>
 
-          <div className="flex flex-1 desktop:flex-none justify-center">
 
-            <div className='w-[250px] h-[250px] rounded-full border-4 border-orange shadow-md overflow-hidden relative mb-6 desktop:mb-0'>
-                  <Image 
-                    src = {siteConfig.OSW_IMG.REVIEWER}
-                    alt = ""
-                    width={600}
-                    height={600}
-                    className="relative scale-[1.7] left-[-20px] bottom-[-50px]"
-                  />
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-start gap-6 desktop:gap-0 desktop:h-[750px]">
-          <div className="flex justify-center items-center desktop:space-x-[10px]  transform desktop:-translate-x-[20px]">
-              <CardReviews 
-                cardText="Had my parents house power washed for a surprise after their anniversary. Orange Soft Wash was incredible. Dylan came by with all the necessary tools, and he got everything cleaned up before his promised time was up. 5 Star service- Keep it up!" 
-                cardName="Nick B."/>
-          </div>
-          <div className=" flex justify-center items-center mt-[-15px] space-x-[10px] left-1/2 transform desktop:-translate-x-[150px]">
-              <CardReviews 
-                cardText="Another post recommending Orange Softwash. I contacted Dylan based on the reviews here and he didn't disappoint. He really went above and beyond to clean my really old white vinyl siding."
-                cardName="Lisa W."/>
-          </div>  
-          <div className="flex justify-center items-center mt-[-15px] space-x-[10px] left-1/2 transform desktop:-translate-x-[-110px] desktop:-translate-y-[235px]">
-              <CardReviews 
-                cardText="They did a great job on the side of my house and they were very polite and professional with their business, I have them come to do my sidewalk next spring because they were very affordable and the best option around the area!"
-                cardName="Jason V."/>
-          </div>
-          <div className=" flex justify-center items-center  mt-[-15px] space-x-[10px] left-1/2 transform desktop:-translate-x-[280px] desktop:-translate-y-[235px]">
-              <CardReviews 
-                cardText="I used this company for power-washing my patio. I've never had such wonderful service. Great job, very reasonable, friendly, personable, did a wonderful job. I highly recommend them."
-                cardName="Margaret A."
-              />
-          </div>
-          <div className=" flex justify-center items-center  mt-[-15px] space-x-[10px] left-1/2 transform desktop:-translate-x-[20px] desktop:-translate-y-[470px]">
-              <CardReviews 
-                cardText="I was skeptical of 'soft washing' as i have always pressure washed my siding, but Dylan assured us that the results would be amazing and last a lot longer. He was right as it turned out amazing and more than I expected."
-                cardName="Scott D."/>
-          </div>
-        </div>
-        </div>
         </PageSection>
 
         {/*****************************************************************/}
@@ -174,7 +135,7 @@ export default function HomePage() {
           <div className="container flex gap-6 mb-4 flex-col desktop:flex-row ">
             <div className="flex flex-col w-full desktop:w-2/3 order-2 desktop:order-1">
               <span className="text-2xl desktop:text-3xl font-bold text-blue mb-4">A message from the owner</span>
-              <span>{`Dylan Daly here, owner and operator of Orange Softwash. I'd like to start off by saying thank you for considering us for your home washing needs. I have instilled in my team that excellence, commitment, passion, and top-notch services are table stakes, but they are only part of our measurement of success.  Above all else, its the people we serve, and the experiences we create, that truly set us apart.   I take great pride in my team, and I'm confident that you will not find a better exterior washing services anywhere else.`}</span>
+              <span>{`Dylan here, owner and operator of Orange Softwash. I'd like to start off by saying thank you for considering us for your home washing needs. I have instilled in my team that excellence, commitment, passion, and top-notch services are table stakes, but they are only part of our measurement of success.  Above all else, its the people we serve, and the experiences we create, that truly set us apart.   I take great pride in my team, and I'm confident that you will not find a better exterior washing services anywhere else.`}</span>
             </div>
 
             <div className="flex order-1 md:order-2">

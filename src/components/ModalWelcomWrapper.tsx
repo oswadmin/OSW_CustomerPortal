@@ -9,7 +9,7 @@ export default function WelcomeWrapper() {
   const [hasVisited, setHasVisited] = useState<boolean>(false);
 
   useEffect(() => {
-    console.log('WelcomeWrapper mounted, hasVisited:', hasVisited);
+    //console.log('WelcomeWrapper mounted, hasVisited:', hasVisited);
     
     // Commented out sessionStorage logic for testing
     /*
@@ -22,15 +22,15 @@ export default function WelcomeWrapper() {
     */
   }, []);
 
-  console.log('WelcomeWrapper rendering, hasVisited:', hasVisited);
+  // console.log('WelcomeWrapper rendering, hasVisited:', hasVisited);
 
-  // Changed condition to make it more explicit
-  if (hasVisited) {
-    console.log('Modal hidden because hasVisited is true');
-    return null;
-  }
+  // // Changed condition to make it more explicit
+  // if (hasVisited) {
+  //   console.log('Modal hidden because hasVisited is true');
+  //   return null;
+  // }
 
-  console.log('Rendering ModalWelcome');
+  //console.log('Rendering ModalWelcome');
   return (
     <ModalWelcome
       initialDelay={100}        // Reduced for testing
