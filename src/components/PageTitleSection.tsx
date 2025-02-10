@@ -35,12 +35,15 @@ export function PageTitleSection({
         </div>
        
         <div className="mt-4 desktop:mt-0 desktop:flex-1 flex justify-center items-center bg-orange-400">
-            <Image className='rounded-[12px] border-white border-4 shadow-md'
+            <Image className='rounded-[12px] border-slate-200 border-[1px] shadow-lg'
               src={imgURL}
               alt="" 
               width={400} 
               height={1200}
             />
+
+
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ImygmNx-ALM?si=iN48u8VRVKUrwO1K&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen ></iframe> */}
         </div>
         
     </div>

@@ -112,7 +112,8 @@ export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
     <div className=''>
         
         <Swiper
-          cssMode={true}
+          autoHeight={true}
+          // cssMode={true}
           navigation={true}
           pagination={true}
           mousewheel={true}

@@ -8,7 +8,7 @@ export const servicesConfig = {
         name: 'Surfaces',
         url: '/services?service=surfaces',
         src: siteConfig.OSW_IMG.SURFACE3,
-        className: "absolute scale-[2.2] left-[-90px] top-[40px]",
+        className: "absolute scale-[2.2] left-[-130px] top-[40px]",
         service: {
             titleMsg: "Surface Pressure Washing",
             titleImg: siteConfig.OSW_IMG.SURFACE2,
@@ -19,19 +19,19 @@ export const servicesConfig = {
                     detailSummary:"Driveways, Walkways, Patios",
                     detailDescription: "Driveways, walkways, and patios, are prone to staining and can accumulate grime over time. We target and remove the toughest stains, like oil and rust, for a fresher concrete appearance.",
                     detailImageURL: siteConfig.OSW_IMG.SURFACE4,
-                    detailImageClass:  "absolute scale-[1.2] left-[0px] top-[10px]",
+                    detailImageClass:  "absolute scale-[1.3] left-[0px] top-[40px]",
                 },
                 {
                     detailSummary:"Brick, Stone, Metal",
                     detailDescription: "Whether brick, stone, or composite decking, our team adjusts the pressure and cleaning agents accordingly without damaging the material.",
                     detailImageURL: siteConfig.OSW_IMG.SURFACE8,
-                    detailImageClass:  "absolute scale-[2.0] left-[10px] top-[65px]",
+                    detailImageClass:  "absolute scale-[2.3] left-[10px] top-[110px]",
                 },
                 {
                     detailSummary:"Paver Regrouting",
                     detailDescription: "We effectively strip unwanted paint and markings from various surfaces, restoring the original look of the affected area.",
                     detailImageURL: siteConfig.OSW_IMG.Paver1,
-                    detailImageClass:  "absolute scale-[1.8] left-[0px] top-[65px]",
+                    detailImageClass:  "absolute scale-[1.9] left-[0px] top-[90px]",
                 },                    
             ],
         },
@@ -41,7 +41,7 @@ export const servicesConfig = {
         name: 'Siding',
         url: '/services?service=siding',
         src: siteConfig.OSW_IMG.SIDING1,
-        className: "absolute scale-[2.5] left-[-120px] top-[40px]",
+        className: "absolute scale-[2.1] left-[-120px] top-[60px]",
         service: {
             titleMsg: "Siding Soft Washing",
             titleImg: siteConfig.OSW_IMG.SIDING1,
@@ -74,7 +74,7 @@ export const servicesConfig = {
         name: 'Decks',
         url: '/services?service=decks',
         src: siteConfig.OSW_IMG.DECK1,
-        className: "absolute scale-[4.3] left-[100px] top-[-100px]",
+        className: "absolute scale-[5.1] left-[100px] top-[-140px]",
         service: {
             titleMsg: "Deck Soft  Washing",
             titleImg: siteConfig.OSW_IMG.DECK1,
@@ -101,7 +101,7 @@ export const servicesConfig = {
         name: 'Fences',
         url: '/services?service=fences',
         src: siteConfig.OSW_IMG.FenceWood,
-        className: "absolute scale-[1.9] left-[0px] top-[60px]",
+        className: "absolute scale-[2.2] left-[0px] top-[105px]",
         service: {
             titleMsg: "Fence Washing",
             titleImg: siteConfig.OSW_IMG.Fence1,
@@ -155,7 +155,7 @@ export const servicesConfig = {
         name: 'Gutters',
         url: '/services?service=gutters',
         src: siteConfig.OSW_IMG.Gutters1,
-        className: "absolute scale-[3.3] left-[-3 0px] top-[100px]",
+        className: "absolute scale-[3.3] left-[-3 0px] top-[120px]",
         service: {
             titleMsg: "Gutter Rejuvenation",
             titleImg: siteConfig.OSW_IMG.Gutters1,
@@ -199,10 +199,10 @@ export const servicesConfig = {
     }, 
     {
         activeService: true,
-        name: 'Waste Bins',
-        url: '/services?service=waste bins',
+        name: 'Bins',
+        url: '/services?service=bins',
         src: siteConfig.OSW_IMG.WasteBin1,
-        className: "absolute scale-[1.7] left-[00px] top-[55px]",
+        className: "absolute scale-[1.8] left-[00px] top-[70px]",
         service: {
             titleMsg: "Waste Bin Pressure Washing",
             titleImg: siteConfig.OSW_IMG.WasteBin1,
@@ -243,7 +243,7 @@ export const servicesConfig = {
         name: 'Commercial',
         url: '/services?service=commercial',
         src: siteConfig.OSW_IMG.Commercial1,
-        className: "absolute scale-[1.8] left-[-20px] top-[60px]",
+        className: "absolute scale-[1.85] left-[-20px] top-[90px]",
         service: {
             titleMsg: "Commercial Services",
             titleImg: siteConfig.OSW_IMG.Commercial1,

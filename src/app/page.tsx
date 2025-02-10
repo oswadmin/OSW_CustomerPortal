@@ -1,6 +1,6 @@
 "use client"
 import { CardReviews } from "@/components/CardReviews";
-import { CardServices, CardServicesv2 } from "@/components/CardServices";
+import { CardServices, CardServicesv2, CardServicesv4 } from "@/components/CardServices";
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge";
 import ModalOverlay from "@/components/ModalOverlay";
 import { PageEstimateSection } from "@/components/PageEstimateSection";
@@ -28,7 +28,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* TITLE SECTION*/}
         {/*****************************************************************/}
-        <PageTitleSection title="Soft Washing Central Ohio" imgURL={siteConfig.OSW_IMG.SIDING1}/>
+        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/Moose.png"/>
 
         {/*****************************************************************/}
         {/* SERVICES SECTION*/}
@@ -41,7 +41,7 @@ export default function HomePage() {
             servicesConfig.OSW_Services.map((obj, index) => {
               if (obj.activeService) {
                 return (
-                    <CardServicesv2 cardTitle={obj.name} cardURL={obj.url} key={`svc${obj.name}`}>
+                    <CardServicesv4 cardTitle={obj.name} cardURL={obj.url} key={`svc${obj.name}`}>
                       <Image
                         src={obj.src}
                         alt=""
@@ -49,7 +49,7 @@ export default function HomePage() {
                         height={600}
                         className={obj.className}
                       />
-                    </CardServicesv2>
+                    </CardServicesv4>
                 );
               }
               return null;
@@ -65,16 +65,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-white">
         <div className="flex flex-col desktop:flex-row">
-          <div className="flex-1">
-                <Image 
-                  src="/OSW_PeaceOfMind.png"
-                  alt="" 
-                  width={700}
-                  height={700}
-                  className='w-auto h-auto'
-                />
-            
-            </div>
+
             <div className="flex flex-1 flex-col justify-center items-center p-6">
             <p>Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!</p>
           </div>
@@ -107,7 +98,7 @@ export default function HomePage() {
                 alt="" 
                 width={700}
                 height={700}
-                className='rounded-[12px] border-white border-8 w-auto h-auto shadow-md'
+                className='rounded-[12px] border-slate-200 border-[1px] w-auto h-auto shadow-lg'
               />
             
             </div>

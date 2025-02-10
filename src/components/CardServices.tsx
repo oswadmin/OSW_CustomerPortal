@@ -111,6 +111,7 @@ export function CardServicesv2({
   return (
     <>
       <div className={`hidden desktop:flex flex-col desktop:w-[230px] `}>
+        
         <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4'>
           {cardURL === "" ? 
             <div className="absolute w-full h-full rounded-3xl text-center align-bottom flex justify-center items-end text-2xl font-bold text-blue_dark z-10 card-service-text px-8 pb-2 ">
@@ -160,8 +161,6 @@ export function CardServicesv2({
         
     </>
   );
-
-  
 };
 
 export function CardServicesv3({ 
@@ -210,4 +209,97 @@ export function CardServicesv3({
   );
 
   
+};
+
+
+
+export function CardServicesv4({ 
+  cardTitle, 
+  cardURL = '',
+  cardDesc = '',
+  imgURL = '',
+  imgScale = '1.0',
+  imgLeft = '0px',
+  imgBottom = '0px',
+  children,
+  className = '' 
+
+}: CardServicesProps) {
+ 
+  return (
+    <>
+      <div className={`hidden desktop:flex flex-col desktop:w-[240px]`}>
+        
+
+        {/* DESKTOP CARD */}
+        <div className='relative hidden bg-orange desktop:flex w-[235px] h-[400PX] justify-center rounded-xl'>
+
+          {/*  */}
+          {cardURL === "" ? 
+            <div className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 ">
+            </div>
+          : (
+            <Button className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 " asChild>
+              <Link href={cardURL} className="text-wrap hover:scale-105" >
+                <div className="border-2 bg-orange rounded-full px-4">
+                  {cardTitle}
+                </div>
+              </Link>
+              
+            </Button>
+          )}
+
+          {/* CARD IMAGE */}
+          <div className='flex w-full h-full rounded-xl shadow-lg relative overflow-hidden '>
+            {children}
+          </div>
+         
+
+        </div>
+
+        {cardDesc === "" ? "" : (
+          <>
+            <div className="text-blue_dark card-service-text text-center text-3xl font-bold">
+             {cardTitle}
+            </div>
+
+            <div className="flex bg-white border-[1px] border-slate-200 rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg ">
+              {cardDesc}
+            </div>
+            
+          </>
+        )} 
+      </div>
+
+      {/* MOBILE CARD */}
+      <div className={`flex flex-col desktop:hidden`}>
+
+
+        {cardURL === "" ? 
+          <>
+            <div className='flex flex-1 justify-center'>
+              <div className='flex w-[235px] h-[400PX] rounded-xl shadow-lg relative overflow-hidden bg-orange justify-center'>
+                {children}
+              </div>
+            </div>
+            <div className="text-center flex-1 mt-2 justify-center items-center text-xl font-bold card-service-text">
+              {cardTitle}
+            </div>
+          </>
+        : (
+          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
+            {cardTitle}
+          </ButtonStandard>
+        )}
+        
+
+        {cardDesc === "" ? "" : (
+          <div className="flex bg-white border-[1px] border-slate-200 rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg mb-20">
+            {cardDesc}
+          </div>
+        )} 
+      </div>
+        
+    </>
+  );
 };

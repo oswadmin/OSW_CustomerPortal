@@ -30,14 +30,14 @@ export default function GoogleReviewCard({review}: GoogleReviewCardProps) {
               
           </div>  
           <div className="flex flex-col ml-4">
-            <p>{review.authorAttribution.displayName}</p>
+            <p>{review?.authorAttribution?.displayName?.split(" ")[0] ?? ""}</p>
             <p>{review.relativePublishTimeDescription}</p>
           </div>
         </div>
 
 
 
-        <div className="text-sm mb-4">
+        <div className="text-lg mb-4">
           {review.text.text}
         </div>
         
@@ -59,7 +59,7 @@ export default function GoogleReviewCard({review}: GoogleReviewCardProps) {
             
           </div>  
           <div className="hidden flex-1 flex-col ml-4 desktop:flex">
-            <p>{review.authorAttribution.displayName}</p>
+            <p>{review.authorAttribution.displayName.split(" ")[0]}</p>
             <p>{review.relativePublishTimeDescription}</p>
           </div>
 

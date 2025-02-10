@@ -57,8 +57,8 @@ export async function getPlaceDetails(placeId: string): Promise<PlaceDetails> {
 
     const data = await response.json();
 
-    const util = require('util');
-    console.log(util.inspect(data, { depth: null, colors: true }));
+    // const util = require('util');
+    // console.log(util.inspect(data, { depth: null, colors: true }));
 
     // if (data.status !== 'OK') {
     //   throw new Error(`Google Places API error: ${data.status}`);
