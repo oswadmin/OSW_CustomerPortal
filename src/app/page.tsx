@@ -28,7 +28,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* TITLE SECTION*/}
         {/*****************************************************************/}
-        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/Moose.png"/>
+        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/Sunny.png"/>
 
         {/*****************************************************************/}
         {/* SERVICES SECTION*/}
