@@ -94,7 +94,7 @@ export default function PageHeader() {
               alt = ""
               width={600}
               height={600}
-              className="w-44 h-44 hover:scale-105"
+              className="scale-75 hover:scale-[80%]"
             />
           </a>
         </div>

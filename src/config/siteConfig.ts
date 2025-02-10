@@ -19,7 +19,7 @@ export const siteConfig = {
 
     //Site Images
     OSW_IMG: {
-        LOGO: "/OSW_Logo_3.png",
+        LOGO: "/OSW_Logo_3_Transparent.png",
         LOCATIONS: "/OSW_Locations.png",
     
     
