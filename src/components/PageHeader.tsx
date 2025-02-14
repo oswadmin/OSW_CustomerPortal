@@ -15,7 +15,7 @@ import { ButtonStandard } from "./ButtonStandard";
 
 function NavMenu() {
   return (
-    <NavigationMenu className="text-blue hidden desktop:flex">
+    <NavigationMenu className="text-blue hidden desktop:flex mr-6">
       <NavigationMenuList>
 
         {/*****************************************************************/}
@@ -87,14 +87,14 @@ export default function PageHeader() {
         {/*****************************************************************/}
         {/* LOGO */}
         {/*****************************************************************/}
-        <div className='flex'>
+        <div className='flex justify-end'>
           <a href="/">
             <Image 
               src = {siteConfig.OSW_IMG.LOGO}
               alt = ""
-              width={600}
-              height={600}
-              className="scale-75 hover:scale-[80%]"
+              width={200}
+              height={200}
+              className="flex scale-100 hover:scale-105 "
             />
           </a>
         </div>

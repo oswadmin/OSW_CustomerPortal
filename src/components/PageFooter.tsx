@@ -145,16 +145,16 @@ export default function PageFooter({
           {/*****************************************************************/}          
           
 
-          <div className="flex-1 flex flex-col items-center ">
+          <div className="flex-1 flex flex-col items-center gap-y-2">
             
             {/* FOOTER LOGO*/}
             <a href="/" className='hidden desktop:flex leading-none'>
                 <Image 
                   src = {siteConfig.OSW_IMG.LOGO}
                   alt = ""
-                  width={600}
-                  height={600}
-                  className="scale-75 hover:scale-[80%]"
+                  width={200}
+                  height={200}
+                  className="scale-100 hover:scale-x-105"
                 />
             </a>
             

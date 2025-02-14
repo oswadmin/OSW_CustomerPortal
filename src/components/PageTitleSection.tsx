@@ -34,7 +34,7 @@ export function PageTitleSection({
     
         </div>
        
-        <div className="mt-4 desktop:mt-0 desktop:flex-1 flex justify-center items-center bg-orange-400">
+        <div className="mt-4 desktop:mt-0 desktop:flex-1 flex justify-end items-center bg-orange-400">
             <Image className='rounded-[12px] border-slate-200 border-[1px] shadow-lg'
               src={imgURL}
               alt="" 

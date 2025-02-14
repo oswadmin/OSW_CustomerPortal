@@ -12,6 +12,7 @@ import Image from "next/image";
 import { map } from "zod";
 import { useState, useEffect } from 'react';
 import GoogelReviews from "@/components/GoogleReview";
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 
 
 const imgH = "600";
@@ -28,7 +29,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* TITLE SECTION*/}
         {/*****************************************************************/}
-        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/Sunny.png"/>
+        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/OSW_Surface1.jpg"/>
 
         {/*****************************************************************/}
         {/* SERVICES SECTION*/}
@@ -59,7 +60,18 @@ export default function HomePage() {
 
         </PageSection>
 
+        {/*****************************************************************/}
+        {/* GALARY SECTION */}
+        {/*****************************************************************/}
+        <PageSection sectionID="Gallery" title="Gallery" subtitle="" className="bg-white ">
+          
+          <ReactCompareSlider className="rounded-2xl shadow-lg"
+            itemOne={<ReactCompareSliderImage src="./OSW_Surface1.jpg" alt="Image one" />}
+            itemTwo={<ReactCompareSliderImage src="./OSW_Surface2.jpg" alt="Image two" />}
+          />
 
+
+        </PageSection>      
         {/*****************************************************************/}
         {/* LOCATIONS SECTION */}
         {/*****************************************************************/}
@@ -114,6 +126,9 @@ export default function HomePage() {
 
 
         </PageSection>
+
+
+  
 
         {/*****************************************************************/}
         {/* ABOUT SECTION */}
