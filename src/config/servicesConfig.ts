@@ -29,7 +29,7 @@ export const servicesConfig = {
                 },
                 {
                     detailSummary:"Resealing & Regrouting",
-                    detailDescription: "The cleaning is complete, but the job's not truly done. Sealer guards against future stains and chemical damage, while fresh grout revitalizes those joints. Investing these services will pay off for years to come.",
+                    detailDescription: "The cleaning is complete, but the job's not truly done. Sealer guards against future stains and chemical damage, while fresh grout revitalizes those joints. Investing in these services will pay off for years to come.",
                     detailImageURL: siteConfig.OSW_IMG.Paver1,
                     detailImageClass:  "absolute scale-[1.9] left-[0px] top-[90px]",
                 },                    
@@ -55,17 +55,11 @@ export const servicesConfig = {
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
                 {
-                    detailSummary:"Spider Eviction",
-                    detailDescription: "Stucco sidings, with their unique texture and classic appearance, need special care to preserve their beauty. Over time, they can attract dirt and grime that’s hard to remove. Our specialized house washing methods ensure your stucco remains clean and vibrant, enhancing its durability while maintaining its distinctive look.",
+                    detailSummary:"Citrus Spider Shield",
+                    detailDescription: "Our Citrus Spider Shield isn't just a scent, it's an eviction notice! This specialized, long-lasting treatment creates a barrier spiders despise, naturally deterring them from rebuilding webs on your clean surfaces. Think of it as giving spiders a 'taste' of orange they won't forget, sending them packing!",
                     detailImageURL: siteConfig.OSW_IMG.Birdbath1,
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
-                {
-                    detailSummary:"Hardie Board",
-                    detailDescription: "Hardie Board siding is renowned for its robustness and authentic look. Yet, without proper upkeep, even the toughest Hardie Board can lose its charm. Our house washing service dives deep to clear off any muck, mildew, or marks. Once we’re done, your Hardie Board siding will not only recapture its original allure but also be primed for many more years of service.",
-                    detailImageURL: siteConfig.OSW_IMG.Paver1,
-                    detailImageClass:  "absolute scale-[1.8] left-[0px] top-[85px]",
-                }, 
             ],
         },
     },

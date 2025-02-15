@@ -8,13 +8,15 @@ import { siteConfig, messageConfig } from '@/config';
 interface PageTitleSectionProps {
   title?: string;
   imgURL?: string;
+  imgAlt?: string;
 }
 
 
 
 export function PageTitleSection({ 
   title,
-  imgURL = siteConfig.OSW_IMG.DECK1
+  imgURL = siteConfig.OSW_IMG.DECK1,
+  imgAlt = "",
 }: PageTitleSectionProps) {
   return (
     <>
@@ -37,7 +39,7 @@ export function PageTitleSection({
         <div className="mt-4 desktop:mt-0 desktop:flex-1 flex justify-end items-center bg-orange-400">
             <Image className='rounded-[12px] border-orange border-[1px] shadow-lg'
               src={imgURL}
-              alt="" 
+              alt={imgAlt} 
               width={400} 
               height={1200}
             />

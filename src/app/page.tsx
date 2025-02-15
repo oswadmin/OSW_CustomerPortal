@@ -3,16 +3,18 @@ import { CardReviews } from "@/components/CardReviews";
 import { CardServices, CardServicesv2, CardServicesv4 } from "@/components/CardServices";
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge";
 import ModalOverlay from "@/components/ModalOverlay";
-import { PageEstimateSection } from "@/components/PageEstimateSection";
+import { PageEstimateSection } from "@/components/PageSection-Estimate";
 import PageFooter from "@/components/PageFooter";
 import { PageSection } from "@/components/PageSection";
-import { PageTitleSection } from "@/components/PageTitleSection";
+import { PageTitleSection } from "@/components/PageSection-Title";
 import { servicesConfig, siteConfig } from "@/config";
 import Image from "next/image";
 import { map } from "zod";
 import { useState, useEffect } from 'react';
 import GoogelReviews from "@/components/GoogleReview";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import { ButtonMedia } from "@/components/ButtonMedia";
+import { InstagramIcon } from "lucide-react";
 
 
 const imgH = "600";
@@ -29,7 +31,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* TITLE SECTION*/}
         {/*****************************************************************/}
-        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/OSW_Surface1.jpg"/>
+        <PageTitleSection title="Soft Washing Central Ohio" imgURL="/OSW_Surface1.jpg" imgAlt="Pressure Washing Walkway"/>
 
         {/*****************************************************************/}
         {/* SERVICES SECTION*/}
@@ -83,12 +85,19 @@ export default function HomePage() {
         {/*****************************************************************/}
         <PageSection sectionID="Gallery" title="Before and After" subtitle="" className="bg-white ">
           
+
+
           <ReactCompareSlider className="rounded-2xl shadow-lg"
             itemOne={<ReactCompareSliderImage src="./OSW_Surface1.jpg" alt="Image one" />}
             itemTwo={<ReactCompareSliderImage src="./OSW_Surface2.jpg" alt="Image two" />}
           />
-
-
+        <div className="flex flex-1 justify-center text-lg align-middle items-center pt-2">
+            <p className="mr-2">Watch our transformations on </p>
+            <ButtonMedia strURL={siteConfig.OSW_Links.Instagram}>
+                  <InstagramIcon className='text-orange'/>
+            </ButtonMedia>
+        </div>
+          
         </PageSection>  
 
 
@@ -137,7 +146,7 @@ export default function HomePage() {
         {/*****************************************************************/}
         {/* ABOUT SECTION */}
         {/*****************************************************************/}
-        <PageSection sectionID="AboutUs"  title="About us" subtitle=" " className="bg-white">
+        <PageSection sectionID="About"  title="About us" subtitle=" " className="bg-white">
 
           {/*****************************************************************/}
           {/* OWNERS MESSAGE */}

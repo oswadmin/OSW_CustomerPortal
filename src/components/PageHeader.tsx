@@ -23,15 +23,15 @@ function NavMenu() {
         {/*****************************************************************/}
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-2xl font-bold">Services</NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-orange">
-            <div className="grid grid-cols-3 gap-3 p-6 w-max  ">
+          <NavigationMenuContent className="bg-gray shadow-lg">
+            <div className="grid grid-cols-3 gap-3 p-6 w-max">
               {
                 servicesConfig.OSW_Services.map((obj, index) => (
                   
                   obj.activeService ? (
 
                     <Link href={obj.url} key={`navMenuContent${index}`} legacyBehavior passHref >
-                      <NavigationMenuLink  className={` ${navigationMenuTriggerStyle()} !text-lg !font-bold` }>
+                      <NavigationMenuLink  className={` ${navigationMenuTriggerStyle()} !text-lg !font-bold hover:underline` }>
                         {obj.name}
                       </NavigationMenuLink>
                     </Link>
@@ -51,7 +51,7 @@ function NavMenu() {
               <NavigationMenuItem key={`navMenuItem${index}`}>
                 <Link href={obj.url.toString()} key={`navLink${index}`} legacyBehavior passHref >
                   <NavigationMenuLink key={`navMenuLink${index}`}  className={` ${navigationMenuTriggerStyle()} !text-2xl !font-bold` }>
-                    {obj.name}
+                    {obj.menuName}
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

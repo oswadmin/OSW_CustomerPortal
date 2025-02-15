@@ -88,7 +88,7 @@ export default function ModalMenu() {
     
             <li key={`navLi2${index}`} className="cursor-pointer  py-2">
               <Link key={`navLiLink2 ${index}`} href={obj.url.toString()} legacyBehavior passHref >
-              <span key={`navLinkSpan2${index}`} onClick={hideMenu}>{obj.name}</span>
+              <span key={`navLinkSpan2${index}`} onClick={hideMenu}>{obj.menuName}</span>
               </Link>
             </li>
             

@@ -4,16 +4,19 @@ export const navConfig = {
   
   mainNav: [
     {
-      name: 'Locations',
+      menuName: 'Locations',
       url: '/#Locations',
+      sectionName: 'Locations',
     },
     {
-      name: 'Reviews',
+      menuName: 'Reviews',
       url: '/#Reviews',
+      sectionName: 'Locations',
     },
     {
-      name: 'About',
-      url: '/#AboutUs',
+      menuName: 'About',
+      url: '/#About',
+      sectionName: 'Locations',
     }
   ],
 

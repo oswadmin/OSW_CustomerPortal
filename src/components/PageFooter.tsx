@@ -9,6 +9,7 @@ import { ButtonMedia } from './ButtonMedia';
 import { CaseLower, FacebookIcon, InstagramIcon, MailIcon, ArrowUp, PhoneIcon } from 'lucide-react';
 import { siteConfig, servicesConfig } from '@/config';
 import { ButtonStandard } from './ButtonStandard';
+import { ScrollPage } from '@/lib/pageScroll';
 
 interface PageFooterProps {
   showTop?: boolean;
@@ -72,23 +73,7 @@ export default function PageFooter({
 
 
   const handleScrollToTop = () => {
-    const scrollDuration = 500; // Adjust the duration as needed
-    const scrollStart = window.scrollY;
-    const scrollEnd = 0;
-    const startTime = Date.now();
-
-    const animateScroll = () => {
-      const elapsedTime = Date.now() - startTime;
-      const progress = Math.min(elapsedTime / scrollDuration, 1);
-      const scrollPosition = scrollStart + (scrollEnd - scrollStart) * progress;
-      window.scrollTo(0, scrollPosition);
-
-      if (progress < 1) {
-        requestAnimationFrame(animateScroll);
-      }
-    };
-
-    animateScroll();
+    ScrollPage({})
   };
 
 

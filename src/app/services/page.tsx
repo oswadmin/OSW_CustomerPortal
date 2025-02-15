@@ -2,19 +2,14 @@
 
 import { CardServices, CardServicesv2, CardServicesv3, CardServicesv4 } from "@/components/CardServices";
 import ModalOverlay from "@/components/ModalOverlay";
-import { PageEstimateSection } from "@/components/PageEstimateSection";
+import { PageEstimateSection } from "@/components/PageSection-Estimate";
 import PageFooter from "@/components/PageFooter";
 import { PageSection } from "@/components/PageSection";
-import { PageTitleSection } from "@/components/PageTitleSection";
+import { PageTitleSection } from "@/components/PageSection-Title";
 import { servicesConfig } from "@/config/servicesConfig";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-
-
-
-
-
 
 
 function ServicePage() {
