@@ -35,7 +35,7 @@ export function PageTitleSection({
         </div>
        
         <div className="mt-4 desktop:mt-0 desktop:flex-1 flex justify-end items-center bg-orange-400">
-            <Image className='rounded-[12px] border-slate-200 border-[1px] shadow-lg'
+            <Image className='rounded-[12px] border-orange border-[1px] shadow-lg'
               src={imgURL}
               alt="" 
               width={400} 
@@ -61,7 +61,7 @@ export function PageTitleSection({
       </CardWhyUsSmall> 
       <CardWhyUsSmall title="Eco-Friendly Options">
       <Image
-          src={siteConfig.OSW_IMG.IconLeaf}
+          src={siteConfig.OSW_IMG.IconEco}
           alt=""
           width={50}
           height={50}
@@ -80,7 +80,7 @@ export function PageTitleSection({
       </CardWhyUsSmall>
       <CardWhyUsSmall title="Satisfaction Guaranteed">
         <Image
-            src={siteConfig.OSW_IMG.IconPenPaper}
+            src={siteConfig.OSW_IMG.IconSatisfaction}
             alt=""
             width={50}
             height={50}

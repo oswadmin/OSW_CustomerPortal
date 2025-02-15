@@ -16,7 +16,7 @@
 }
 
 .form-input {
-  @apply rounded-[12px] text-blue p-2 text-xl border-[3px] border-blue_dark
+  @apply rounded-[12px] text-blue p-2 text-xl border-[1px] border-blue_dark shadow-lg
 }
 
 .gradient-text {

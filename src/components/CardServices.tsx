@@ -232,11 +232,11 @@ export function CardServicesv4({
         
 
         {/* DESKTOP CARD */}
-        <div className='relative hidden bg-orange desktop:flex w-[235px] h-[400PX] justify-center rounded-xl'>
+        <div className='relative hidden desktop:flex w-[235px] h-[400PX] justify-center rounded-xl shadow-lg mb-2'>
 
           {/*  */}
           {cardURL === "" ? 
-            <div className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 ">
+            <div className="absolute w-full h-full rounded-xl text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 ">
             </div>
           : (
             <Button className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 " asChild>
@@ -250,7 +250,7 @@ export function CardServicesv4({
           )}
 
           {/* CARD IMAGE */}
-          <div className='flex w-full h-full rounded-xl shadow-lg relative overflow-hidden '>
+          <div className='flex w-full h-full rounded-xl shadow-lg relative overflow-hidden border-[1px] border-orange '>
             {children}
           </div>
          
@@ -259,11 +259,11 @@ export function CardServicesv4({
 
         {cardDesc === "" ? "" : (
           <>
-            <div className="text-blue_dark card-service-text text-center text-3xl font-bold">
+            <div className="text-blue_dark card-service-text text-center text-3xl font-bold mb-2">
              {cardTitle}
             </div>
 
-            <div className="flex bg-white border-[1px] border-slate-200 rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg ">
+            <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg ">
               {cardDesc}
             </div>
             
@@ -277,12 +277,12 @@ export function CardServicesv4({
 
         {cardURL === "" ? 
           <>
-            <div className='flex flex-1 justify-center'>
-              <div className='flex w-[235px] h-[400PX] rounded-xl shadow-lg relative overflow-hidden bg-orange justify-center'>
+            <div className='flex flex-1 justify-center '>
+              <div className='flex w-[235px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
                 {children}
               </div>
             </div>
-            <div className="text-center flex-1 mt-2 justify-center items-center text-xl font-bold card-service-text">
+            <div className="text-center flex-1 mt-2 mb-2 justify-center items-center text-xl font-bold card-service-text">
               {cardTitle}
             </div>
           </>
@@ -294,7 +294,7 @@ export function CardServicesv4({
         
 
         {cardDesc === "" ? "" : (
-          <div className="flex bg-white border-[1px] border-slate-200 rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg mb-20">
+          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg mb-20">
             {cardDesc}
           </div>
         )} 

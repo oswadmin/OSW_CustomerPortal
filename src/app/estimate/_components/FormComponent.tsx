@@ -100,7 +100,7 @@ export function FormComponent() {
             </>
         ) : ( 
             <PageSection title="Estimate Request" className="bg-white -mt-20" >
-                <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] border-[3px] border-blue" onSubmit={handleSubmit} action={handleAction}>
+                <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] shadow-lg border-[1px] border-blue" onSubmit={handleSubmit} action={handleAction}>
 
                 <div className="flex flex-col desktop:flex-row gap-4">
                     <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
@@ -120,7 +120,7 @@ export function FormComponent() {
                         
                         selectProps={{
                             placeholder: 'Property Address*',
-                            className: "flex w-full rounded-[12px] text-blue text-xl border-[3px] border-blue_dark ",
+                            className: "flex w-full rounded-[12px] text-blue text-xl border-[1px] border-blue_dark shadow-lg",
                             onChange: (selectedOption) => {
                                 if (selectedOption) {
                                 setSelectedAddress(selectedOption.label);
@@ -224,7 +224,7 @@ function SubmitButton(){
     const {pending } = useFormStatus()
 
     return (
-        <button  type="submit" className="bg-blue text-orange `bg-orange  hover:scale-105 rounded-[12px]  border-2 border-white shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2" disabled={pending}>
+        <button  type="submit" className="bg-green-600 text-white `bg-orange  hover:scale-105 rounded-[12px]  border-[1px] border-blue_dark shadow-md w-full desktop:w-1/4 text-2xl font-bold p-2" disabled={pending}>
             {pending ? "Saving..." : "Submit"}
         </button>
     )

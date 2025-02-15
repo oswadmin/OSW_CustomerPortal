@@ -47,6 +47,8 @@ export const siteConfig = {
         IconPenPaper: "/OSW_Icon_PenPaper.png",
         IconShield: "/OSW_Icon_Shield.png",
         IconLeaf: "/OSW_Icon_Leaf.png",
+        IconEco: "/OSW_Icon_Eco1.png",
+        IconSatisfaction: "/OSW_Icon_Satisfaction.png",
 
         Paver1: "/OSW_Paver1.png",
 

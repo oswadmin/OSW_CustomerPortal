@@ -12,24 +12,24 @@ export const servicesConfig = {
         service: {
             titleMsg: "Surface Pressure Washing",
             titleImg: siteConfig.OSW_IMG.SURFACE2,
-            serviceMsg: "Surfaces We Specialize In...",
+            serviceMsg: "Your Surfaces Specialist...",
             estimateMsg: "Ready to peel away the dirt?",
             details: [
                 {
-                    detailSummary:"Driveways, Walkways, Patios",
-                    detailDescription: "Driveways, walkways, and patios, are prone to staining and can accumulate grime over time. We target and remove the toughest stains, like oil and rust, for a fresher concrete appearance.",
+                    detailSummary:"Driveways, Walkways, Patios, Pool Decks",
+                    detailDescription: "Accumulating grime seems to be a superpower of hard surfaces.  While there is no miracle to keep them clean forever, with our refined TPT proces you'll get the longest lasting results possible.",
                     detailImageURL: siteConfig.OSW_IMG.SURFACE4,
                     detailImageClass:  "absolute scale-[1.3] left-[0px] top-[40px]",
                 },
                 {
-                    detailSummary:"Brick, Stone, Metal",
-                    detailDescription: "Whether brick, stone, or composite decking, our team adjusts the pressure and cleaning agents accordingly without damaging the material.",
+                    detailSummary:"Stains and Chemicals",
+                    detailDescription: "Often, it's more than just grime that makes your surfaces look bad.  We can treat oil, paint, rust, tire and hard water marks, sometimes removing them entirely.",
                     detailImageURL: siteConfig.OSW_IMG.SURFACE8,
                     detailImageClass:  "absolute scale-[2.3] left-[10px] top-[110px]",
                 },
                 {
-                    detailSummary:"Paver Regrouting",
-                    detailDescription: "We effectively strip unwanted paint and markings from various surfaces, restoring the original look of the affected area.",
+                    detailSummary:"Resealing & Regrouting",
+                    detailDescription: "The cleaning is complete, but the job's not truly done. Sealer guards against future stains and chemical damage, while fresh grout revitalizes those joints. Investing these services will pay off for years to come.",
                     detailImageURL: siteConfig.OSW_IMG.Paver1,
                     detailImageClass:  "absolute scale-[1.9] left-[0px] top-[90px]",
                 },                    
@@ -41,7 +41,7 @@ export const servicesConfig = {
         name: 'Siding',
         url: '/services?service=siding',
         src: siteConfig.OSW_IMG.SIDING1,
-        className: "absolute scale-[2.1] left-[-120px] top-[60px]",
+        className: "absolute scale-[2.2] left-[-130px] top-[60px]",
         service: {
             titleMsg: "Siding Soft Washing",
             titleImg: siteConfig.OSW_IMG.SIDING1,
@@ -49,13 +49,13 @@ export const servicesConfig = {
             estimateMsg: "Ready to peel away the dirt?",
             details: [
                 {
-                    detailSummary:"Vinyl",
+                    detailSummary:"Vinyl, Stucco, Hardie Board",
                     detailDescription: "Vinyl siding looks good, it’s versatile, and has a great lifespan. However, it does need to be maintained in order to be able to reach its full durability. Our house washing service will remove any staining, moss, and other residues to have the siding on your home looking brand new.",
                     detailImageURL: siteConfig.OSW_IMG.Birdbath1,
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
                 {
-                    detailSummary:"Stucco",
+                    detailSummary:"Spider Eviction",
                     detailDescription: "Stucco sidings, with their unique texture and classic appearance, need special care to preserve their beauty. Over time, they can attract dirt and grime that’s hard to remove. Our specialized house washing methods ensure your stucco remains clean and vibrant, enhancing its durability while maintaining its distinctive look.",
                     detailImageURL: siteConfig.OSW_IMG.Birdbath1,
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
@@ -78,18 +78,18 @@ export const servicesConfig = {
         service: {
             titleMsg: "Deck Soft  Washing",
             titleImg: siteConfig.OSW_IMG.DECK1,
-            serviceMsg: "We clean all deck surfaces...",
+            serviceMsg: "Your Deck Druids...",
             estimateMsg: "Bring back the orange-like gleam",
             details: [
                 {
                     detailSummary:"Wood, Composite, Vinyl",
-                    detailDescription: "Regular wood decking washing is crucial to maintain its longevity and appearance. Removing dirt, mold, and mildew not only enhances its beauty but also prevents potential structural damage, ensuring a safe and inviting outdoor space for years to come.",
+                    detailDescription: "We promise to never use high pressure on any deck material.  You can have peace of mind that your deck will not be damaged by our gentle soft deck wash service.",
                     detailImageURL: siteConfig.OSW_IMG.DECK1,
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
                 {
                     detailSummary:"Brightening, Sealing, Restaining",
-                    detailDescription: "People call us the Deck Druids, because of the magical transformations we can bring to your outdoor spaces.  Our experts understand the science of wood care,  and have a knack for restoring its natural beauty. Whether your looking to brighten, seal, or restain, your deck, we'll make it look as though it were touched by an enchantment.",
+                    detailDescription: "People are amazed at the magical transformations we can bring to your outdoor spaces.  Our experts understand the science of wood care,  and have a knack for restoring its natural beauty. Whether your looking to brighten, seal, or restain, your deck, we'll make it look as though it were touched by an enchantment.",
                     detailImageURL: siteConfig.OSW_IMG.DECK1,
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
@@ -109,22 +109,16 @@ export const servicesConfig = {
             estimateMsg: "Ready to bring a fresh gleam to your fence?",
             details: [
                 {
-                    detailSummary:"Wood",
+                    detailSummary:"Wood, Vinyl, Metal",
                     detailDescription: "Regular wood fence washing is essential to preserve its beauty and integrity. Removing dirt, mildew, and stains through professional cleaning not only enhances the fence's curb appeal but also prevents potential decay, ensuring a longer-lasting and aesthetically pleasing addition to your property. comfortable living environment during hot and dry weather.",
-                    detailImageURL: siteConfig.OSW_IMG.FenceWood,
+                    detailImageURL: siteConfig.OSW_IMG.FenceVinyl,
                     detailImageClass:  "absolute scale-[2.1] left-[60px] top-[100px]",
                 },
                 {
-                    detailSummary:"Vinyl",
+                    detailSummary:"Staining, Resealing, Replacing",
                     detailDescription: "Regular vinyl fence washing is essential to maintain its appearance and durability. Professional cleaning removes dirt, mold, and stains, preventing degradation and ensuring your fence remains a lasting, low-maintenance asset to your property.",
-                    detailImageURL: siteConfig.OSW_IMG.FenceVinyl,
+                    detailImageURL: siteConfig.OSW_IMG.FenceWood,
                     detailImageClass:  "absolute scale-[2.0] left-[60px] top-[110px]",
-                },
-                {
-                    detailSummary:"Metal",
-                    detailDescription: "Regular metal fence washing is vital to maintain its appearance and structural integrity. Professional cleaning, targeting rust, dirt, and pollutants, not only enhances the fence's visual appeal but also prevents corrosion, ensuring a longer-lasting and resilient boundary for your property.",
-                    detailImageURL: siteConfig.OSW_IMG.FenceMetal,
-                    detailImageClass:  "absolute scale-[3.0] left-[60px] top-[130px]",
                 },
             ],
         },
@@ -202,7 +196,7 @@ export const servicesConfig = {
         name: 'Bins',
         url: '/services?service=bins',
         src: siteConfig.OSW_IMG.WasteBin1,
-        className: "absolute scale-[1.8] left-[00px] top-[70px]",
+        className: "absolute scale-[1.8] left-[00px] top-[72px]",
         service: {
             titleMsg: "Waste Bin Pressure Washing",
             titleImg: siteConfig.OSW_IMG.WasteBin1,
@@ -248,25 +242,25 @@ export const servicesConfig = {
             titleMsg: "Commercial Services",
             titleImg: siteConfig.OSW_IMG.Commercial1,
             serviceMsg: "A trusted partner...",
-            estimateMsg: "Orange you glad there's a way to brighten your business?",
+            estimateMsg: "Brighten your business!",
             details: [
                 {
                     detailSummary:"Cost Effective",
                     detailDescription: "Our competitive pricing combined with our proven ability to increase property value means you're investing in, not just spending on, exterior maintenance. We offer flexible packages tailored to your budget, ensuring maximum ROI.",
-                    detailImageURL: siteConfig.OSW_IMG.Birdbath1,
-                    detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
+                    detailImageURL: "/OSW_Commercial_CostEffective.png",
+                    detailImageClass:  "absolute scale-[1.1] left-[0px] top-[10px]",
                 },
                 {
                     detailSummary:"Time  Efficient",
-                    detailDescription: "We understand your business runs on tight schedules. Our efficient, streamlined process ensures minimal disruption to your operations. Our teams work swiftly and meticulously to deliver exceptional results.",
-                    detailImageURL: siteConfig.OSW_IMG.Birdbath1,
-                    detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
+                    detailDescription: "We understand your business runs on tight schedules. Our teams work swiftly and meticulously to deliver exceptional results at minimal disruption to your operations. ",
+                    detailImageURL: "/OSW_Commercial_TimeEfficient.png",
+                    detailImageClass:  "absolute scale-[1.2] left-[5px] top-[70px]",
                 },
                 {
                     detailSummary:"Quality",
                     detailDescription: "Our experienced technicians use industry standard equipment and proven techniques to deliver superior results. We pay meticulous attention to detail, to ensure your property looks its best.",
-                    detailImageURL: siteConfig.OSW_IMG.Birdbath1,
-                    detailImageClass:  "absolute scale-[1.8] left-[0px] top-[85px]",
+                    detailImageURL: "/OSW_Commercial_Quality.png",
+                    detailImageClass:  "absolute scale-[1.1] left-[0px] top-[0x]",
                 }, 
             ],
         },

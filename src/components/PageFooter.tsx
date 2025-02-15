@@ -154,7 +154,7 @@ export default function PageFooter({
                   alt = ""
                   width={200}
                   height={200}
-                  className="scale-100 hover:scale-x-105"
+                  className="scale-100 hover:scale-105"
                 />
             </a>
             

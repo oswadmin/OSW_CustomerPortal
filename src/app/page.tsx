@@ -60,26 +60,15 @@ export default function HomePage() {
 
         </PageSection>
 
+    
         {/*****************************************************************/}
-        {/* GALARY SECTION */}
-        {/*****************************************************************/}
-        <PageSection sectionID="Gallery" title="Gallery" subtitle="" className="bg-white ">
-          
-          <ReactCompareSlider className="rounded-2xl shadow-lg"
-            itemOne={<ReactCompareSliderImage src="./OSW_Surface1.jpg" alt="Image one" />}
-            itemTwo={<ReactCompareSliderImage src="./OSW_Surface2.jpg" alt="Image two" />}
-          />
-
-
-        </PageSection>      
-        {/*****************************************************************/}
-        {/* LOCATIONS SECTION */}
+        {/* FAQs */}
         {/*****************************************************************/}
         <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-white">
         <div className="flex flex-col desktop:flex-row">
 
-            <div className="flex flex-1 flex-col justify-center items-center p-6">
-            <p>Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!</p>
+          <div className="flex flex-1 flex-col text-lg justify-center items-center p-6">
+            Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!
           </div>
           
 
@@ -87,6 +76,21 @@ export default function HomePage() {
 
 
         </PageSection>
+
+
+        {/*****************************************************************/}
+        {/* GALARY SECTION */}
+        {/*****************************************************************/}
+        <PageSection sectionID="Gallery" title="Before and After" subtitle="" className="bg-white ">
+          
+          <ReactCompareSlider className="rounded-2xl shadow-lg"
+            itemOne={<ReactCompareSliderImage src="./OSW_Surface1.jpg" alt="Image one" />}
+            itemTwo={<ReactCompareSliderImage src="./OSW_Surface2.jpg" alt="Image two" />}
+          />
+
+
+        </PageSection>  
+
 
         {/*****************************************************************/}
         {/* LOCATIONS SECTION */}
@@ -110,7 +114,7 @@ export default function HomePage() {
                 alt="" 
                 width={700}
                 height={700}
-                className='rounded-[12px] border-slate-200 border-[1px] w-auto h-auto shadow-lg'
+                className='rounded-[12px] border-orange border-[1px] w-auto h-auto shadow-lg'
               />
             
             </div>
@@ -146,7 +150,7 @@ export default function HomePage() {
 
             <div className="flex order-1 md:order-2">
               
-              <div className='w-[250px] h-[250px] rounded-full border-4 border-orange shadow-md overflow-hidden'>
+              <div className='w-[250px] h-[250px] rounded-full border-[1px] border-orange shadow-lg overflow-hidden'>
                 <Image 
                   src = {siteConfig.OSW_IMG.PROFILE_DYLAN}
                   alt = ""
@@ -166,7 +170,7 @@ export default function HomePage() {
           {/*****************************************************************/}
           <div className="container flex flex-col desktop:flex-row justify-between gap-6 items-center ">
           <div className="flex lg:w-1/3 sm:flex-col">
-             <div className='w-[250px] h-[250px] rounded-full border-4 border-orange shadow-md overflow-hidden'>
+             <div className='w-[250px] h-[250px] rounded-full border-[1px]] border-orange shadow-lg overflow-hidden'>
                 <Image 
                   src = {siteConfig.OSW_IMG.Edger1}
                   alt = ""
@@ -191,16 +195,54 @@ export default function HomePage() {
           <div className="container flex flex-wrap justify-center gap-4 ">
             <CardWhyUsLarge 
               title='Quick & Easy'
-              cardText="Customer experience is our #1 goal.  We make it a breaze to work with us" />
+              cardText="Customer experience is our #1 goal.  We make it a breaze to work with us">
+                <Image
+                    src={siteConfig.OSW_IMG.IconLightning}
+                    alt=""
+                    width={50}
+                    height={50}
+                    className="flex scale-[1.0] left-[0px] top-[0px]"
+                  /> 
+            </CardWhyUsLarge>
+            
+            
             <CardWhyUsLarge 
               title='Eco-Friendly Options'
-              cardText="We prioritize both the health of your property and the planet" />
+              cardText="We prioritize both the health of your property and the planet">
+                <Image
+                  src={siteConfig.OSW_IMG.IconEco}
+                  alt=""
+                  width={50}
+                  height={50}
+                  className="scale-[.9] left-[0px] top-[0px]"
+                /> 
+            </CardWhyUsLarge>
+            
+            
             <CardWhyUsLarge 
               title='Licensed & Insured'
-              cardText="Trust and confidence in the team you call" />
+              cardText="Trust and confidence in the team you call">
+                <Image
+                            src={siteConfig.OSW_IMG.IconShield}
+                            alt=""
+                            width={50}
+                            height={50}
+                            className="scale-[.9] left-[0px] top-[0px]"
+                          /> 
+            </CardWhyUsLarge>
+            
+            
             <CardWhyUsLarge 
               title='Satisfaction Guaranteed'
-              cardText="We stand behind our services 100%" />
+              cardText="We stand behind our services 100%">
+                <Image
+                            src={siteConfig.OSW_IMG.IconSatisfaction}
+                            alt=""
+                            width={50}
+                            height={50}
+                            className="scale-[.9] left-[0px] top-[0px]"
+                          /> 
+            </CardWhyUsLarge>
           </div>
         </PageSection>
 
