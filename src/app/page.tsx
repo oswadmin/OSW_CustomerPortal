@@ -15,7 +15,7 @@ import GoogelReviews from "@/components/GoogleReview";
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import { ButtonMedia } from "@/components/ButtonMedia";
 import { InstagramIcon } from "lucide-react";
-
+import { Metadata } from "next";
 
 const imgH = "600";
 let mapCount = 0;
