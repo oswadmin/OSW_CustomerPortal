@@ -1,7 +1,7 @@
 import { servicesConfig } from "@/config/servicesConfig";
 
 export default function sitemap() {
-    const baseUrl = "https://orangesoftwash.com";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
     
     const services = servicesConfig.OSW_Services.map((obj, index) => {
                   
