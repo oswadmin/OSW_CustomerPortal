@@ -7,6 +7,7 @@ import Link from 'next/link';
 interface ButtonStandardProps {
   strURL?: string;
   strTarget?: string;
+  aria_label?: string;
   children: ReactNode;
   className?: string;
 }
@@ -14,6 +15,7 @@ interface ButtonStandardProps {
 export function ButtonStandard({ 
   strURL = '',
   strTarget = '',
+  aria_label = '',
   children, 
   className = '' 
 }: ButtonStandardProps) {
@@ -21,7 +23,7 @@ export function ButtonStandard({
     <>
 
       <Button className={`bg-orange hover:bg-orange hover:scale-105 rounded-[12px]  text-blue border-[1px] border-blue_dark shadow-lg font-bold ${className}`} asChild>
-        <a href={strURL} target={strTarget} rel="noopener noreferrer" className='text-wrap' >
+        <a href={strURL} target={strTarget} rel="noopener noreferrer" className='text-wrap' aria-label={aria_label}>
           {children}
         </a>
       </Button> 

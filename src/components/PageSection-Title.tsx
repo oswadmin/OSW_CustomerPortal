@@ -41,7 +41,8 @@ export function PageTitleSection({
               src={imgURL}
               alt={imgAlt} 
               width={400} 
-              height={1200}
+              height={300}
+              priority
             />
 
 
@@ -55,38 +56,38 @@ export function PageTitleSection({
       <CardWhyUsSmall title="Quick & Easy">
         <Image
           src={siteConfig.OSW_IMG.IconLightning}
-          alt=""
+          alt="Quick & Easy"
           width={50}
           height={50}
-          className="scale-[1.0] left-[0px] top-[0px]"
+          className=""
         />  
       </CardWhyUsSmall> 
       <CardWhyUsSmall title="Eco-Friendly Options">
       <Image
           src={siteConfig.OSW_IMG.IconEco}
-          alt=""
+          alt="Eco-Friendly Options"
           width={50}
           height={50}
-          className="flex scale-[1.0] left-[0px] top-[0px]"
+          className=""
         /> 
       </CardWhyUsSmall>
 
       <CardWhyUsSmall title="Licensed & Insured">
         <Image
             src={siteConfig.OSW_IMG.IconShield}
-            alt=""
+            alt="Licensed & Insured"
             width={50}
             height={50}
-            className="scale-[.9] left-[0px] top-[0px]"
+            className=""
           /> 
       </CardWhyUsSmall>
       <CardWhyUsSmall title="Satisfaction Guaranteed">
         <Image
             src={siteConfig.OSW_IMG.IconSatisfaction}
-            alt=""
+            alt="Satisfaction Guaranteed"
             width={50}
             height={50}
-            className="scale-[1.0] left-[0px] top-[0px]"
+            className=""
           />         
       </CardWhyUsSmall>
     </div>

@@ -15,7 +15,7 @@ export function CardWhyUsSmall({
     <>
       <div className="flex flex-row items-center">
           
-          <div className="h-[50px] w-[50px]">
+          <div className="h-[50px] w-[50px] relative">
             {children}
           </div>
 

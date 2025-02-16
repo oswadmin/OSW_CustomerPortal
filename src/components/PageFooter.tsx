@@ -133,33 +133,33 @@ export default function PageFooter({
           <div className="flex-1 flex flex-col items-center gap-y-2">
             
             {/* FOOTER LOGO*/}
-            <a href="/" className='hidden desktop:flex leading-none'>
+            <a href="/" className='hidden desktop:flex leading-none' aria-label='Orange Soft Wash Home'>
                 <Image 
                   src = {siteConfig.OSW_IMG.LOGO}
-                  alt = ""
+                  alt = "Orange Soft Wash Logo, Home"
                   width={200}
-                  height={200}
+                  height={197}
                   className="scale-100 hover:scale-105"
                 />
             </a>
             
             {/* MEDIA BUTTONS CONTAINER */}
-            <div className='hidden desktop:flex justify-center '> 
+            <div className='hidden desktop:flex justify-center'> 
 
               {/* INSTAGRAM BUTTON */}
-              <ButtonMedia strURL={siteConfig.OSW_Links.Instagram}>
+              <ButtonMedia strURL={siteConfig.OSW_Links.Instagram} aria_label='Instagram'>
                 <InstagramIcon className='text-orange'/>
               </ButtonMedia>
               
               {/* FACEBOOK BUTTON */}
-              <ButtonMedia strURL={siteConfig.OSW_Links.Facebook}>
+              <ButtonMedia strURL={siteConfig.OSW_Links.Facebook} aria_label='Facebook'>
                 <FacebookIcon className='text-orange'/>
               </ButtonMedia>
               
             </div>
             
             {/* LOCATIONS LINK */}
-            <Link href="/#Locations" className='hidden desktop:flex text-blue font-bold text-lg hover:scale-105'>Service Locations</Link>
+            <Link href="/#Locations" className='hidden desktop:flex text-blue font-bold text-lg hover:scale-105' aria-label='Service Locations'>Service Locations</Link>
 
              {/* COPYWRIGHT TEXT */}
             <div className='flex text-sm text-center text-blue font-semibold'>
@@ -181,7 +181,7 @@ export default function PageFooter({
                 servicesConfig.OSW_Services.map((obj, index) => (
 
                   obj.activeService ? (
-                   <Link key={obj.name} href={obj.url} className='hover:scale-105'>{obj.name}</Link>
+                   <Link href={obj.url} key={`MenuFooterServiceLink${index}`} className='hover:scale-105' aria-label={obj.aria_label}>{obj.name}</Link>
                   ) : null
                   
                 ))
@@ -198,7 +198,7 @@ export default function PageFooter({
             
             <div className='flex items-center pl-6'>
                {/* PHONE BUTTON */}
-               <ButtonMedia strURL={`tel:${siteConfig.OSW_Phone}`}>
+               <ButtonMedia strURL={`tel:${siteConfig.OSW_Phone}`} aria_label='Contact sales by phone'>
                 <PhoneIcon className="w-6 h-6 text-orange" />
               </ButtonMedia>
               
@@ -208,8 +208,8 @@ export default function PageFooter({
             </div>
             
             <div className='flex items-center pl-6'>
-              {/* PHONE BUTTON */}
-              <ButtonMedia strURL={`mailto:${siteConfig.OSW_Email_Sales}`}>
+              {/* Mail BUTTON */}
+              <ButtonMedia strURL={`mailto:${siteConfig.OSW_Email_Sales}`} aria_label='Contact sales by email'>
                 <MailIcon className="w-6 h-6 text-orange" />
               </ButtonMedia>
               <a href={`mailto:${siteConfig.OSW_Email_Sales}`} className='hover:scale-105'>

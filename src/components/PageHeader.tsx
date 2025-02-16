@@ -30,8 +30,8 @@ function NavMenu() {
                   
                   obj.activeService ? (
 
-                    <Link href={obj.url} key={`navMenuContent${index}`} legacyBehavior passHref >
-                      <NavigationMenuLink  className={` ${navigationMenuTriggerStyle()} !text-lg !font-bold hover:underline` }>
+                    <Link href={obj.url} key={`MenuDesktopLink${index}`} legacyBehavior passHref >
+                      <NavigationMenuLink key={`MenuDesktopNavMenuLink${index}`}  className={` ${navigationMenuTriggerStyle()} !text-lg !font-bold hover:underline` }>
                         {obj.name}
                       </NavigationMenuLink>
                     </Link>
@@ -49,8 +49,8 @@ function NavMenu() {
           navConfig.mainNav.map((obj, index) => (
 
               <NavigationMenuItem key={`navMenuItem${index}`}>
-                <Link href={obj.url.toString()} key={`navLink${index}`} legacyBehavior passHref >
-                  <NavigationMenuLink key={`navMenuLink${index}`}  className={` ${navigationMenuTriggerStyle()} !text-2xl !font-bold` }>
+                <Link href={obj.url.toString()} key={`MenuDesktopLink${index}`} legacyBehavior passHref >
+                  <NavigationMenuLink key={`MenuDesktopNavMenuLink${index}`}  className={` ${navigationMenuTriggerStyle()} !text-2xl !font-bold` }>
                     {obj.menuName}
                   </NavigationMenuLink>
                 </Link>
@@ -88,13 +88,14 @@ export default function PageHeader() {
         {/* LOGO */}
         {/*****************************************************************/}
         <div className='flex justify-end'>
-          <a href="/">
+          <a href="/" aria-label="Orange Soft Wash Home">
             <Image 
               src = {siteConfig.OSW_IMG.LOGO}
-              alt = ""
+              alt = "Orange Soft Wash Logo, Home"
               width={200}
-              height={200}
-              className="flex scale-100 hover:scale-105 "
+              height={197}
+              className="hover:scale-105 "
+              priority
             />
           </a>
         </div>

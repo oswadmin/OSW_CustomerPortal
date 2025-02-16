@@ -16,6 +16,7 @@ import { ButtonStandard } from './ButtonStandard';
 import { getPlaceDetails, PlaceDetails } from '@/lib/google-places';
 import GoogleReviewCard from './GoogleReviewCard';
 import SvgGoogleLogo from './SvgGoogleLogo';
+import { randomUUID } from 'crypto';
 
 
 interface GoogleReviewsProps {
@@ -125,8 +126,8 @@ export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
       
           {placeDetails.reviews.map((review, index) => (
             <>
-              <SwiperSlide>
-                <GoogleReviewCard key={index} review={review} />
+              <SwiperSlide key={`GoogleReview_${index}`} >
+                <GoogleReviewCard key={`GoogleReview_1.${index}`} review={review} />
               
               </SwiperSlide>
               {/*  */}

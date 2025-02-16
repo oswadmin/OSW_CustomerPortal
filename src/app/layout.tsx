@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import PageHeader from "@/components/PageHeader";
 
 import ModalWelcome from "@/components/ModalWelcome";
-import ModalMenu from "@/components/ModalMenu";
+import ModalMenu from "@/components/MenuMobileTop";
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });

@@ -10,7 +10,7 @@ interface GoogleReviewCardProps {
 export default function GoogleReviewCard({review}: GoogleReviewCardProps) {
 
   return (
-    <div className="bg-white rounded-3xl shadow-lg m-16 p-2 desktop:p-6 flex flex-col justify-between">
+    <div className="bg-white rounded-3xl shadow-lg m-16 p-2 desktop:p-6 flex flex-col justify-between"  >
       <div>
         <div className="hidden items-center mb-4 desktop:flex">
           <StarRatings

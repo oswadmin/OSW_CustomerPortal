@@ -7,6 +7,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Surfaces',
         url: '/services?service=surfaces',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.SURFACE3,
         className: "absolute scale-[2.2] left-[-130px] top-[40px]",
         service: {
@@ -40,6 +41,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Siding',
         url: '/services?service=siding',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.SIDING1,
         className: "absolute scale-[2.2] left-[-130px] top-[60px]",
         service: {
@@ -67,6 +69,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Decks',
         url: '/services?service=decks',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.DECK1,
         className: "absolute scale-[5.1] left-[100px] top-[-140px]",
         service: {
@@ -94,6 +97,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Fences',
         url: '/services?service=fences',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.FenceWood,
         className: "absolute scale-[2.2] left-[0px] top-[105px]",
         service: {
@@ -121,6 +125,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Roofs',
         url: '/services?service=roofs',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.Roof1,
         className: "absolute scale-[1.7] left-[-62px] top-[50px]",
         service: {
@@ -142,6 +147,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Gutters',
         url: '/services?service=gutters',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.Gutters1,
         className: "absolute scale-[3.3] left-[-3 0px] top-[120px]",
         service: {
@@ -175,6 +181,7 @@ export const servicesConfig = {
         activeService: false,
         name: 'Boats & RVs',
         url: '/services?service=boatrv',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.SURFACE2,
         className: "absolute scale-[3.0] left-[60px] top-[40px]",
         service: {
@@ -189,6 +196,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Bins',
         url: '/services?service=bins',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.WasteBin1,
         className: "absolute scale-[1.8] left-[00px] top-[72px]",
         service: {
@@ -216,6 +224,7 @@ export const servicesConfig = {
         activeService: false,
         name: 'Graffiti',
         url: '/services?service=graffiti',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.SURFACE2,
         className: "absolute scale-[3.0] left-[60px] top-[40px]",
         service: {
@@ -230,6 +239,7 @@ export const servicesConfig = {
         activeService: true,
         name: 'Commercial',
         url: '/services?service=commercial',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.Commercial1,
         className: "absolute scale-[1.85] left-[-20px] top-[90px]",
         service: {
@@ -263,6 +273,7 @@ export const servicesConfig = {
         activeService: false,
         name: 'Windows',
         url: '/services?service=siding',
+        aria_label: "Surface Pressure Washing",
         src: siteConfig.OSW_IMG.SIDING1,
         className: "absolute scale-[2.5] left-[-120px] top-[40px]",
         service: {

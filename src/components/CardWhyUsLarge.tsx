@@ -17,8 +17,8 @@ export function CardWhyUsLarge({
     <>
       <div className="flex flex-col w-[220px]
       rounded-xl border-[1px] shadow-lg border-orange gap-y-4  p-2">
-          <div className='flex h-[50px] justify-center'>
-          <div className="flex ">
+          <div className='flex h-[50px] justify-center relative'>
+          <div className="flex h-[50px] w-[50px] relative">
             {children}
           </div>
           </div>

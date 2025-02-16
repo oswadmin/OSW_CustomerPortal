@@ -2,7 +2,7 @@
 import { CardReviews } from "@/components/CardReviews";
 import { CardServices, CardServicesv2, CardServicesv4 } from "@/components/CardServices";
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge";
-import ModalOverlay from "@/components/ModalOverlay";
+import ModalOverlay from "@/components/MenuMobileBottom";
 import { PageEstimateSection } from "@/components/PageSection-Estimate";
 import PageFooter from "@/components/PageFooter";
 import { PageSection } from "@/components/PageSection";
@@ -44,7 +44,7 @@ export default function HomePage() {
             servicesConfig.OSW_Services.map((obj, index) => {
               if (obj.activeService) {
                 return (
-                    <CardServicesv4 cardTitle={obj.name} cardURL={obj.url} key={`svc${obj.name}`}>
+                    <CardServicesv4 cardTitle={obj.name} cardURL={obj.url} key={`ServiceLing_${obj.name}`}>
                       <Image
                         src={obj.src}
                         alt=""
@@ -93,7 +93,7 @@ export default function HomePage() {
           />
         <div className="flex flex-1 justify-center text-lg align-middle items-center pt-2">
             <p className="mr-2">Watch our transformations on </p>
-            <ButtonMedia strURL={siteConfig.OSW_Links.Instagram}>
+            <ButtonMedia strURL={siteConfig.OSW_Links.Instagram} aria_label="Instagram">
                   <InstagramIcon className='text-orange'/>
             </ButtonMedia>
         </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
                     alt=""
                     width={50}
                     height={50}
-                    className="flex scale-[1.0] left-[0px] top-[0px]"
+                    className="object-contain"
                   /> 
             </CardWhyUsLarge>
             
@@ -223,7 +223,7 @@ export default function HomePage() {
                   alt=""
                   width={50}
                   height={50}
-                  className="scale-[.9] left-[0px] top-[0px]"
+                  className=""
                 /> 
             </CardWhyUsLarge>
             
@@ -236,7 +236,7 @@ export default function HomePage() {
                             alt=""
                             width={50}
                             height={50}
-                            className="scale-[.9] left-[0px] top-[0px]"
+                            className=""
                           /> 
             </CardWhyUsLarge>
             
@@ -249,7 +249,7 @@ export default function HomePage() {
                             alt=""
                             width={50}
                             height={50}
-                            className="scale-[.9] left-[0px] top-[0px]"
+                            className=""
                           /> 
             </CardWhyUsLarge>
           </div>
