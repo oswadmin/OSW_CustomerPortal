@@ -16,6 +16,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 import { ButtonMedia } from "@/components/ButtonMedia";
 import { InstagramIcon } from "lucide-react";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 
 const imgH = "600";
 let mapCount = 0;
@@ -93,9 +94,15 @@ export default function HomePage() {
           />
         <div className="flex flex-1 justify-center text-lg align-middle items-center pt-2">
             <p className="mr-2">Watch our transformations on </p>
-            <ButtonMedia strURL={siteConfig.OSW_Links.Instagram} aria_label="Instagram">
-                  <InstagramIcon className='text-orange'/>
-            </ButtonMedia>
+              <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className='text-wrap' >
+                <Image 
+                  src = "/MediaIcon_Instagram.png"
+                  alt = "Instagram"
+                  width={40}
+                  height={40}
+                  className="border-2 border-white w-[40px]"
+                />
+              </a>
         </div>
           
         </PageSection>  

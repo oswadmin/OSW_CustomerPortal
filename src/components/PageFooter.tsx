@@ -100,7 +100,7 @@ export default function PageFooter({
   return (
     <>
     
-    <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="600" height="600" className='hidden w-full h-auto'/>
+    {/* <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="600" height="600" className='hidden w-full h-auto'/> */}
 
     <footer 
       ref={footerRef} 
@@ -133,13 +133,13 @@ export default function PageFooter({
           <div className="flex-1 flex flex-col items-center gap-y-2">
             
             {/* FOOTER LOGO*/}
-            <a href="/" className='hidden desktop:flex leading-none' aria-label='Orange Soft Wash Home'>
+            <a href="/" className='hidden desktop:flex' aria-label='Orange Soft Wash Home'>
                 <Image 
                   src = {siteConfig.OSW_IMG.LOGO}
                   alt = "Orange Soft Wash Logo, Home"
                   width={200}
                   height={197}
-                  className="scale-100 hover:scale-105"
+                  className="scale-[70%] hover:scale-[75%] "
                 />
             </a>
             
@@ -147,14 +147,26 @@ export default function PageFooter({
             <div className='hidden desktop:flex justify-center'> 
 
               {/* INSTAGRAM BUTTON */}
-              <ButtonMedia strURL={siteConfig.OSW_Links.Instagram} aria_label='Instagram'>
-                <InstagramIcon className='text-orange'/>
-              </ButtonMedia>
+              <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className='text-wrap' >
+                <Image 
+                  src = "/MediaIcon_Instagram.png"
+                  alt = "Instagram"
+                  width={40}
+                  height={40}
+                  className="mr-2"
+                />
+              </a>
               
               {/* FACEBOOK BUTTON */}
-              <ButtonMedia strURL={siteConfig.OSW_Links.Facebook} aria_label='Facebook'>
-                <FacebookIcon className='text-orange'/>
-              </ButtonMedia>
+              <a href={siteConfig.OSW_Links.Facebook} aria-label='Facebook' target="_blank" rel="noopener noreferrer" className='text-wrap' >
+                <Image 
+                  src = "/MediaIcon_Facebook.png"
+                  alt = "Facebook"
+                  width={40}
+                  height={40}
+                  className=""
+                />
+              </a>              
               
             </div>
             

@@ -1,10 +1,10 @@
 "use client"
 
 import { ReactNode, useEffect, useRef, useState } from 'react';
-import { ButtonMedia } from './ButtonMedia';
-import { ClipboardListIcon, FacebookIcon, InstagramIcon, MailIcon, PhoneIcon } from 'lucide-react';
+import { ClipboardListIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import { siteConfig } from '@/config/siteConfig';
 import { Button } from './ui/button';
+import Image from "next/image";
 
 
 export default function ModalOverlay() {
@@ -38,8 +38,8 @@ export default function ModalOverlay() {
 
             {/* ESTIMATE BUTTON */}
             <div className='flex flex-row items-center gap-x-4 text-2xl'>
-              <span className='rounded-[12px] bg-white border-2 px-2 opacity-80'>Estimate</span>
-            <Button className="bg-orange hover:bg-orange rounded-full border-2 border-white shadow-md text-2xl font-bold text-blue_dark h-[60px]">
+              <span className='rounded-[12px] bg-white border-[1px] border-orange px-2 opacity-80'>Estimate</span>
+            <Button className="bg-orange hover:bg-orange rounded-full shadow-lg text-2xl font-bold text-blue_dark h-[60px] w-[60px]">
               <a href="/estimate"  >
                 <ClipboardListIcon className='text-white'/>
               </a>
@@ -48,8 +48,8 @@ export default function ModalOverlay() {
             
             {/* Phone BUTTON */}
             <div className='flex flex-row items-center gap-x-4 text-2xl'>
-              <span className='rounded-[12px] bg-white border-2 px-2 opacity-80'>Phone</span>
-            <Button className="bg-lime-700 hover:bg-lime-700 rounded-full border-2 border-white shadow-md text-2xl font-bold text-white h-[60px]">
+              <span className='rounded-[12px] bg-white border-[1px] border-orange px-2 opacity-80'>Phone</span>
+            <Button className="bg-lime-700 hover:bg-lime-700 rounded-full shadow-lg text-2xl font-bold text-white h-[60px] w-[60px]">
               <a href={`tel:${siteConfig.OSW_Phone}`}  >
               <PhoneIcon className='text-whate'/>
               </a>
@@ -58,8 +58,8 @@ export default function ModalOverlay() {
 
             {/* EMAIL BUTTON */}
             <div className='flex flex-row items-center gap-x-4 text-2xl'>
-              <span className='rounded-[12px] bg-white border-2 px-2 opacity-80'>Email</span>
-            <Button className="bg-blue hover:bg-blue rounded-full border-2 border-white shadow-md text-2xl font-bold text-white h-[60px]">
+              <span className='rounded-[12px] bg-white border-[1px] border-orange px-2 opacity-80'>Email</span>
+            <Button className="bg-blue hover:bg-blue rounded-full shadow-lg text-2xl font-bold text-white h-[60px] w-[60px]">
               <a href={`mailto:${siteConfig.OSW_Email_Sales}`}  >
                 <MailIcon className='text-white'/>
               </a>
@@ -70,29 +70,39 @@ export default function ModalOverlay() {
 
             {/* FACEBOOK BUTTON */}
             <div className='flex flex-row items-center gap-x-4 text-2xl'>
-              <span className='rounded-[12px] bg-white border-2 px-2 opacity-80'>Facebook</span>
-            <Button className="bg-indigo-600 hover:bg-indigo-600 rounded-full border-2 border-white shadow-md text-2xl font-bold text-white h-[60px]">
-              <a href={`${siteConfig.OSW_Links.Facebook}`}  >
-                <FacebookIcon className='text-white'/>
-              </a>
-            </Button> 
+              <span className='rounded-[12px] bg-white border-[1px] border-orange px-2 opacity-80'>Facebook</span>
+              <a href={siteConfig.OSW_Links.Facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer" className='rounded-full shadow-lg' >
+                <Image 
+                  src = "/MediaIcon_Facebook.png"
+                  alt = "Facebook"
+                  width={60}
+                  height={60}
+                  className=""
+                />
+              </a>  
             </div>
 
             {/* INSTAGRAM BUTTON */}
             <div className='flex flex-row items-center gap-x-4 text-2xl'>
-              <span className='rounded-[12px] bg-white border-2 px-2 opacity-80'>Instagram</span>
-            <Button className="bg-gradient-to-br from-purple-700 to-yellow-500 hover:bg-pink-500 rounded-full border-2 border-white shadow-md text-2xl font-bold text-white h-[60px]">
-              <a href={`${siteConfig.OSW_Links.Instagram}`}  >
-                <InstagramIcon className='text-white'/>
-              </a>
-            </Button>             
+              <span className='rounded-[12px] bg-white border-[1px] border-orange px-2 opacity-80'>Instagram</span>
+
+              <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className='rounded-full shadow-lg' >
+                <Image 
+                  src = "/MediaIcon_Instagram.png"
+                  alt = "Instagram"
+                  width={60}
+                  height={60}
+                  className=""
+                />
+              </a>           
+
             </div>
 
 
 
             {/* CLOSE MODAL BUTTON */}
             <Button  
-              className={`bg-black rounded-full border-2 border-white shadow-md text-xl font-bold text-white hover:bg-black h-[60px]`} 
+              className={`bg-black rounded-full shadow-lg text-xl font-bold text-white hover:bg-black h-[60px] w-[60px]`} 
               onClick={hideModal}>
               &nbsp;X&nbsp;
             </Button> 
