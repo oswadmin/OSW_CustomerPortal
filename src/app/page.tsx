@@ -70,7 +70,7 @@ export default function HomePage() {
         <PageSection sectionID="FAQs" title="What is Soft Washing?" subtitle="A safe  effective way to clean your home..." className="bg-white">
         <div className="flex flex-col desktop:flex-row">
 
-          <div className="flex flex-1 flex-col text-lg justify-center items-center p-6">
+          <div className="flex flex-1 flex-col text-lg justify-center items-center px-6">
             Soft washing is a low-pressure approach which combines special cleaning solution, soaps, and a power washing system that uses about the same pressure as a garden hose.   However, unlike a standard garden hose, our equipment provides increased flow rate allowing us to easily reach any part of your home from the ground.  We promise to never use high-pressure on delicate surfaces!
           </div>
           
@@ -87,11 +87,14 @@ export default function HomePage() {
         <PageSection sectionID="Gallery" title="Before and After" subtitle="" className="bg-white ">
           
 
-
-          <ReactCompareSlider className="rounded-2xl shadow-lg"
-            itemOne={<ReactCompareSliderImage src="./OSW_Surface1.jpg" alt="Image one" />}
-            itemTwo={<ReactCompareSliderImage src="./OSW_Surface2.jpg" alt="Image two" />}
+          <div className="flex flex-1 justify-center">
+          <ReactCompareSlider className="rounded-2xl shadow-lg h-[600px] w-[500px]" position={95}
+            itemOne={<ReactCompareSliderImage src="./OSW_Driveway_Before.jpeg" alt="Image one" />}
+            itemTwo={<ReactCompareSliderImage src="./OSW_Driveway_After.jpeg" alt="Image two" />}
           />
+          </div>
+
+
         <div className="flex flex-1 justify-center text-lg align-middle items-center pt-2">
             <p className="mr-2">Watch our transformations on </p>
               <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className='text-wrap' >

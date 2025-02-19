@@ -23,8 +23,8 @@ function NavMenu() {
         {/*****************************************************************/}
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-2xl font-bold">Services</NavigationMenuTrigger>
-          <NavigationMenuContent className="bg-gray shadow-lg">
-            <div className="grid grid-cols-3 gap-3 p-6 w-max">
+          <NavigationMenuContent className="bg-zinc-300 shadow-lg">
+            <div className="grid grid-cols-3 gap-3 p-6 w-max rounded-lg">
               {
                 servicesConfig.OSW_Services.map((obj, index) => (
                   
@@ -94,7 +94,7 @@ export default function PageHeader() {
               alt = "Orange Soft Wash Logo, Home"
               width={200}
               height={197}
-              className="hover:scale-105 "
+              className="scale-[80%] hover:scale-[85%] "
               priority
             />
           </a>
@@ -113,7 +113,7 @@ export default function PageHeader() {
         {/* PHONE BUTTON */}
         {/*****************************************************************/}
         <div className="hidden desktop:flex items-center ">
-          <ButtonStandard strURL={`tel:${siteConfig.OSW_Phone}`} className="w-[200px] h-[50px] bg-gradient-to-b from-orange_light to-orange hover:bg-orange">
+          <ButtonStandard strURL={`tel:${siteConfig.OSW_Phone}`} className="w-[210px] h-[50px] bg-gradient-to-b from-orange_light to-orange hover:bg-orange">
             <div className="relative flex items-center justify-center w-7 h-7 rounded-full bg-[#060082] " >
                   <PhoneIcon className="w-4 h-4 left text-[#FFAE00]" />
             </div>

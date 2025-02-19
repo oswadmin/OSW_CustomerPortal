@@ -16,7 +16,7 @@ export function ScrollPage({
     startTime = Date.now(),
 }: handleScrollProps) {
 
-    //console.log("ScrollPage")
+    console.log("ScrollPage")
 
     if (sectionId !== "") {
         const sectionPosition = getSectionScrollPosition(sectionId);

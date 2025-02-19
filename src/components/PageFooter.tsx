@@ -73,6 +73,7 @@ export default function PageFooter({
 
 
   const handleScrollToTop = () => {
+    //console.log('handleScrollToTop')
     ScrollPage({})
   };
 
@@ -100,7 +101,8 @@ export default function PageFooter({
   return (
     <>
     
-    {/* <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="600" height="600" className='hidden w-full h-auto'/> */}
+    {/* TODO:  Remove image.  But, ScrollToTop button is dependent on it. */}
+    <Image ref={footerImg} alt="bgImgRef" src={siteConfig.OSW_IMG.SURFACE1} width="1" height="1" className='hidden'/>
 
     <footer 
       ref={footerRef} 
@@ -147,7 +149,7 @@ export default function PageFooter({
             <div className='hidden desktop:flex justify-center'> 
 
               {/* INSTAGRAM BUTTON */}
-              <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className='text-wrap' >
+              <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" >
                 <Image 
                   src = "/MediaIcon_Instagram.png"
                   alt = "Instagram"
@@ -158,15 +160,25 @@ export default function PageFooter({
               </a>
               
               {/* FACEBOOK BUTTON */}
-              <a href={siteConfig.OSW_Links.Facebook} aria-label='Facebook' target="_blank" rel="noopener noreferrer" className='text-wrap' >
+              <a href={siteConfig.OSW_Links.Facebook} aria-label='Facebook' target="_blank" rel="noopener noreferrer"  >
                 <Image 
                   src = "/MediaIcon_Facebook.png"
                   alt = "Facebook"
                   width={40}
                   height={40}
-                  className=""
+                  className="mr-2"
                 />
-              </a>              
+              </a>        
+              {/* NEXTDOOR BUTTON */}
+              <a href="https://nextdoor.com/pages/orange-soft-washing-westerville-oh/" aria-label='Facebook' target="_blank" rel="noopener noreferrer" >
+                <Image 
+                  src = "/MediaIcon_NextDoor.png"
+                  alt = "NextDoor"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+              </a>                      
               
             </div>
             
@@ -175,7 +187,7 @@ export default function PageFooter({
 
              {/* COPYWRIGHT TEXT */}
             <div className='flex text-sm text-center text-blue font-semibold'>
-              &copy; 2025 Orange Softwash, LLC.<br/>All rights reserved.                
+              &copy; 2025 Orange Soft Wash, LLC.<br/>All rights reserved.                
             </div>
           </div>
           
@@ -237,7 +249,7 @@ export default function PageFooter({
       </div>
 
 
-      <div ref={topRef} className="hidden  fixed bottom-28 right-2.5 p-3 z-[9999]">
+      <div ref={topRef} className="hidden  fixed bottom-28 desktop:bottom-12 right-2.5 p-3 z-[9999]">
           <Button 
             className={`rounded-full text-blue text-2xl font-bold h-[100px] flex-col` }
             onClick={handleScrollToTop}

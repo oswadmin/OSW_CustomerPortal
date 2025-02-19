@@ -8,7 +8,7 @@ export const siteConfig = {
 
 
     //Company Info Config
-    OSW_Phone: "614-887-7225",
+    OSW_Phone: "(614) 887-7225",
     OSW_Email_Sales: "sales@orangesoftwash.com",
     OSW_Links: {
         Instagram: "https://www.instagram.com/orangesoftwash/",
