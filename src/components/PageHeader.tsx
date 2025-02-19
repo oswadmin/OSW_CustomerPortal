@@ -22,7 +22,9 @@ function NavMenu() {
         {/* Nav Menu Services */}
         {/*****************************************************************/}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-2xl font-bold">Services</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-2xl font-bold">
+            Services
+          </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-zinc-300 shadow-lg">
             <div className="grid grid-cols-3 gap-3 p-6 w-max rounded-lg">
               {

@@ -22,10 +22,14 @@ export default function sitemap() {
             url: baseUrl,
             lastModified: new Date(),
         },
-        ...services.map(service => ({
-            ...service,
-            lastModified: service.lastModified.toISOString()
-        })),
+        // ...services.map(service => ({
+        //     ...service,
+        //     lastModified: service.lastModified.toISOString()
+        // })),
+        {
+            url: `${baseUrl}/services`,
+            lastModified: new Date(),
+        },
         {
             url: `${baseUrl}/estimate`,
             lastModified: new Date(),

@@ -115,7 +115,7 @@ export default function GoogleReviews({ placeId }: GoogleReviewsProps) {
         <Swiper
           autoHeight={true}
           // cssMode={true}
-          slidesPerView={2}
+          slidesPerView={1}
           navigation={true}
           pagination={true}
           mousewheel={true}
