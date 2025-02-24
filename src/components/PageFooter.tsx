@@ -155,7 +155,7 @@ export default function PageFooter({
                   alt = "Instagram"
                   width={40}
                   height={40}
-                  className="mr-2"
+                  className="mr-2 border-[1px] border-orange rounded-full"
                 />
               </a>
               
@@ -166,7 +166,7 @@ export default function PageFooter({
                   alt = "Facebook"
                   width={40}
                   height={40}
-                  className="mr-2"
+                  className="mr-2 border-[1px] border-orange rounded-full"
                 />
               </a>        
               {/* NEXTDOOR BUTTON */}
@@ -176,7 +176,7 @@ export default function PageFooter({
                   alt = "NextDoor"
                   width={40}
                   height={40}
-                  className="rounded-full"
+                  className="border-[1px] border-orange rounded-full"
                 />
               </a>                      
               

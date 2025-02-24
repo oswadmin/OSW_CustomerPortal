@@ -26,9 +26,9 @@ export const servicesConfig = {
                 {
                     detailSummary:"Stains and Chemicals",
                     detailDescription: "Often, it's more than just grime that makes your surfaces look bad.  We can treat oil, paint, rust, tire and hard water marks, sometimes removing them entirely.",
-                    detailImageURL: siteConfig.OSW_IMG.SURFACE8,
+                    detailImageURL: "/OSW_Driveway_Rust1.png",
                     detailImageAlt: "Oil Stain",
-                    detailImageClass:  "absolute scale-[2.3] left-[10px] top-[110px]",
+                    detailImageClass:  "",
                 },
                 {
                     detailSummary:"Resealing & Regrouting",
@@ -61,11 +61,11 @@ export const servicesConfig = {
                     detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
                 },
                 {
-                    detailSummary:"FREE",
-                    detailDescription: "And hey, while we're making things shine, don't forget to check out our Waste Bin service! You get TWO FREE bin cleanings with any whole-house siding wash.  Because who wants a sparkling house with stinky bins?",
-                    detailImageURL: siteConfig.OSW_IMG.Birdbath1,
+                    detailSummary:"TWO FREE Waste Bins",
+                    detailDescription: "And hey, while we're making things shine, don't forget to check out our Waste Bin service! You get TWO FREE residential bin cleanings with any whole-house siding wash.  Because who wants a sparkling house with stinky bins?",
+                    detailImageURL: "/OSW_WasteBin2.png",
                     detailImageAlt: "Vinyl Siding",
-                    detailImageClass:  "absolute scale-[1.7] left-[-40px] top-[80px]",
+                    detailImageClass:  "",
                 },
                 {
                     detailSummary:"Citrus Spider Shield",
@@ -128,7 +128,7 @@ export const servicesConfig = {
                     detailImageClass:  "absolute scale-[2.1] left-[60px] top-[100px]",
                 },
                 {
-                    detailSummary:"Staining, Resealing, Replacing",
+                    detailSummary:"Restore, Reseal, Stain",
                     detailDescription: "Regular vinyl fence washing is essential to maintain its appearance and durability. Professional cleaning removes dirt, mold, and stains, preventing degradation and ensuring your fence remains a lasting, low-maintenance asset to your property.",
                     detailImageURL: siteConfig.OSW_IMG.FenceWood,
                     detailImageAlt: "",
