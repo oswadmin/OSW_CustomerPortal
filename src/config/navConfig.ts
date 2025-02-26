@@ -6,16 +6,19 @@ export const navConfig = {
     {
       menuName: 'Locations',
       url: '/#Locations',
+      aria_label: "Locations we serve",
       sectionName: 'Locations',
     },
     {
       menuName: 'Reviews',
       url: '/#Reviews',
+      aria_label: "Our Reviews",
       sectionName: 'Locations',
     },
     {
       menuName: 'About',
       url: '/#About',
+      aria_label: "About Us",
       sectionName: 'Locations',
     }
   ],

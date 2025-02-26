@@ -103,17 +103,21 @@ export function FormComponent() {
                 <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] shadow-lg border-[1px] border-blue" onSubmit={handleSubmit} action={handleAction}>
 
                 <div className="flex flex-col desktop:flex-row gap-4">
+                    <label htmlFor="custFirstName" className="hidden">First name:</label>
                     <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
+                    <label htmlFor="custLastName" className="hidden">Last name:</label>
                     <input id="custLastName" name="custLastName" placeholder="Last Name*" className="form-input flex-1" required/>
                 </div>
                 <div className="flex flex-col desktop:flex-row sm:f gap-4">
+                    <label htmlFor="custEmail" className="hidden">Email:</label>
                     <input id="custEmail" name="custEmail" placeholder="Email*" type="email" className="form-input flex-1" required/>
                     
-
+                    <label htmlFor="custPhone" className="hidden">Phone:</label>
                     <input id="custPhone" name="custPhone" placeholder="Phone*" type="tel"  className="form-input lg:w-1/5 " required/>        
                 </div>
 
                 <div className="flex flex-row">
+                    <label htmlFor="custAddress" className="hidden">Address:</label>
                     <input id="custAddress" name="custAddress" type="hidden" value={selectedAddress}/> 
                     <GooglePlacesAutocomplete
                         apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_PLATFORM_APIKEY} 
@@ -173,9 +177,11 @@ export function FormComponent() {
                 </div>           
 
                 <div className="flex flex-col">
+                    <label htmlFor="custDesc" className="hidden">Description:</label>
                     <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" className="form-input resize-none" rows={6}/>
                 </div>
                 <div className="flex flex-col desktop:flex-row  justify-start gap-4">
+                    <label htmlFor="custReferral" className="hidden">Referral:</label>
                     <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
                         <option value="">How did you find us?*</option>
                         <option value="Angie">Angie&apos;s List</option>
@@ -190,7 +196,7 @@ export function FormComponent() {
                         <option value="Yard Sign">Yard Sign</option>
                         
                     </select>
-                    
+                    <label htmlFor="custPromo" className="hidden">Promo:</label>
                     <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
                 </div>
 

@@ -23,10 +23,9 @@ export function FormCheckboxComponent({
   return (
     <>
     <div className="items-center flex space-x-1">
-      
       <input type="checkbox" name={fieldName} className={`border-[2px] rounded-[3px] scale-125  bg-white font-bold border-blue-dark  ${className}` } value={fieldValue}/>
       <Label 
-        htmlFor={fieldValue}
+        htmlFor={fieldName}
         className="text-xl text-blue leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
       >
         {fieldValue}  

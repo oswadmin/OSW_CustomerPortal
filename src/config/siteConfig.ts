@@ -1,6 +1,36 @@
 // Site-wide configuration
+
+
+
+export const SEO_Metadata = {
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
+    keywords: [
+        "Pressure Washing", 
+        "Power Washing", 
+        "Pressure Washing Services", 
+        "Soft Washing", 
+        "House Washing", 
+        "Driveway Washing"
+    ],
+    description: "Premier soft washing, pressure washing and power washing services. We specialize in surface (Driveways, Patios, Pool Decks, Porches, Stoops, Walkways),  siding (vinyl, stucco, hardie board), roof (shingle, tile, metal), deck (composite, wood, vinyl), fence (vinyl, metal, wood), gutter (debris removal, downspout flushing, brightening) and waste bin washing. Currently serving North Columbus, Ohio and these surrounding areas: Westerville, Dublin, Gahana, Sunbury, Lewis Center, New Albany, Worthington.",
+    title: {
+        default: "Orange Soft Wash",
+        template: `%s | Orange Soft Wash`
+    },
+    openGraph: {
+        description: 'Cool desc',
+        images: 'logo.png',
+        type: 'website',
+        locale: 'en_US',
+    },
+}
+
+
+
 export const siteConfig = {
     debug: true,
+
+    
 
     name: 'My Next.js App',
     description: 'Description for SEO',
