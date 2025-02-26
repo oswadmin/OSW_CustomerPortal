@@ -243,18 +243,12 @@ export const servicesConfig = {
             details: [
                 {
                     detailSummary:"Building",
-                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
+                    detailDescription: "Our experienced teams  can scale any service to meet your property needs.  We work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
                     detailImageURL: "/OSW_Commercial1.png",
                     detailImageAlt: "Quality",
                     detailImageClass:  "",
                 }, 
-                {
-                    detailSummary:"Curb Painting",
-                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
-                    detailImageURL: "/OSW_Commercial_Quality.png",
-                    detailImageAlt: "Quality",
-                    detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
-                }, 
+
                 {
                     detailSummary:"Commercial Bins",
                     detailDescription: "Regularly washing your dumpster is crucial for maintaining a hygienic environment and preventing the proliferation of harmful bacteria and unpleasant odors. Accumulated waste residue can attract pests, posing health risks, while routine cleaning not only ensures a sanitized waste disposal area but also contributes to the longevity and structural integrity of the dumpster itself, reducing the likelihood of corrosion and deterioration.",
@@ -262,6 +256,13 @@ export const servicesConfig = {
                     detailImageAlt: "",
                     detailImageClass:  "absolute scale-[2.5] left-[-80px] top-[80px]",
                 },
+                {
+                    detailSummary:"Curb Painting",
+                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
+                    detailImageURL: "/OSW_Commercial_Quality.png",
+                    detailImageAlt: "Quality",
+                    detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
+                },                 
             ],
         },
     },

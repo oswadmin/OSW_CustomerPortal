@@ -196,7 +196,7 @@ export default function PageFooter({
           {/*****************************************************************/}
           {/* SERVICES BLOCK */}
           {/*****************************************************************/}
-          <div className="hidden desktop:flex flex-1  flex-col items-start space-y-4 text-blue border-l-2 border-l-blue font-bold">
+          <div className="hidden desktop:flex flex-1  flex-col items-start space-y-4 text-blue border-l-2 border-l-blue font-bold mt-10">
             <h2 className='text-3xl font-bold border-l-8 border-blue pl-4'>Services</h2>
             <div className='flex-1 flex flex-col ml-6 space-y-2 '>
               
@@ -217,7 +217,7 @@ export default function PageFooter({
 
 
           {/* CONTACT US BLOCK */}
-          <div className="hidden desktop:flex flex-1 flex-col items-start space-y-4 text-blue  border-l-2 border-l-blue font-bold ">
+          <div className="hidden desktop:flex flex-1 flex-col items-start space-y-4 text-blue  border-l-2 border-l-blue font-bold mt-10 ">
             <h2 className='text-3xl font-bold border-l-8 border-l-blue pl-4'>Contact Us</h2>
             
             <div className='flex items-center pl-6'>
