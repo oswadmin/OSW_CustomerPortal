@@ -29,7 +29,7 @@ export function FormComponent() {
     const [recaptchaKey, setRecaptchaKey] = useState('');
     const [recaptchToken, setRecaptchToken] = useState('');
     
-    const [selectedAddress, setSelectedAddress] = useState('');
+     const [selectedAddress, setSelectedAddress] = useState('');
 
    
 
@@ -100,7 +100,7 @@ export function FormComponent() {
             </>
         ) : ( 
             <PageSection title="Estimate Request" className="bg-white -mt-20" >
-                <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange_light rounded-[16px] shadow-lg border-[1px] border-blue" onSubmit={handleSubmit} action={handleAction}>
+                <form className="container flex flex-col justify-center space-y-4 pb-10 pt-10 bg-orange rounded-[16px] shadow-lg border-[1px] border-blue" onSubmit={handleSubmit} action={handleAction}>
 
                 <div className="flex flex-col desktop:flex-row gap-4">
                     <input id="custFirstName" name="custFirstName" placeholder="First Name*" className="form-input flex-1" required/>
