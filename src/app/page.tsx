@@ -1,4 +1,4 @@
-"use client"
+
 import { CardReviews } from "@/components/CardReviews"
 import { CardServices, CardServicesv2, CardServicesv4 } from "@/components/CardServices"
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge"
@@ -25,6 +25,14 @@ let printDiv = true
 function test(somdata: any) {
 	const willSee = "ok"
 }
+
+export const metadata: Metadata = {
+  title: "Orange Soft Wash",
+  description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+  openGraph: {
+    images: ['/OSW_Logo_3_Transparent.png'],
+  },
+};
 
 export default function HomePage() {
 	return (

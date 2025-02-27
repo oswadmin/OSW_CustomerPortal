@@ -1,4 +1,3 @@
-"use client"
 
 import { CardServices, CardServicesv2, CardServicesv3, CardServicesv4 } from "@/components/CardServices"
 import ModalOverlay from "@/components/MenuMobileBottom"
@@ -10,6 +9,18 @@ import { servicesConfig } from "@/config/servicesConfig"
 import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 import { Suspense } from "react"
+import { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+  title: "Services Page",
+  description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+  openGraph: {
+    images: ['/OSW_Logo_3_Transparent.png'],
+  },
+};
+
+
 
 function ServicePage() {
 	const serviceData = servicesConfig.OSW_Services

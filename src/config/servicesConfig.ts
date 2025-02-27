@@ -237,20 +237,20 @@ export const servicesConfig = {
         className: "absolute scale-[1.85] left-[-20px] top-[90px]",
         service: {
             titleMsg: "Commercial Services",
-            subTitleMsg: "Cost Effective, Time Efficient, Highest Value",
+            subTitleMsg: "Cost Effective, Time Efficient, Highest Quality, Best Value",
             serviceMsg: "Commercial Properties",
             estimateMsg: "Brighten your business!",
             details: [
                 {
                     detailSummary:"Building",
-                    detailDescription: "Our experienced teams  can scale any service to meet your property needs.  We work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
+                    detailDescription: "Our experienced teams can scale any service to meet your property needs.  We work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
                     detailImageURL: "/OSW_Commercial1.png",
                     detailImageAlt: "Quality",
                     detailImageClass:  "",
                 }, 
 
                 {
-                    detailSummary:"Commercial Bins",
+                    detailSummary:"Dumpsters and Pad",
                     detailDescription: "Regularly washing your dumpster is crucial for maintaining a hygienic environment and preventing the proliferation of harmful bacteria and unpleasant odors. Accumulated waste residue can attract pests, posing health risks, while routine cleaning not only ensures a sanitized waste disposal area but also contributes to the longevity and structural integrity of the dumpster itself, reducing the likelihood of corrosion and deterioration.",
                     detailImageURL: siteConfig.OSW_IMG.WasteBinCommercial,
                     detailImageAlt: "",
@@ -263,6 +263,13 @@ export const servicesConfig = {
                     detailImageAlt: "Quality",
                     detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
                 },                 
+                {
+                    detailSummary:"Gas Stations",
+                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
+                    detailImageURL: "/OSW_GasStation.png",
+                    detailImageAlt: "Quality",
+                    detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
+                },                   
             ],
         },
     },

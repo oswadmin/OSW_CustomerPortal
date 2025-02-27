@@ -28,7 +28,16 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 //   },
 // }
 
-export const metadata: Metadata = SEO_Metadata
+//export const metadata: Metadata = SEO_Metadata
+
+// Default/fallback metadata
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Orange Soft Wash',
+    default: 'Your Company - Default Title',
+  },
+  description: 'Default site description',
+};
 
 export default function RootLayout({
   children,
