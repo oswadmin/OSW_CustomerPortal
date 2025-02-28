@@ -144,11 +144,15 @@ export default function HomePage() {
 				>
 					<div className="flex flex-col desktop:flex-row">
 						<div className="flex flex-1 flex-col justify-center items-center text-blue">
-							<p className="text-3xl pb-2">Westerville, OH</p>
-							<p className="text-3xl pb-2">Worthington, OH</p>
-							<p className="text-3xl pb-2">Lewis Center, OH</p>
-							<p className="text-3xl pb-2">Sunbury, OH</p>
-							<p className="text-3xl pb-2">New Albany, OH</p>
+							<p className="text-3xl pb-2">North Columbus</p>
+							<p className="text-3xl pb-2">Dublin</p>
+							<p className="text-3xl pb-2">Worthington</p>
+							<p className="text-3xl pb-2">Westerville</p>
+							<p className="text-3xl pb-2">New Albany</p>
+							<p className="text-3xl pb-2">Johnstown</p>
+							<p className="text-3xl pb-2">Sunbury</p>
+							<p className="text-3xl pb-2">Delaware</p>
+							
 							<p className="text-3xl pt-2 pb-2">+ Surrounding Areas</p>
 						</div>
 
