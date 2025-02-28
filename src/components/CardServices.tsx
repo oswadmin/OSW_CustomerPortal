@@ -278,7 +278,7 @@ export function CardServicesv4({
         {cardURL === "" ? 
           <>
             <div className='flex flex-1 justify-center '>
-              <div className='flex w-[250px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
+              <div className='flex w-[250px] h-[390PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
                 {children}
               </div>
             </div>
