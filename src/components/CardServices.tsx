@@ -232,7 +232,7 @@ export function CardServicesv4({
         
 
         {/* DESKTOP CARD */}
-        <div className='relative hidden desktop:flex w-[235px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
+        <div className='relative hidden desktop:flex w-[240px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
 
           {/*  */}
           {cardURL === "" ? 
@@ -278,7 +278,7 @@ export function CardServicesv4({
         {cardURL === "" ? 
           <>
             <div className='flex flex-1 justify-center '>
-              <div className='flex w-[235px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
+              <div className='flex w-[240px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
                 {children}
               </div>
             </div>
@@ -294,7 +294,7 @@ export function CardServicesv4({
         
 
         {cardDesc === "" ? "" : (
-          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-2xl mb-20 mx-2 desktop:mx-0">
+          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-xl mb-20 mx-2 desktop:mx-0">
             {cardDesc}
           </div>
         )} 
