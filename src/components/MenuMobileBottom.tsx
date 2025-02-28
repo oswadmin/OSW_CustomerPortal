@@ -32,7 +32,7 @@ export default function ModalOverlay() {
     <>
       <div
         ref={overlayRef} 
-        className={`fixed inset-0 bg-white bg-opacity-90 z-50 flex-col items-end justify-end pb-6 pr-8 gap-4 overlay hidden`}
+        className={`fixed inset-0 bg-white bg-opacity-90 z-[9999] flex-col items-end justify-end pb-6 pr-8 gap-4 overlay hidden`}
         onClick={hideModal}
       >
 
@@ -110,7 +110,7 @@ export default function ModalOverlay() {
       </div>
 
 
-    <div className="desktop:hidden fixed bottom-3 right-5 p-3">
+    <div className="desktop:hidden fixed bottom-3 right-2 p-3 z-[9990]">
       <Button  
         className={`bg-blue rounded-full border-2 border-white shadow-md text-2xl font-bold text-white hover:bg-blue h-[60px]`} 
         onClick={showModal}>

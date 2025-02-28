@@ -250,7 +250,7 @@ export default function PageFooter({
 
 
       <div ref={topRef} className="hidden  fixed bottom-20 desktop:bottom-4
-       right-2.5 p-3 z-[9999]">
+       right-1 p-3 z-[9990]">
           <Button 
             className={`rounded-full text-blue text-2xl font-bold h-[100px] flex-col` }
             onClick={handleScrollToTop}
