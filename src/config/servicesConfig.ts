@@ -88,7 +88,7 @@ export const servicesConfig = {
             titleMsg: "Deck Soft Washing",
             subTitleMsg: "Restore your deck's natural beauty.",
             serviceMsg: "Decks",
-            estimateMsg: "Bring back the orange-like gleam",
+            estimateMsg: "Ready for a dazzling deck?",
             details: [
                 {
                     detailSummary:"Wood, Composite, Vinyl",
@@ -116,7 +116,7 @@ export const servicesConfig = {
         className: "absolute scale-[2.2] left-[0px] top-[105px]",
         service: {
             titleMsg: "Fence Washing",
-            subTitleMsg: "Hey",
+            subTitleMsg: "Clean, Beautiful, Protected",
             serviceMsg: "Fences Soft Washing",
             estimateMsg: "Ready for a fresh fence?",
             details: [
@@ -169,31 +169,32 @@ export const servicesConfig = {
         className: "absolute scale-[3.3] left-[-3 0px] top-[120px]",
         service: {
             titleMsg: "Gutters Rejuvenation",
-            subTitleMsg: "Hey",
+            subTitleMsg: "Reviving Curb Appeal, Restoring Flow.",
             serviceMsg: "Gutters",
-            estimateMsg: "Are you ready for gleaming gutters?",
+            estimateMsg: "Ready for gleaming gutters?",
             details: [
-                {
-                    detailSummary:"Debris Removal",
-                    detailDescription: "Gutter debris removal is essential to maintain the structural integrity of your home and prevent water damage. Regularly cleaning out gutters prevents clogs and ensures proper water flow, protecting your roof, walls, and foundation from potential costly repairs.",
-                    detailImageURL: siteConfig.OSW_IMG.Gutters1,
-                    detailImageAlt: "",
-                    detailImageClass:  "",
-                },
-                {
-                    detailSummary:"Downspout Flushing",
-                    detailDescription: "Clearing downspouts is essential for maintaining proper drainage and preventing potential water damage to your home. When downspouts are clogged with debris such as leaves, twigs, and dirt, rainwater cannot flow freely away from the roof and foundation, leading to potential leaks, mold growth, and even structural issues.",
-                    detailImageURL: "/OSW_Downspout1.png",
-                    detailImageAlt: "",
-                    detailImageClass:  "",
-                },
-                {
+                 {
                     detailSummary:"Brightening",
                     detailDescription: "Unsightly \"tiger stripes\" on your gutters are caused by a stubborn build-up of dirt, pollen, and grime. Our Gutter brightening service will tame those stripes, gently removing years of accumulated stains revealing the clean, bright gutters beneath.",
                     detailImageURL: "/OSW_Gutters3.png",
                     detailImageAlt: "",
                     detailImageClass:  "",
-                },                
+                },      
+                {
+                    detailSummary:"Debris",
+                    detailDescription: "Gutter debris removal is essential to maintain the structural integrity of your home and prevent water damage. Regularly cleaning out gutters prevents clogs and ensures proper water flow, protecting your roof, walls, and foundation from potential costly repairs.",
+                    detailImageURL: "/OSW_Gutters1.png",
+                    detailImageAlt: "",
+                    detailImageClass:  "",
+                },
+                {
+                    detailSummary:"Downspout",
+                    detailDescription: "Clearing downspouts is essential for maintaining proper drainage and preventing potential water damage to your home. When downspouts are clogged with debris such as leaves, twigs, and dirt, rainwater cannot flow freely away from the roof and foundation, leading to potential leaks, mold growth, and even structural issues.",
+                    detailImageURL: "/OSW_Downspout1.png",
+                    detailImageAlt: "",
+                    detailImageClass:  "",
+                },
+                         
             ],
         },
     },
@@ -239,7 +240,7 @@ export const servicesConfig = {
             titleMsg: "Commercial Services",
             subTitleMsg: "Cost Effective, Time Efficient, Highest Quality, Best Value",
             serviceMsg: "Commercial Properties",
-            estimateMsg: "Brighten your business!",
+            estimateMsg: "Ready for a brighter business!",
             details: [
                 {
                     detailSummary:"Building",
@@ -250,26 +251,13 @@ export const servicesConfig = {
                 }, 
 
                 {
-                    detailSummary:"Dumpsters and Pad",
-                    detailDescription: "Regularly washing your dumpster is crucial for maintaining a hygienic environment and preventing the proliferation of harmful bacteria and unpleasant odors. Accumulated waste residue can attract pests, posing health risks, while routine cleaning not only ensures a sanitized waste disposal area but also contributes to the longevity and structural integrity of the dumpster itself, reducing the likelihood of corrosion and deterioration.",
-                    detailImageURL: siteConfig.OSW_IMG.WasteBinCommercial,
-                    detailImageAlt: "",
-                    detailImageClass:  "absolute scale-[2.5] left-[-80px] top-[80px]",
+                    detailSummary:"Dumpsters",
+                    detailDescription: "Our teams use a strategic combination of pressure and soft washing to tackle exceptionally tough commercial dumpster grime, breaking down grease and organic buildup and leaving your dumpster pads thoroughly sanitized and refreshed.",
+                    detailImageURL: "/OSW_Dumpster1.png",
+                    detailImageAlt: "Dumpster and Pad",
+                    detailImageClass:  "",
                 },
-                {
-                    detailSummary:"Curb Painting",
-                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
-                    detailImageURL: "/OSW_Commercial_Quality.png",
-                    detailImageAlt: "Quality",
-                    detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
-                },                 
-                {
-                    detailSummary:"Gas Stations",
-                    detailDescription: "Our experienced teams work swiftly and meticulously, using industry-standard equipment and proven techniques, to deliver superior results with minimal disruption to your operations.",
-                    detailImageURL: "/OSW_GasStation.png",
-                    detailImageAlt: "Quality",
-                    detailImageClass:  "absolute scale-[1.1] left-[-10px] top-[0x]",
-                },                   
+                              
             ],
         },
     },
