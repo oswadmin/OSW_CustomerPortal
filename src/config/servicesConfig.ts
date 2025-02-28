@@ -111,8 +111,8 @@ export const servicesConfig = {
         name: 'Fences',
         url: '/services#Fences',
         aria_label: "Surface Pressure Washing",
-        src: siteConfig.OSW_IMG.FenceWood,
-        className: "absolute scale-[2.2] left-[0px] top-[105px]",
+        src: "/OSW_Fence1.png",
+        className: "",
         service: {
             titleMsg: "Fence Washing",
             subTitleMsg: "Clean, Beautiful, Protected",
@@ -164,8 +164,8 @@ export const servicesConfig = {
         name: 'Gutters',
         url: '/services#Gutters',
         aria_label: "Surface Pressure Washing",
-        src: siteConfig.OSW_IMG.Gutters1,
-        className: "absolute scale-[3.3] left-[-3 0px] top-[120px]",
+        src: "/OSW_Gutters2.png",
+        className: "",
         service: {
             titleMsg: "Gutters Rejuvenation",
             subTitleMsg: "Reviving Curb Appeal, Restoring Flow.",
@@ -181,14 +181,14 @@ export const servicesConfig = {
                 },      
                 {
                     detailSummary:"Debris",
-                    detailDescription: "Gutter debris removal is essential to maintain the structural integrity of your home and prevent water damage. Regularly cleaning out gutters prevents clogs and ensures proper water flow, protecting your roof, walls, and foundation from potential costly repairs.",
+                    detailDescription: "To keep your gutters looking their best, you need proper flow! We can also remove all debris, ensuring those stripes don't return for as long as possible.",
                     detailImageURL: "/OSW_Gutters1.png",
                     detailImageAlt: "",
                     detailImageClass:  "",
                 },
                 {
                     detailSummary:"Downspout",
-                    detailDescription: "Clearing downspouts is essential for maintaining proper drainage and preventing potential water damage to your home. When downspouts are clogged with debris such as leaves, twigs, and dirt, rainwater cannot flow freely away from the roof and foundation, leading to potential leaks, mold growth, and even structural issues.",
+                    detailDescription: "Orange Soft Wash can also flush out downspouts and clear drains, preventing backups and keeping those tiger stripes at bay.  Don't let clogged downspouts ruin your freshly brightened gutters!",
                     detailImageURL: "/OSW_Downspout1.png",
                     detailImageAlt: "",
                     detailImageClass:  "",
