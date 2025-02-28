@@ -139,7 +139,7 @@ export default function HomePage() {
 				<PageSection
 					sectionID="Locations"
 					title="Our Locations"
-					subtitle="We are proudly serving..."
+					subtitle="We're expanding, now serving all North Columbus areas..."
 					className="bg-white"
 				>
 					<div className="flex flex-col desktop:flex-row">
