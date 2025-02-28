@@ -294,7 +294,7 @@ export function CardServicesv4({
         
 
         {cardDesc === "" ? "" : (
-          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg mb-20">
+          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg mb-20 mx-2 desktop:mx-0">
             {cardDesc}
           </div>
         )} 
