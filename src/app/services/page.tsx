@@ -60,8 +60,8 @@ function ServicePage() {
 												<Image
 													src={detail.detailImageURL}
 													alt=""
-													width={600}
-													height={600}
+													width={235}
+													height={400}
 													className={detail.detailImageClass}
 												/>
 											</CardServicesv4>

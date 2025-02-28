@@ -232,7 +232,7 @@ export function CardServicesv4({
         
 
         {/* DESKTOP CARD */}
-        <div className='relative hidden desktop:flex w-[235px] h-[400PX] justify-center rounded-xl shadow-lg mb-2'>
+        <div className='relative hidden desktop:flex w-[235px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
 
           {/*  */}
           {cardURL === "" ? 
