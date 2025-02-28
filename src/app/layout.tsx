@@ -11,6 +11,11 @@ import ModalMenu from "@/components/MenuMobileTop";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 // Default/fallback metadata
 export const metadata: Metadata = {
   title: {
