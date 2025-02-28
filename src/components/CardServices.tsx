@@ -228,11 +228,11 @@ export function CardServicesv4({
  
   return (
     <>
-      <div className={`hidden desktop:flex flex-col desktop:w-[240px]`}>
+      <div className={`hidden desktop:flex flex-col desktop:w-[250px]`}>
         
 
         {/* DESKTOP CARD */}
-        <div className='relative hidden desktop:flex w-[240px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
+        <div className='relative hidden desktop:flex w-[250px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
 
           {/*  */}
           {cardURL === "" ? 
@@ -278,7 +278,7 @@ export function CardServicesv4({
         {cardURL === "" ? 
           <>
             <div className='flex flex-1 justify-center '>
-              <div className='flex w-[240px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
+              <div className='flex w-[250px] h-[400PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
                 {children}
               </div>
             </div>
