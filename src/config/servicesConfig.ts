@@ -1,7 +1,6 @@
 import { siteConfig } from "./siteConfig";
 
 export const servicesConfig = {
-
     OSW_Services: [
     {
         activeService: true,
