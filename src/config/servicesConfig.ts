@@ -7,7 +7,7 @@ export const servicesConfig = {
         name: 'Surfaces',
         url: '/services#Surfaces',
         aria_label: "Surface Pressure Washing",
-        src: siteConfig.OSW_IMG.SURFACE3,
+        src: "/OSW_Surface3.png",
         className: "",
         service: {
             titleMsg: "Surface Pressure Washing",
@@ -18,7 +18,7 @@ export const servicesConfig = {
                 {
                     detailSummary:"Concrete, Brick, or Stone",
                     detailDescription: "Accumulating grime seems to be a superpower of hard surfaces.  While there is no miracle to keep them clean forever, with our refined C-3P-O process you'll get the longest lasting results possible.",
-                    detailImageURL: siteConfig.OSW_IMG.SURFACE4,
+                    detailImageURL: "/OSW_Surface4.png",
                     detailImageAlt: "Clean Driveway",
                     detailImageClass:  "",
                 },
@@ -44,7 +44,7 @@ export const servicesConfig = {
         name: 'Siding',
         url: '/services#Siding',
         aria_label: "Siding Soft Washing",
-        src: siteConfig.OSW_IMG.SIDING1,
+        src: "/OSW_Siding1.png",
         className: "",
         service: {
             titleMsg: "Siding Soft Washing",
@@ -233,7 +233,7 @@ export const servicesConfig = {
         name: 'Commercial',
         url: '/services#Commercial',
         aria_label: "Surface Pressure Washing",
-        src: siteConfig.OSW_IMG.Commercial1,
+        src: "/OSW_Commercial1.png",
         className: "",
         service: {
             titleMsg: "Commercial Services",
