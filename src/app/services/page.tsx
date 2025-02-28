@@ -63,6 +63,8 @@ function ServicePage() {
 													width={235}
 													height={400}
 													className={detail.detailImageClass}
+													layout="responsive"
+  													objectFit="cover"
 												/>
 											</CardServicesv4>
 										</>
