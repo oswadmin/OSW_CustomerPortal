@@ -87,7 +87,7 @@ export async function FormAction(formData: FormData){
       const data = await resend.emails.send({
         from: `OSW System <admin@orangesoftwash.com>`,
         to: `sales@orangesoftwash.com`,
-        subject: `NEW: Service Request`,
+        subject: `OSW: New Estimate Request`,
         react: EstimateRequestEmail(result.data)
       })
 
