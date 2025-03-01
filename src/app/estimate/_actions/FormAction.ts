@@ -31,7 +31,7 @@ const requestFormSchema = z.object({
     custPropertyType: z.enum([
           "Residential",
           "Commercial",
-        ]).optional(),    
+        ]),    
     custReferral: z.enum([
       "Angie",
       "Business Card",

@@ -8,6 +8,7 @@ type EstimateRequestEmailProps = {
     custAddress: string
     custServices: string[] | string;
     custDesc?: string
+    custPropertyType: string,
     custReferral?: string
     custPromo?: string
 }
@@ -22,6 +23,7 @@ EstimateRequestEmail.PreviewProps = {
     custAddress: '7064 Hilmmar',
     custServices: 'Surfaces',
     custDesc: 'Clean Something',
+    custPropertyType: "Residential",
     custReferral: 'Referral',
     custPromo: 'O123456',
 } satisfies EstimateRequestEmailProps
@@ -44,6 +46,7 @@ export default function EstimateRequestEmail(data: EstimateRequestEmailProps) {
                             <p>Property Address: {data.custAddress}</p>
                             <p>Services Requested: {data.custServices}</p>
                             <p>Description: {data.custDesc}</p>
+                            <p>PropertyType: {data.custPropertyType}</p>
                             <p>How did they find us?: {data.custReferral}</p>
                             <p>Promo Code: {data.custPromo}</p>
                     </Container>
