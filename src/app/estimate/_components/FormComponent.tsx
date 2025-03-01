@@ -13,7 +13,6 @@ import { PageSection } from "@/components/PageSection"
 import { FormCheckboxComponent } from "./FormCheckboxComponent"
 import { ThankYouComponent } from "./ThankYouComponent"
 import { Label } from "@radix-ui/react-label"
-import { Switch } from "@/components/ui/switch"
 
 
 
