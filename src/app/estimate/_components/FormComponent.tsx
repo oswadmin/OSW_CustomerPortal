@@ -2,15 +2,19 @@
 import { servicesConfig } from "@/config"
 import { useEffect, useRef, useState } from "react"
 import { useFormState, useFormStatus } from "react-dom"
-
+ 
 import { FormAction } from "../_actions/FormAction"
+
 
 import ReCAPTCHA from "react-google-recaptcha"
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
-import { FormCheckboxComponent } from "./FormCheckboxComponent"
 
-import { ThankYouComponent } from "./ThankYouComponent"
 import { PageSection } from "@/components/PageSection"
+import { FormCheckboxComponent } from "./FormCheckboxComponent"
+import { ThankYouComponent } from "./ThankYouComponent"
+import { Label } from "@radix-ui/react-label"
+import { Switch } from "@/components/ui/switch"
+
 
 
 export function FormComponent() {
@@ -29,9 +33,11 @@ export function FormComponent() {
     const [recaptchaKey, setRecaptchaKey] = useState('');
     const [recaptchToken, setRecaptchToken] = useState('');
     
-     const [selectedAddress, setSelectedAddress] = useState('');
+    const [selectedAddress, setSelectedAddress] = useState('');
 
-   
+
+    const [isCommercial, setIsCommercial] = useState(false); // Default to Residential (not commercial)
+
 
     useEffect(() => {
         const dMode = process.env.NEXT_PUBLIC_DEBUG_MODE;
@@ -47,17 +53,25 @@ export function FormComponent() {
         // setgMapsApiKey(gKey ?? '');
     }, []);
 
+
+
+    //-------------------------------------------------------------------------
+    //Handlers
+    //-------------------------------------------------------------------------
     const handleRecaptchaChange = (token: string | null) => {
         // Handle recaptcha change
         //console.log('Recaptcha token:', token);
         setRecaptchToken(token ?? '');
     };
+    const handleCommercialToggle = () => {
+        setIsCommercial(!isCommercial);
+    };    
 
     const handleSubmit = (e: React.FormEvent) => {
         console.log('handleSubmit');
         if(!recaptchToken) {
            e.preventDefault();
-        }    
+        }  
     };
 
     const handleScrollToTop = () => {
@@ -153,34 +167,89 @@ export function FormComponent() {
                         }}
                     />    
                 </div>
-                
+
+
 
 
                 <div className="flex-1 flex flex-col space-y-2 justify-start items-start">
-                <div className="text-blue text-xl font-bold ">
-                    Services Requested?
-                </div>
-                <div className="flex flex-wrap gap-x-4 gap-y-4" >
-                    {
-                        servicesConfig.OSW_Services.map((obj, index) => (
-                            
-                            obj.activeService ? (
+                    <div className="text-blue text-xl font-bold ">
+                        Services Requested?
+                    </div>
+                    <div className="flex flex-wrap gap-x-4 gap-y-4" >
+                        {
+                            servicesConfig.OSW_Services.map((obj, index) => (
+                                
+                                obj.activeService && obj.name !== "Commercial" ? (
 
-                            <FormCheckboxComponent key={`custService${index}`} fieldName="custServices" fieldValue={obj.name}/>
-                            
-                            ) : null
-                            
-                        ))              
-                    }
-                </div>
-                
+                                <FormCheckboxComponent key={`custService${index}`} fieldName="custServices" fieldValue={obj.name}/>
+                                
+                                ) : null
+                                
+                            ))              
+                        }
+                    </div>
+                 
+
+                   
                 </div>           
 
+                {/* 
+                -----------------------------------------------------------------
+                Description
+                ----------------------------------------------------------------- 
+                */}
                 <div className="flex flex-col">
                     <label htmlFor="custDesc" className="hidden">Description:</label>
                     <textarea id="custDesc" name="custDesc" placeholder="Describe what you would like us to do?" className="form-input resize-none" rows={6}/>
                 </div>
+
+
+                {/* 
+                -----------------------------------------------------------------
+                Commercial
+                ----------------------------------------------------------------- 
+                */}
+                <div className="flex-1 flex flex-row space-x-2 justify-start items-start">
+                    <div className="items-center flex space-x-2">
+                        <Label 
+                                htmlFor="Commercial"
+                                className="text-xl text-blue leading-none font-bold "
+                            >
+                                Is this a commercial property?
+                        </Label>
+                    
+                        <div className="sr-only">
+                            <input 
+                                type="checkbox" 
+                                id="Residential" 
+                                name="custPropertyType" 
+                                checked={!isCommercial}
+                                value="Residential"
+                                onChange={handleCommercialToggle}
+                            />
+                        </div>
+
+                        <input 
+                            type="checkbox" 
+                            id="Commercial" 
+                            name="custPropertyType" 
+                            className={`border-[2px] rounded-[3px] scale-125  bg-white font-bold border-blue-dark`} 
+                            checked={isCommercial}
+                            value="Commercial"
+                            onChange={handleCommercialToggle}
+                        />
+                    </div>
+
+                </div>
+
+
+
                 <div className="flex flex-col desktop:flex-row  justify-start gap-4">
+                    {/* 
+                    ----------------------------------------------------------------
+                    How did you find us?
+                    ---------------------------------------------------------------- 
+                    */}
                     <label htmlFor="custReferral" className="hidden">Referral:</label>
                     <select id="custReferral" name="custReferral" className="form-input desktop:w-2/3" required >
                         <option value="">How did you find us?*</option>
@@ -196,6 +265,12 @@ export function FormComponent() {
                         <option value="Yard Sign">Yard Sign</option>
                         
                     </select>
+
+                    {/* 
+                    ----------------------------------------------------------------
+                    Promo Code
+                    ---------------------------------------------------------------- 
+                    */}
                     <label htmlFor="custPromo" className="hidden">Promo:</label>
                     <input id="custPromo" name="custPromo" placeholder="Promo Code" className="form-input w-1/2 desktop:w-1/3 " /> 
                 </div>

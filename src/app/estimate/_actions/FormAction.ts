@@ -28,6 +28,10 @@ const requestFormSchema = z.object({
     custAddress: z.string().min(1, { message: "Address is required" }),
     custServices: custServicesSchema, // Uses the union schema
     custDesc: z.string().optional(),
+    custPropertyType: z.enum([
+          "Residential",
+          "Commercial",
+        ]).optional(),    
     custReferral: z.enum([
       "Angie",
       "Business Card",
