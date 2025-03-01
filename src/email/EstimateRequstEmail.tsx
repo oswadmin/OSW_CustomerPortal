@@ -46,7 +46,7 @@ export default function EstimateRequestEmail(data: EstimateRequestEmailProps) {
                             <p>Property Address: {data.custAddress}</p>
                             <p>Services Requested: {data.custServices}</p>
                             <p>Description: {data.custDesc}</p>
-                            <p>ContactType: {data.custContactType}</p>
+                            <p>Contact Type: {data.custContactType}</p>
                             <p>How did they find us?: {data.custReferral}</p>
                             <p>Promo Code: {data.custPromo}</p>
                     </Container>
