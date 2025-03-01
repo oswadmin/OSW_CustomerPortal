@@ -15,7 +15,7 @@ export default function MenuMobileTop() {
   const overlayRef = useRef<HTMLDivElement>(null);
   const refService = useRef<HTMLLIElement>(null);
 
-  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(true);
 
   const toggleDropdown = () => {
     setIsDropDownOpen(!isDropDownOpen);
