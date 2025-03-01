@@ -214,14 +214,14 @@ export function FormComponent() {
                                 htmlFor="Commercial"
                                 className="text-xl text-blue leading-none font-bold "
                             >
-                                Is this a commercial property?
+                                Is this for a commercial property?
                         </Label>
                     
                         <div className="sr-only">
                             <input 
                                 type="checkbox" 
                                 id="Residential" 
-                                name="custPropertyType" 
+                                name="custContactType" 
                                 checked={!isCommercial}
                                 value="Residential"
                                 onChange={handleCommercialToggle}
@@ -231,7 +231,7 @@ export function FormComponent() {
                         <input 
                             type="checkbox" 
                             id="Commercial" 
-                            name="custPropertyType" 
+                            name="custContactType" 
                             className={`border-[2px] rounded-[3px] scale-125  bg-white font-bold border-blue-dark`} 
                             checked={isCommercial}
                             value="Commercial"
