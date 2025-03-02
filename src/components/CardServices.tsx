@@ -78,7 +78,7 @@ function DesktopServiceDetailCard(cardTitle: string, cardDesc: string, children:
 function MobileServiceCard(cardTitle: string, cardURL: string, children: ReactNode) {
   return (
 
-    <div className={`desktop:hidden flex flex-col border-orange bg-white rounded-xl shadow-2xl border-[1px]`}>
+    <div className={`desktop:hidden flex flex-col bg-white rounded-xl shadow-2xl`}>
       <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
         {cardTitle}
       </ButtonStandard>
