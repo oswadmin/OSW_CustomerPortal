@@ -25,15 +25,15 @@ function DesktopServiceCard(cardTitle: string, cardURL: string, children: ReactN
   return (
     <>
       {/* Outer Container*/}
-      <div className='relative hidden desktop:flex w-[250px] h-[400px] justify-center rounded-xl shadow-2xl border-[1px] border-orange mb-2'>
+      <section className='relative hidden desktop:flex w-[250px] h-[400px] justify-center rounded-xl shadow-2xl border-[1px] border-orange mb-2'>
 
         <Button className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 " asChild>
 
 
           <Link href={cardURL} className="text-wrap hover:scale-105" >
-            <div className="border-2 bg-orange rounded-full px-4">
+            <h3 className="border-2 bg-orange rounded-full px-4">
               {cardTitle}
-            </div>
+            </h3>
           </Link>
 
         </Button>
@@ -44,7 +44,7 @@ function DesktopServiceCard(cardTitle: string, cardURL: string, children: ReactN
         </div>
 
 
-      </div>
+      </section>
     </>
   )
 }
@@ -53,7 +53,7 @@ function DesktopServiceDetailCard(cardTitle: string, cardDesc: string, children:
   return (
     <>
       {/* Outer Container */}
-      <div className={`hidden desktop:flex flex-col desktop:w-[250px] border-[1px] border-orange bg-white rounded-xl shadow-2xl `}>
+      <section className={`hidden desktop:flex flex-col desktop:w-[250px] border-[1px] border-orange bg-white rounded-xl shadow-2xl `}>
 
         {/* Image Container */}
         <div className='flex w-full h-[395px] rounded-tl-xl rounded-tr-xl relative overflow-hidden mb-2'>
@@ -61,15 +61,15 @@ function DesktopServiceDetailCard(cardTitle: string, cardDesc: string, children:
         </div>
 
         {/* Title Container */}
-        <div className="text-blue_dark card-service-text text-center text-3xl font-bold mb-2">
+        <h3 className="text-blue_dark card-service-text text-center text-3xl font-bold mb-2">
           {cardTitle}
-        </div>
+        </h3>
 
         {/* Description Container */}
-        <div className="flex p-2 text-blue text-start relative text-lg ">
+        <p className="flex p-2 text-blue text-start relative text-lg ">
           {cardDesc}
-        </div>
-      </div>
+        </p>
+      </section>
     </>
   )
 

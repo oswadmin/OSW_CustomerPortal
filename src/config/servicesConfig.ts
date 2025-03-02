@@ -154,7 +154,7 @@ export const servicesConfig = {
                         detailDescription: "We use a customized soft wash technique, perfectly tailored to your roofing material, to banish algae, moss, and grime without causing damage. Our skilled technicians will leave your roof sparkling clean!",
                         detailImageURL: siteConfig.OSW_IMG.Roof1,
                         detailImageAlt: "",
-                        detailImageClass: "absolute scale-[2.1] left-[60px] top-[100px]",
+                        detailImageClass: "",
                     },
                 ],
             },
