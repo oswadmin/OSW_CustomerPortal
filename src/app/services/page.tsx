@@ -1,5 +1,5 @@
 
-import { CardServices, CardServicesv2, CardServicesv3, CardServicesv4 } from "@/components/CardServices"
+import { CardServicesv4 } from "@/components/CardServices"
 import ModalOverlay from "@/components/MenuMobileBottom"
 import { PageEstimateSection } from "@/components/PageSection-Estimate"
 import PageFooter from "@/components/PageFooter"
@@ -35,7 +35,7 @@ function ServicePage() {
 			{/*****************************************************************/}
 			{/* TITLE SECTION*/}
 			{/*****************************************************************/}
-			<PageTitleSection title="Our Services" imgURL="/OSW_Surface1.jpg" />
+			<PageTitleSection title="Our Services" imgURL="/OSW_Surface2.jpg" />
 
 			{serviceData.map((obj, index) => {
 				if (obj.activeService) {
@@ -48,7 +48,7 @@ function ServicePage() {
 								sectionID={obj.name}
 								title={obj.service.titleMsg}
 								subtitle={obj.service.subTitleMsg}
-								className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-99% "
+								className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-100% "
 
 							>
 								<div className="flex flex-wrap justify-center desktop:space-x-4">

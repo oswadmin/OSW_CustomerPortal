@@ -1,6 +1,6 @@
 
 import { CardReviews } from "@/components/CardReviews"
-import { CardServices, CardServicesv2, CardServicesv4 } from "@/components/CardServices"
+import { CardServicesv4 } from "@/components/CardServices"
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge"
 import ModalOverlay from "@/components/MenuMobileBottom"
 import { PageEstimateSection } from "@/components/PageSection-Estimate"
@@ -27,11 +27,11 @@ function test(somdata: any) {
 }
 
 export const metadata: Metadata = {
-  title: "Orange Soft Wash",
-  description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
-  openGraph: {
-    images: ['/OSW_Logo_3_Transparent.png'],
-  },
+	title: "Orange Soft Wash",
+	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+	openGraph: {
+		images: ['/OSW_Logo_3_Transparent.png'],
+	},
 };
 
 export default function HomePage() {
@@ -54,7 +54,7 @@ export default function HomePage() {
 					sectionID="Services"
 					title="What we wash"
 					subtitle="Click a service to dive deeper..."
-					className="bg-white"
+					className="bg-gradient-to-b from-white via-sky-100 to-white"
 				>
 					<div className="flex flex-col desktop:flex-row desktop:flex-wrap justify-center gap-4 px-4 desktop:px-0">
 						{servicesConfig.OSW_Services.map((obj, index) => {
@@ -140,7 +140,7 @@ export default function HomePage() {
 					sectionID="Locations"
 					title="Our Locations"
 					subtitle="We're expanding, now serving all North Columbus areas..."
-					className="bg-white"
+					className="bg-gradient-to-b from-white via-sky-100 to-white"
 				>
 					<div className="flex flex-col desktop:flex-row">
 						<div className="flex flex-1 flex-col justify-center items-center text-blue">
@@ -150,12 +150,12 @@ export default function HomePage() {
 							<p className="text-2xl pb-2">Westerville</p>
 							<p className="text-2xl pb-2">New Albany</p>
 							<p className="text-2xl pb-2">Upper Arlington</p>
-							
+
 							<p className="text-2xl pb-2">Johnstown</p>
 							<p className="text-2xl pb-2">Sunbury</p>
 							<p className="text-2xl pb-2">Delaware</p>
 							<p className="text-2xl pt-2 pb-2">+ Surrounding Areas</p>
-							
+
 						</div>
 
 						<div className="flex-1">
@@ -177,7 +177,7 @@ export default function HomePage() {
 					sectionID="Reviews"
 					title="Our Reviews"
 					subtitle="What people are saying..."
-					className="bg-white "
+					className="bg-gradient-to-b from-white via-sky-100 to-white"
 				>
 					<GoogelReviews placeId="ChIJQ7ge5FCdNKMRdhLJTP6maks" />
 				</PageSection>
@@ -237,7 +237,7 @@ export default function HomePage() {
 				{/*****************************************************************/}
 				{/* WHY SECTION */}
 				{/*****************************************************************/}
-				<PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-white">
+				<PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-99% ">
 					<div className="container flex flex-wrap justify-center gap-4 ">
 						<CardWhyUsLarge
 							title="Quick & Easy"
