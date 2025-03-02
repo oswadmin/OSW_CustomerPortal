@@ -13,11 +13,11 @@ import { Metadata } from "next"
 
 
 export const metadata: Metadata = {
-  title: "Services Page",
-  description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
-  openGraph: {
-    images: ['/OSW_Logo_3_Transparent.png'],
-  },
+	title: "Services Page",
+	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+	openGraph: {
+		images: ['/OSW_Logo_3_Transparent.png'],
+	},
 };
 
 
@@ -48,7 +48,8 @@ function ServicePage() {
 								sectionID={obj.name}
 								title={obj.service.titleMsg}
 								subtitle={obj.service.subTitleMsg}
-								className="bg-white"
+								className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-99% "
+
 							>
 								<div className="flex flex-wrap justify-center desktop:space-x-4">
 									{obj.service.details.map((detail, index) => (
@@ -64,7 +65,7 @@ function ServicePage() {
 													height={400}
 													className={detail.detailImageClass}
 													layout="responsive"
-  													objectFit="cover"
+													objectFit="cover"
 												/>
 											</CardServicesv4>
 										</>
@@ -84,7 +85,7 @@ function ServicePage() {
 	)
 }
 
-function BuildSection() {}
+function BuildSection() { }
 
 export default function ServicesPage() {
 	return (

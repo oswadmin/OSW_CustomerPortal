@@ -21,8 +21,8 @@ interface CardServicesProps {
   className?: string;
 }
 
-export function CardServices({ 
-  cardTitle, 
+export function CardServices({
+  cardTitle,
   cardURL = '',
   cardDesc = '',
   imgURL = '',
@@ -30,28 +30,28 @@ export function CardServices({
   imgLeft = '0px',
   imgBottom = '0px',
   children,
-  className = '' 
+  className = ''
 
 }: CardServicesProps) {
- 
+
   //console.log(`URL:${imgURL} Scale:${imgScale} Left:${imgLeft} Bottom:${imgBottom}`)
-  
+
   return (
     <>
       <div className={`hidden desktop:flex flex-col desktop:w-[230px] hover:scale-105`}>
         <div className='relative hidden desktop:flex w-[230px] h-[400PX] '>
-          {cardURL === "" ? 
+          {cardURL === "" ?
             <div className="absolute w-full h-full custom-oval text-center align-middle flex justify-center items-center text-4xl font-bold text-blue_dark z-10 card-service-text p-8 bg-orange bg-opacity-30 hover:scale-105">
               {cardTitle}
             </div>
-          : (
-            <Button className="absolute w-full h-full hover:scale-105 custom-oval text-center align-middle flex justify-center items-center text-4xl font-bold text-blue_dark z-10 card-service-text p-8 bg-orange bg-opacity-30" asChild>
-              <Link href={cardURL} className='text-wrap' >
+            : (
+              <Button className="absolute w-full h-full hover:scale-105 custom-oval text-center align-middle flex justify-center items-center text-4xl font-bold text-blue_dark z-10 card-service-text p-8 bg-orange bg-opacity-30" asChild>
+                <Link href={cardURL} className='text-wrap' >
                   {cardTitle}
-              </Link>
-              
-            </Button>
-          )}
+                </Link>
+
+              </Button>
+            )}
 
 
           <div className='flex w-full h-full custom-oval border-4 mr-1 border-orange shadow-md relative overflow-hidden'>
@@ -64,37 +64,37 @@ export function CardServices({
           <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
             {cardDesc}
           </div>
-        )} 
+        )}
       </div>
 
       <div className={`flex flex-col desktop:hidden`}>
-        {cardURL === "" ? 
+        {cardURL === "" ?
           <div className="text-center flex-1 mt-6 justify-center items-center text-xl font-bold card-service-text">
             {cardTitle}
           </div>
-        : (
-          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-yellow-300 to-orange hover:bg-orange h-[50px] text-2xl">
-            {cardTitle}
-          </ButtonStandard>
-        )}
-        
+          : (
+            <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-yellow-300 to-orange hover:bg-orange h-[50px] text-2xl">
+              {cardTitle}
+            </ButtonStandard>
+          )}
+
 
         {cardDesc === "" ? "" : (
           <div className="flex flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
             {cardDesc}
           </div>
-        )} 
+        )}
       </div>
-        
+
     </>
   );
 
-  
+
 };
 
 
-export function CardServicesv2({ 
-  cardTitle, 
+export function CardServicesv2({
+  cardTitle,
   cardURL = '',
   cardDesc = '',
   imgURL = '',
@@ -102,34 +102,34 @@ export function CardServicesv2({
   imgLeft = '0px',
   imgBottom = '0px',
   children,
-  className = '' 
+  className = ''
 
 }: CardServicesProps) {
- 
+
   //console.log(`URL:${imgURL} Scale:${imgScale} Left:${imgLeft} Bottom:${imgBottom}`)
-  
+
   return (
     <>
       <div className={`hidden desktop:flex flex-col desktop:w-[230px] `}>
-        
+
         <div className='relative hidden desktop:flex w-[230px] h-[400PX] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4'>
-          {cardURL === "" ? 
+          {cardURL === "" ?
             <div className="absolute w-full h-full rounded-3xl text-center align-bottom flex justify-center items-end text-2xl font-bold text-blue_dark z-10 card-service-text px-8 pb-2 ">
               {cardTitle}
             </div>
-          : (
-            <Button className="absolute w-full h-full rounded-3xl  text-center align-bottom flex justify-center items-end text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3" asChild>
-              <Link href={cardURL} className='text-wrap hover:scale-105' >
+            : (
+              <Button className="absolute w-full h-full rounded-3xl  text-center align-bottom flex justify-center items-end text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3" asChild>
+                <Link href={cardURL} className='text-wrap hover:scale-105' >
                   {cardTitle}
-              </Link>
-              
-            </Button>
-          )}
+                </Link>
+
+              </Button>
+            )}
 
           <div className='flex w-4/5 h-4/6 mt-6 rounded-2xl border-2 mr-1 border-white shadow-md  relative overflow-hidden '>
             {children}
           </div>
-         
+
 
         </div>
 
@@ -137,34 +137,34 @@ export function CardServicesv2({
           <div className="flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg ">
             {cardDesc}
           </div>
-        )} 
+        )}
       </div>
 
       <div className={`flex flex-col desktop:hidden`}>
-        {cardURL === "" ? 
+        {cardURL === "" ?
           <div className="text-center flex-1 mt-6 justify-center items-center text-xl font-bold card-service-text">
             {cardTitle}
           </div>
-        : (
-          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
-            {cardTitle}
-          </ButtonStandard>
-        )}
-        
+          : (
+            <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
+              {cardTitle}
+            </ButtonStandard>
+          )}
+
 
         {cardDesc === "" ? "" : (
           <div className="flex flex-1 bg-gray_light rounded-[12px] m-2 p-2 text-blue text-start relative shadow-md text-lg">
             {cardDesc}
           </div>
-        )} 
+        )}
       </div>
-        
+
     </>
   );
 };
 
-export function CardServicesv3({ 
-  cardTitle, 
+export function CardServicesv3({
+  cardTitle,
   cardURL = '',
   cardDesc = '',
   imgURL = '',
@@ -172,49 +172,49 @@ export function CardServicesv3({
   imgLeft = '0px',
   imgBottom = '0px',
   children,
-  className = '' 
+  className = ''
 
 }: CardServicesProps) {
- 
+
   //console.log(`URL:${imgURL} Scale:${imgScale} Left:${imgLeft} Bottom:${imgBottom}`)
-  
+
   return (
     <>
       <div className={`desktop:flex flex-col desktop:w-[230px] justify-center bg-gradient-to-b from-orange_light to-orange rounded-3xl border-4 pb-4`}>
-          <div className="w-full text-2xl h-[4em]  font-bold text-blue_dark card-service-text px-8 pb-2 ">
-            {cardTitle}  
-          </div>
+        <div className="w-full text-2xl h-[4em]  font-bold text-blue_dark card-service-text px-8 pb-2 ">
+          {cardTitle}
+        </div>
 
-          <div className='flex m-2 p-2 h-72 rounded-2xl border-2 border-white shadow-md relative overflow-hidden '>
-            {children}
-          </div>
+        <div className='flex m-2 p-2 h-72 rounded-2xl border-2 border-white shadow-md relative overflow-hidden '>
+          {children}
+        </div>
 
 
 
-          <div className="flex flex-1 items-start rounded-[12px] m-2 p-2 text-blue text-start relative  text-lg">
-            {cardDesc}
-          </div>
-         
+        <div className="flex flex-1 items-start rounded-[12px] m-2 p-2 text-blue text-start relative  text-lg">
+          {cardDesc}
+        </div>
 
-        
+
+
 
       </div>
 
 
 
-        
 
-        
+
+
     </>
   );
 
-  
+
 };
 
 
 
-export function CardServicesv4({ 
-  cardTitle, 
+export function CardServicesv4({
+  cardTitle,
   cardURL = '',
   cardDesc = '',
   imgURL = '',
@@ -222,63 +222,63 @@ export function CardServicesv4({
   imgLeft = '0px',
   imgBottom = '0px',
   children,
-  className = '' 
+  className = ''
 
 }: CardServicesProps) {
- 
+
   return (
     <>
-      <div className={`hidden desktop:flex flex-col desktop:w-[250px]`}>
-        
+      <div className={`hidden desktop:flex flex-col desktop:w-[250px] border-[1px] border-orange bg-white rounded-xl shadow-2xl `}>
+
 
         {/* DESKTOP CARD */}
         <div className='relative hidden desktop:flex w-[250px] h-[400px] justify-center rounded-xl shadow-lg mb-2'>
 
           {/*  */}
-          {cardURL === "" ? 
+          {cardURL === "" ?
             <div className="absolute w-full h-full rounded-xl text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 ">
             </div>
-          : (
-            <Button className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 " asChild>
-              <Link href={cardURL} className="text-wrap hover:scale-105" >
-                <div className="border-2 bg-orange rounded-full px-4">
-                  {cardTitle}
-                </div>
-              </Link>
-              
-            </Button>
-          )}
+            : (
+              <Button className="absolute w-full h-full rounded-xl  text-center align-bottom flex justify-center items-center text-3xl font-bold z-10 text-blue_dark card-service-text px-8 pb-3 " asChild>
+                <Link href={cardURL} className="text-wrap hover:scale-105" >
+                  <div className="border-2 bg-orange rounded-full px-4">
+                    {cardTitle}
+                  </div>
+                </Link>
+
+              </Button>
+            )}
 
           {/* CARD IMAGE */}
-          <div className='flex w-full h-full rounded-xl shadow-lg relative overflow-hidden border-[1px] border-orange '>
+          <div className='flex w-full h-full rounded-tl-xl rounded-tr-xl relative overflow-hidden'>
             {children}
           </div>
-         
+
 
         </div>
 
         {cardDesc === "" ? "" : (
           <>
             <div className="text-blue_dark card-service-text text-center text-3xl font-bold mb-2">
-             {cardTitle}
+              {cardTitle}
             </div>
 
-            <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-lg ">
+            <div className="flex p-2 text-blue text-start relative text-lg ">
               {cardDesc}
             </div>
-            
+
           </>
-        )} 
+        )}
       </div>
 
       {/* MOBILE CARD */}
-      <div className={`flex flex-col desktop:hidden`}>
+      <div className={`flex flex-col w-[250px] desktop:hidden border-orange bg-white rounded-xl shadow-2xl border-[1px] mb-4`}>
 
 
-        {cardURL === "" ? 
+        {cardURL === "" ?
           <>
             <div className='flex flex-1 justify-center '>
-              <div className='flex w-[250px] h-[390PX] rounded-xl shadow-lg border-[1px] border-orange relative overflow-hidden justify-center'>
+              <div className='flex w-[250px] h-[390PX] rounded-tl-xl rounded-tr-xl relative overflow-hidden justify-center'>
                 {children}
               </div>
             </div>
@@ -286,20 +286,20 @@ export function CardServicesv4({
               {cardTitle}
             </div>
           </>
-        : (
-          <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
-            {cardTitle}
-          </ButtonStandard>
-        )}
-        
+          : (
+            <ButtonStandard strURL={cardURL} className="bg-gradient-to-b from-orange_light to-orange hover:bg-orange h-[50px] text-2xl">
+              {cardTitle}
+            </ButtonStandard>
+          )}
+
 
         {cardDesc === "" ? "" : (
-          <div className="flex bg-white border-[1px] border-orange rounded-[12px] p-2 text-blue text-start relative shadow-lg text-xl mb-20 mx-2 desktop:mx-0">
+          <div className="flex p-2 text-blue text-start relative text-xl mb-20 mx-2 desktop:mx-0">
             {cardDesc}
           </div>
-        )} 
+        )}
       </div>
-        
+
     </>
   );
 };

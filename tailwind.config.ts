@@ -8,7 +8,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     screens: {
@@ -96,21 +96,21 @@ const config = {
           to: { height: "0" },
         },
         'rise-up': {
-          '0%': { 
+          '0%': {
             transform: 'translateY(100%)',
             opacity: '0'
           },
-          '100%': { 
+          '100%': {
             transform: 'translateY(0)',
             opacity: '1'
           },
         },
         'slide-down': {
-          '0%': { 
+          '0%': {
             transform: 'translateY(0)',
             opacity: '1'
           },
-          '100%': { 
+          '100%': {
             transform: 'translateY(100%)',
             opacity: '0'
           },
