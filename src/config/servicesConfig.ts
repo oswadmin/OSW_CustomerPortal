@@ -251,7 +251,7 @@ export const servicesConfig = {
 
                     {
                         detailSummary: "Dumpsters",
-                        detailDescription: "Our teams use a combination of pressure and soft washing to tackle exceptionally tough grease and organic buildup to leaving your dumpster(s) & pad(s) thoroughly sanitized and refreshed.",
+                        detailDescription: "Our teams use a combination of pressure and soft washing to tackle exceptionally tough commercial grease and organic buildup to leaving your dumpster(s) & pad(s) thoroughly sanitized and refreshed.",
                         detailImageURL: "/OSW_Dumpster1.png",
                         detailImageAlt: "Dumpster and Pad",
                         detailImageClass: "",
