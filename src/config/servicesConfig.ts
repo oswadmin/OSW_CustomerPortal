@@ -121,14 +121,14 @@ export const servicesConfig = {
                 details: [
                     {
                         detailSummary: "Wood, Vinyl, Metal",
-                        detailDescription: "Regular wood fence washing is essential to preserve its beauty and integrity. Removing dirt, mildew, and stains through professional cleaning not only enhances the fence's curb appeal but also prevents potential decay, ensuring a longer-lasting and aesthetically pleasing addition to your property. comfortable living environment during hot and dry weather.",
+                        detailDescription: "We thoroughly wash all fence types, carefully removing dirt and grime with our soft washing techniques. Your fence will shine again!",
                         detailImageURL: siteConfig.OSW_IMG.FenceVinyl,
                         detailImageAlt: "",
                         detailImageClass: "absolute scale-[2.1] left-[60px] top-[100px]",
                     },
                     {
                         detailSummary: "Restore, Reseal, Stain",
-                        detailDescription: "Regular vinyl fence washing is essential to maintain its appearance and durability. Professional cleaning removes dirt, mold, and stains, preventing degradation and ensuring your fence remains a lasting, low-maintenance asset to your property.",
+                        detailDescription: "We expertly seal, stain, and repair broken fences, revitalizing your property's perimeter.",
                         detailImageURL: siteConfig.OSW_IMG.FenceWood,
                         detailImageAlt: "",
                         detailImageClass: "absolute scale-[2.0] left-[60px] top-[110px]",
@@ -243,7 +243,7 @@ export const servicesConfig = {
                 details: [
                     {
                         detailSummary: "Building",
-                        detailDescription: "Our experienced teams can scale any service to meet your property needs.  We use industry-standard equipment and proven techniques, to deliver results with minimal disruption to your operations.",
+                        detailDescription: "Our experienced teams can scale any service to meet your property needs.  We use industry-standard equipment and proven techniques, to deliver maximum results with minimal disruption to your operations.",
                         detailImageURL: "/OSW_Commercial1.png",
                         detailImageAlt: "Quality",
                         detailImageClass: "",
