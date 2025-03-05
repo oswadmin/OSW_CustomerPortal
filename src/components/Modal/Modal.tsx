@@ -5,17 +5,16 @@
 // import { ModalProps } from './types';
 // import { cn } from '@/lib/utils';
 
-
-// const Modal = ({ 
-//   isOpen, 
-//   onClose, 
-//   children, 
+// const Modal = ({
+//   isOpen,
+//   onClose,
+//   children,
 //   className,
 //   animation = 'scale',
 //   variant = 'center'
 // }: ModalProps) => {
 //   const variants = ANIMATIONS[animation];
-  
+
 //   return (
 //     <AnimatePresence>
 //       {isOpen && (
@@ -27,7 +26,7 @@
 //             className="fixed inset-0 bg-black/50 z-50"
 //             onClick={onClose}
 //           />
-          
+
 //           <motion.div
 //             {...variants}
 //             className={cn(

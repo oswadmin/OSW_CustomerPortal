@@ -5,7 +5,7 @@
 
 // export const WelcomeModal = () => {
 //   const [isOpen, setIsOpen] = useState(false);
-  
+
 //   useEffect(() => {
 //     // Check if modal has been shown this session
 //     const hasShown = sessionStorage.getItem('welcomeModalShown');

@@ -1,4 +1,3 @@
-
 import { CardServicesv4 } from "@/components/CardServices"
 import ModalOverlay from "@/components/MenuMobileBottom"
 import { PageEstimateSection } from "@/components/PageSection-Estimate"
@@ -11,16 +10,14 @@ import { Suspense } from "react"
 import { Metadata } from "next"
 import React from "react"
 
-
 export const metadata: Metadata = {
 	title: "Services Page",
-	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+	description:
+		"Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
-		images: ['/OSW_Logo_3_Transparent.png'],
+		images: ["/OSW_Logo_3_Transparent.png"],
 	},
-};
-
-
+}
 
 function ServicePage() {
 	const serviceData = servicesConfig.OSW_Services
@@ -49,7 +46,6 @@ function ServicePage() {
 								title={obj.service.titleMsg}
 								subtitle={obj.service.subTitleMsg}
 								className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-100% "
-
 							>
 								<div className="flex flex-wrap justify-center desktop:space-x-4">
 									{obj.service.details.map((detail, index) => (
@@ -61,8 +57,8 @@ function ServicePage() {
 												<Image
 													src={detail.detailImageURL}
 													alt={detail.detailSummary}
-													width={235}
-													height={400}
+													width={350}
+													height={576}
 													className={detail.detailImageClass}
 												// layout="responsive"
 												// objectFit="cover"
@@ -84,8 +80,6 @@ function ServicePage() {
 		</>
 	)
 }
-
-function BuildSection() { }
 
 export default function ServicesPage() {
 	return (

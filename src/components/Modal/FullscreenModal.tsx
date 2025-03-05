@@ -5,7 +5,7 @@
 
 // export const FullscreenModal = () => {
 //   const [isOpen, setIsOpen] = useState(false);
-  
+
 //   useEffect(() => {
 //     // Check if modal has been shown this session
 //     const hasShown = sessionStorage.getItem('welcomeModalShown');
@@ -24,13 +24,13 @@
 //       className="bg-white p-6"
 //     >
 //       <div className="h-full flex flex-col">
-//         <button 
+//         <button
 //           onClick={() => setIsOpen(false)}
 //           className="self-end p-2"
 //         >
 //           Close
 //         </button>
-            
+
 //       </div>
 //     </Modal>
 //   );
