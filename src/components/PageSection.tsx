@@ -17,7 +17,7 @@ export function PageSection({
 }: PageSectionProps) {
   return (
     <>
-      <section className={`pt-12 pb-12 ${className}`} id={sectionID}>
+      <section className={`pt-12 pb-12 ${className}`} id={sectionID} key={`Key_${sectionID}`}>
         <div className="container mx-auto px-1">
           <div className="text-center mb-1">
             {title && <h2 className="desktop:text-5xl text-4xl font-bold text-blue pb-2">{title}</h2>}

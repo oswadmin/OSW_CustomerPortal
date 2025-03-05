@@ -7,7 +7,7 @@ interface MetaProps {
   image?: string;
 }
 
-export default function Meta({ title, description, image }: MetaProps): React.ReactElement {
+export default function Meta({ title, description, image }: MetaProps): React.ReactElement<any> {
   return (
     <Head>
       <title>{title}</title>

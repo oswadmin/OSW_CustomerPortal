@@ -27,20 +27,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{children: React.ReactNode;}>) {
-  
+}: Readonly<{ children: React.ReactNode; }>) {
+
   return (
+
     <html lang="en">
-      
-      <body className={cn(" bg-background min-h-screen font-sans antialiased", inter.variable) }>
-        
+
+      <body className={cn(" bg-background min-h-screen font-sans antialiased", inter.variable)}>
+
 
         <div className="">
-          <ModalMenu/>
+          <ModalMenu />
 
           <PageHeader />
-            {children}
-          
+          {children}
+
         </div>
       </body>
     </html>

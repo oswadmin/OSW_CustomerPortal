@@ -56,12 +56,12 @@ export default function MenuMobileTop() {
         <nav className="text-blue text-3xl">
           <ul className="">
             <li className="cursor-pointer py-2">
-              <Link href="/" key="nav_home" legacyBehavior passHref >
+              <Link href="/" key="nav_home" id="nav_home" legacyBehavior passHref >
                 <span onClick={hideMenu}>Home</span>
               </Link>
             </li>
             <li className="cursor-pointer py-2">
-              <Link href="/estimate" key="nav_home" legacyBehavior passHref >
+              <Link href="/estimate" key="nav_estimate" legacyBehavior passHref >
                 <span onClick={hideMenu}>Estimate</span>
               </Link>
             </li>
@@ -72,7 +72,7 @@ export default function MenuMobileTop() {
                   servicesConfig.OSW_Services.map((obj, index) => (
 
                     obj.activeService ? (
-                      <li key={`navLi${index}`} className="hover:bg-gray-700  py-2" >
+                      <li key={`navLi${index}`} id={`navLi${index}`} className="hover:bg-gray-700  py-2" >
                         <Link key={`navLiLink${index}`} href={obj.url} legacyBehavior passHref >
                           <span key={`navLidLinkSpan${index}`} onClick={hideMenu}>{obj.name}</span>
                         </Link>

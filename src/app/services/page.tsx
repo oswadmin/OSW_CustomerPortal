@@ -7,9 +7,9 @@ import { PageSection } from "@/components/PageSection"
 import { PageTitleSection } from "@/components/PageSection-Title"
 import { servicesConfig } from "@/config/servicesConfig"
 import Image from "next/image"
-import { useSearchParams } from "next/navigation"
 import { Suspense } from "react"
 import { Metadata } from "next"
+import React from "react"
 
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ function ServicePage() {
 			{serviceData.map((obj, index) => {
 				if (obj.activeService) {
 					return (
-						<>
+						<React.Fragment key={index}>
 							{/*****************************************************************/}
 							{/* PRESSURE WASHING SERVICES SECTION*/}
 							{/*****************************************************************/}
@@ -53,22 +53,22 @@ function ServicePage() {
 							>
 								<div className="flex flex-wrap justify-center desktop:space-x-4">
 									{obj.service.details.map((detail, index) => (
-										<>
+										<React.Fragment key={`${obj.name}.${index}`}>
 											<CardServicesv4
 												cardTitle={detail.detailSummary}
 												cardDesc={detail.detailDescription}
 											>
 												<Image
 													src={detail.detailImageURL}
-													alt=""
+													alt={detail.detailSummary}
 													width={235}
 													height={400}
 													className={detail.detailImageClass}
-													layout="responsive"
-													objectFit="cover"
+												// layout="responsive"
+												// objectFit="cover"
 												/>
 											</CardServicesv4>
-										</>
+										</React.Fragment>
 									))}
 								</div>
 							</PageSection>
@@ -77,7 +77,7 @@ function ServicePage() {
 							{/* ESTIMATE SECTION */}
 							{/*****************************************************************/}
 							<PageEstimateSection title={obj.service.estimateMsg} className="bg-white" />
-						</>
+						</React.Fragment>
 					)
 				}
 			})}
