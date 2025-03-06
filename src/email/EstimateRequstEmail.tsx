@@ -1,64 +1,65 @@
 import { Body, Container, Head, Heading, Html, Preview, Tailwind } from "@react-email/components"
 
 type EstimateRequestEmailProps = {
-	custFirstName: string
-	custLastName: string
-	custEmail: string
-	custPhone: string
-	custAddress: string
-	custServices: string[] | string
-	custDesc?: string
-	custContactType: string
-	custReferral?: string
-	custPromo?: string
+  custFirstName: string
+  custLastName: string
+  custEmail: string
+  custPhone: string
+  custAddress: string
+  custServices: string[] | string;
+  custDesc?: string
+  custContactType: string,
+  custReferral?: string
+  custPromo?: string
 }
+
+
 
 EstimateRequestEmail.PreviewProps = {
-	custFirstName: "Scott",
-	custLastName: "Daly",
-	custEmail: "scott.daly1@gmail.com",
-	custPhone: "614-805-1950",
-	custAddress: "7064 Hilmmar",
-	custServices: ["Surfaces", "Decks"],
-	custDesc: "Clean Something",
-	custContactType: "Residential",
-	custReferral: "Referral",
-	custPromo: "O123456",
+  custFirstName: 'Scott',
+  custLastName: 'Daly',
+  custEmail: 'scott.daly1@gmail.com',
+  custPhone: '614-805-1950',
+  custAddress: '7064 Hilmmar',
+  custServices: ['Surfaces', 'Decks'],
+  custDesc: 'Clean Something',
+  custContactType: "Residential",
+  custReferral: 'Referral',
+  custPromo: 'O123456',
 } satisfies EstimateRequestEmailProps
 
-export default function EstimateRequestEmail(data: EstimateRequestEmailProps) {
-	return (
-		<Html>
-			<Preview>View Request</Preview>
 
-			<Tailwind>
-				<Head></Head>
-				<Body className="font-sans bg-white">
-					<Container className="max-w-xl">
-						<Heading>Customer Detials</Heading>
-						<p>
-							Name: {data.custFirstName} {data.custLastName}
-						</p>
-						<p>Email: {data.custEmail}</p>
-						<p>Phone: {data.custPhone}</p>
-						<p>Property Address: {data.custAddress}</p>
-						<p>
-							Services Requested:{" "}
-							{Array.isArray(data.custServices) ? data.custServices.join(", ") : data.custServices}
-						</p>
-						<p>Description: {data.custDesc}</p>
-						<p>Contact Type: {data.custContactType}</p>
-						<p>How did they find us?: {data.custReferral}</p>
-						<p>Promo Code: {data.custPromo}</p>
-					</Container>
-				</Body>
-			</Tailwind>
-		</Html>
-	)
+export default function EstimateRequestEmail(data: EstimateRequestEmailProps) {
+
+  return (
+    <Html>
+      <Preview>View Request</Preview>
+
+      <Tailwind >
+        <Head></Head>
+        <Body className="font-sans bg-white">
+          <Container className="max-w-xl">
+            <Heading>Customer Detials</Heading>
+            <p>Name: {data.custFirstName} {data.custLastName}</p>
+            <p>Email: {data.custEmail}</p>
+            <p>Phone: {data.custPhone}</p>
+            <p>Property Address: {data.custAddress}</p>
+            <p>Services Requested: {Array.isArray(data.custServices) ? data.custServices.join(', ') : data.custServices}</p>
+            <p>Description: {data.custDesc}</p>
+            <p>Contact Type: {data.custContactType}</p>
+            <p>How did they find us?: {data.custReferral}</p>
+            <p>Promo Code: {data.custPromo}</p>
+          </Container>
+
+        </Body>
+
+      </Tailwind>
+    </Html>
+  )
 }
 
-{
-	/* 
+
+{/* 
 
 <head>
   <meta charset="utf-8">
@@ -94,5 +95,4 @@ export default function EstimateRequestEmail(data: EstimateRequestEmailProps) {
       </td>
     </tr>
   </table>
-</body> */
-}
+</body> */}

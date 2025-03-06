@@ -1,3 +1,4 @@
+
 import { CardServicesv4 } from "@/components/CardServices"
 import ModalOverlay from "@/components/MenuMobileBottom"
 import { PageEstimateSection } from "@/components/PageSection-Estimate"
@@ -6,18 +7,20 @@ import { PageSection } from "@/components/PageSection"
 import { PageTitleSection } from "@/components/PageSection-Title"
 import { servicesConfig } from "@/config/servicesConfig"
 import Image from "next/image"
+import { useSearchParams } from "next/navigation"
 import { Suspense } from "react"
 import { Metadata } from "next"
-import React from "react"
+
 
 export const metadata: Metadata = {
 	title: "Services Page",
-	description:
-		"Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
-		images: ["/OSW_Logo_3_Transparent.png"],
+		images: ['/OSW_Logo_3_Transparent.png'],
 	},
-}
+};
+
+
 
 function ServicePage() {
 	const serviceData = servicesConfig.OSW_Services
@@ -37,7 +40,7 @@ function ServicePage() {
 			{serviceData.map((obj, index) => {
 				if (obj.activeService) {
 					return (
-						<React.Fragment key={index}>
+						<>
 							{/*****************************************************************/}
 							{/* PRESSURE WASHING SERVICES SECTION*/}
 							{/*****************************************************************/}
@@ -46,25 +49,26 @@ function ServicePage() {
 								title={obj.service.titleMsg}
 								subtitle={obj.service.subTitleMsg}
 								className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-100% "
+
 							>
 								<div className="flex flex-wrap justify-center desktop:space-x-4">
 									{obj.service.details.map((detail, index) => (
-										<React.Fragment key={`${obj.name}.${index}`}>
+										<>
 											<CardServicesv4
 												cardTitle={detail.detailSummary}
 												cardDesc={detail.detailDescription}
 											>
 												<Image
 													src={detail.detailImageURL}
-													alt={detail.detailSummary}
-													width={350}
-													height={576}
+													alt=""
+													width={235}
+													height={400}
 													className={detail.detailImageClass}
-												// layout="responsive"
-												// objectFit="cover"
+													layout="responsive"
+													objectFit="cover"
 												/>
 											</CardServicesv4>
-										</React.Fragment>
+										</>
 									))}
 								</div>
 							</PageSection>
@@ -73,13 +77,15 @@ function ServicePage() {
 							{/* ESTIMATE SECTION */}
 							{/*****************************************************************/}
 							<PageEstimateSection title={obj.service.estimateMsg} className="bg-white" />
-						</React.Fragment>
+						</>
 					)
 				}
 			})}
 		</>
 	)
 }
+
+function BuildSection() { }
 
 export default function ServicesPage() {
 	return (

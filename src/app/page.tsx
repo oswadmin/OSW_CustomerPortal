@@ -1,3 +1,5 @@
+
+import { CardReviews } from "@/components/CardReviews"
 import { CardServicesv4 } from "@/components/CardServices"
 import { CardWhyUsLarge } from "@/components/CardWhyUsLarge"
 import ModalOverlay from "@/components/MenuMobileBottom"
@@ -7,18 +9,30 @@ import { PageSection } from "@/components/PageSection"
 import { PageTitleSection } from "@/components/PageSection-Title"
 import { servicesConfig, siteConfig } from "@/config"
 import Image from "next/image"
+import { map } from "zod"
+import { useState, useEffect } from "react"
 import GoogelReviews from "@/components/GoogleReview"
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider"
+import { ButtonMedia } from "@/components/ButtonMedia"
+import { InstagramIcon } from "lucide-react"
 import { Metadata } from "next"
+import { Button } from "@/components/ui/button"
+
+const imgH = "600"
+let mapCount = 0
+let printDiv = true
+
+function test(somdata: any) {
+	const willSee = "ok"
+}
 
 export const metadata: Metadata = {
 	title: "Orange Soft Wash",
-	description:
-		"Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
+	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
-		images: ["/OSW_Logo_3_Transparent.png"],
+		images: ['/OSW_Logo_3_Transparent.png'],
 	},
-}
+};
 
 export default function HomePage() {
 	return (
@@ -49,7 +63,7 @@ export default function HomePage() {
 									<CardServicesv4
 										cardTitle={obj.name}
 										cardURL={obj.url}
-										key={`CardService_${obj.name}${index}`}
+										key={`ServiceLing_${obj.name}`}
 									>
 										<Image
 											src={obj.src}
@@ -141,6 +155,7 @@ export default function HomePage() {
 							<p className="text-2xl pb-2">Sunbury</p>
 							<p className="text-2xl pb-2">Delaware</p>
 							<p className="text-2xl pt-2 pb-2">+ Surrounding Areas</p>
+
 						</div>
 
 						<div className="flex-1">
@@ -222,12 +237,7 @@ export default function HomePage() {
 				{/*****************************************************************/}
 				{/* WHY SECTION */}
 				{/*****************************************************************/}
-				<PageSection
-					sectionID="Why"
-					title="Why Choose Us?"
-					subtitle=" "
-					className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-99% "
-				>
+				<PageSection sectionID="Why" title="Why Choose Us?" subtitle=" " className="bg-gradient-to-b from-white from-0% via-sky-100 via-50%  to-white to-99% ">
 					<div className="container flex flex-wrap justify-center gap-4 ">
 						<CardWhyUsLarge
 							title="Quick & Easy"

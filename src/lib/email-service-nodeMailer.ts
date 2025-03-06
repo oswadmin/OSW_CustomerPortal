@@ -1,4 +1,7 @@
+
+
 // import nodemailer from 'nodemailer';
+
 
 // interface TransportOptions {
 //     host: string;
@@ -27,6 +30,8 @@
 //     emailBody: string;
 // }
 
+
+
 // export async function sendMail({
 //     reciepent,
 //     sender,
@@ -36,6 +41,7 @@
 
 //     const { mail_uid, mail_pwd } = process.env
 
+
 //     transporter.sendMail(mailOptions, (error, info) => {
 //         if(error){
 //             console.log('Error sending email:', error);
@@ -44,5 +50,6 @@
 //         }
 
 //     })
+    
 
 // }

@@ -1,22 +1,9 @@
 {
-	"extends": [
-		"next/core-web-vitals",
-		"next/typescript",
-		"prettier"
-	],
+	"extends": ["next/core-web-vitals", "prettier"],
 	"rules": {
-		"prefer-arrow-callback": [
-			"error"
-		],
-		"prettier/prettier": [
-			"warn",
-			{
-				"endOfLine": "auto"
-			}
-		],
-		"@typescript-eslint/no-empty-object-type": "warn"
+		"prefer-arrow-callback": ["error"],
+		"prettier/prettier": ["warn", { "endOfLine": "auto" }]
 	},
-	"plugins": [
-		"prettier"
-	]
+	
+	"plugins": ["prettier"]
 }
