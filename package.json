@@ -28,7 +28,7 @@
     "react": "19.0.0",
     "react-compare-slider": "^3.1.0",
     "react-dom": "19.0.0",
-    "react-google-places-autocomplete": "oswadmin/react-google-places-autocomplete#master",
+    "react-google-places-autocomplete": "^4.1.0",
     "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.52.2",
     "react-star-ratings": "^2.3.0",
