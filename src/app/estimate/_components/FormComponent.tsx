@@ -11,8 +11,8 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 
 import { PageSection } from "@/components/PageSection"
 import { FormCheckboxComponent } from "./FormCheckboxComponent"
-import { ThankYouComponent } from "./ThankYouComponent"
 import { Label } from "@radix-ui/react-label"
+import { EmailVerificationComponent } from "./EmailVerificationComponent"
 
 
 
@@ -107,7 +107,7 @@ export function FormComponent() {
             {actionResult.success ? (
                 <>
                     <PageSection title="Thank you!" className="bg-white" >
-                        <ThankYouComponent />
+                        <EmailVerificationComponent />
                     </PageSection>
 
                 </>
