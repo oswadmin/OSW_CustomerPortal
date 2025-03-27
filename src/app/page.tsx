@@ -42,7 +42,7 @@ export default function HomePage() {
 				{/* TITLE SECTION*/}
 				{/*****************************************************************/}
 				<PageTitleSection
-					title="Soft Washing Central Ohio"
+					title="Power Washing Central Ohio"
 					imgURL="/OSW_Surface1.jpg"
 					imgAlt="Pressure Washing Walkway"
 				/>
@@ -194,7 +194,7 @@ export default function HomePage() {
 							<span className="text-2xl desktop:text-3xl font-bold text-blue mb-4">
 								A message from the owner
 							</span>
-							<span>{`Dylan here, owner and operator of Orange Softwash. I'd like to start off by saying thank you for considering us for your home washing needs. I have instilled in my team that excellence, commitment, passion, and top-notch services are table stakes, but they are only part of our measurement of success.  Above all else, its the people we serve, and the experiences we create, that truly set us apart.   I take great pride in my team, and I'm confident that you will not find a better exterior washing services anywhere else.`}</span>
+							<span>{`Dylan here, owner and operator of Orange Soft Wash. I'd like to start off by saying thank you for considering us for your home washing needs. I have instilled in my team that excellence, commitment, passion, and top-notch services are table stakes, but they are only part of our measurement of success.  Above all else, its the people we serve, and the experiences we create, that truly set us apart.   I take great pride in my team, and I'm confident that you will not find a better exterior washing services anywhere else.`}</span>
 						</div>
 
 						<div className="flex order-1 md:order-2">
