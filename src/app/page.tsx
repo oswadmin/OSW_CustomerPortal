@@ -236,7 +236,7 @@ export default function HomePage() {
 							<span className="text-2xl desktop:text-3xl font-bold text-blue mb-4">
 								Our value is unmatched
 							</span>
-							<span>{`Orange Softwash goes above and beyond to provide results at prices that make sense for your budget. We don't just clean—we aim to protect your investment. Our expert team tailors each service to your property's specific needs. We bring the perfect balance of power and precision to every job, proving why homeowners and businesses throughout the area trust us as their go-to exterior cleaning specialists.`}</span>
+							<span>{`Orange Soft Wash goes above and beyond to provide results at prices that make sense for your budget. We don't just clean—we aim to protect your investment. Our expert team tailors each service to your property's specific needs. We bring the perfect balance of power and precision to every job, proving why homeowners and businesses throughout the area trust us as their go-to exterior cleaning specialists.`}</span>
 						</div>
 					</div>
 				</PageSection>
