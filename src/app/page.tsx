@@ -43,7 +43,7 @@ export default function HomePage() {
 				{/*****************************************************************/}
 				<PageTitleSection
 					title="Power Washing Central Ohio"
-					imgURL="/OSW_Surface1.jpg"
+					imgURL="/OSW_Surface1.png"
 					imgAlt="Pressure Washing Walkway"
 				/>
 
@@ -185,19 +185,26 @@ export default function HomePage() {
 				{/*****************************************************************/}
 				{/* ABOUT SECTION */}
 				{/*****************************************************************/}
-				<PageSection sectionID="About" title="About us" subtitle=" " className="bg-white">
+				<PageSection
+					sectionID="About"
+					title="About us"
+					subtitle=" "
+					backgroundImage="/OSW_Surface1.jpg"
+					parallax={true}
+					className="bg-[#fed7aa]/70 bg-blend-overlay"
+				>
 					{/*****************************************************************/}
 					{/* OWNERS MESSAGE */}
 					{/*****************************************************************/}
 					<div className="container flex gap-6 mb-4 flex-col desktop:flex-row ">
-						<div className="flex flex-col w-full desktop:w-2/3 order-2 desktop:order-1">
+						<div className="flex flex-col desktop:w-2/3 order-2 desktop:order-1 rounded-xl border-[1px] bg-white shadow-2xl border-orange gap-y-4  p-2">
 							<span className="text-2xl desktop:text-3xl font-bold text-blue mb-4">
-								A message from the owner
+								A message from our team
 							</span>
-							<span>{`Dylan here, owner and operator of Orange Soft Wash. I'd like to start off by saying thank you for considering us for your home washing needs. I have instilled in my team that excellence, commitment, passion, and top-notch services are table stakes, but they are only part of our measurement of success.  Above all else, its the people we serve, and the experiences we create, that truly set us apart.   I take great pride in my team, and I'm confident that you will not find a better exterior washing services anywhere else.`}</span>
+							<span>{`Hello from all of us at Orange Soft Wash! We wanted to start by thanking you for considering our team for your home washing needs. We're all committed to providing top-notch service – and nothing short of  excellence is the standard we set for ourselves. But what truly drives us is serving our community and creating great experiences for every homeowner we work with. We take immense pride in our work and are confident you won't find a better exterior washing service anywhere else.`}</span>
 						</div>
 
-						<div className="flex order-1 md:order-2">
+						<div className="hidden order-1 md:order-2">
 							<div className="w-[250px] h-[250px] rounded-full border-[1px] border-orange shadow-lg overflow-hidden">
 								<Image
 									src={siteConfig.OSW_IMG.PROFILE_DYLAN}
@@ -213,8 +220,8 @@ export default function HomePage() {
 					{/*****************************************************************/}
 					{/* VALUE MESSAGE */}
 					{/*****************************************************************/}
-					<div className="container flex flex-col desktop:flex-row justify-between gap-6 items-center ">
-						<div className="flex lg:w-1/3 sm:flex-col">
+					<div className="container flex flex-col desktop:flex-row justify-between gap-6 items-center desktop:justify-end">
+						<div className="hidden lg:w-1/3 sm:flex-col">
 							<div className="w-[250px] h-[250px] rounded-full border-[1px]] border-orange shadow-lg overflow-hidden">
 								<Image
 									src={siteConfig.OSW_IMG.Edger1}
@@ -225,7 +232,7 @@ export default function HomePage() {
 								/>
 							</div>
 						</div>
-						<div className="flex flex-col lg:w-2/3 ">
+						<div className="flex flex-col desktop:w-2/3 rounded-xl border-[1px] bg-white shadow-2xl border-orange gap-y-4  p-2">
 							<span className="text-2xl desktop:text-3xl font-bold text-blue mb-4">
 								Our value is unmatched
 							</span>

@@ -35,7 +35,7 @@ function ServicePage() {
 			{/*****************************************************************/}
 			{/* TITLE SECTION*/}
 			{/*****************************************************************/}
-			<PageTitleSection title="Our Services" imgURL="/OSW_Surface2.jpg" />
+			<PageTitleSection title="Our Services" imgURL="/OSW_Surface8.png" />
 
 			{serviceData.map((obj, index) => {
 				if (obj.activeService) {

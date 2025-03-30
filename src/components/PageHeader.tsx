@@ -71,7 +71,7 @@ export default function PageHeader() {
 
   return (
     <>
-      <header className="bg-gradient-to-b from-sky-100 to-white">
+      <header className="">
 
 
         {/*

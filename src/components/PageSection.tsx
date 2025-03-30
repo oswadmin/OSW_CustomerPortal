@@ -6,6 +6,8 @@ interface PageSectionProps {
   subtitle?: string;
   children: ReactNode;
   className?: string;
+  backgroundImage?: string; // Add backgroundImage prop
+  parallax?: boolean; // Add parallax prop
 }
 
 export function PageSection({
@@ -13,21 +15,34 @@ export function PageSection({
   title,
   subtitle = ' ',
   children,
-  className = ''
+  className = '',
+  backgroundImage,
+  parallax = false,
 }: PageSectionProps) {
+
+  const sectionStyle = {
+    backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+    backgroundAttachment: parallax ? 'fixed' : 'scroll', // Apply fixed for parallax
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
+
   return (
-    <>
-      <section className={`pt-12 pb-12 ${className}`} id={sectionID}>
-        <div className="container mx-auto px-1">
-          <div className="text-center mb-1">
-            {title && <h2 className="desktop:text-5xl text-4xl font-bold text-blue pb-2">{title}</h2>}
-            {subtitle && <h4 className="tablet:text-2xl phone:text-lg text-gray-600  pb-10">{subtitle}</h4>}
-          </div>
-          <div className="content">
-            {children}
-          </div>
+    <section
+      className={`pt-12 pb-12 ${className}`}
+      id={sectionID}
+      style={sectionStyle}
+    >
+      <div className="container mx-auto px-1">
+        <div className="text-center mb-1">
+          {title && <h2 className="desktop:text-5xl text-4xl font-bold text-blue pb-2">{title}</h2>}
+          {subtitle && <h4 className="tablet:text-2xl phone:text-lg text-gray-600 pb-10">{subtitle}</h4>}
         </div>
-      </section>
-    </>
+        <div className="content">
+          {children}
+        </div>
+      </div>
+    </section>
   );
-};
+}

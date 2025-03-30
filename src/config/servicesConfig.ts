@@ -18,7 +18,7 @@ export const servicesConfig = {
                     {
                         detailSummary: "Concrete, Brick, or Stone",
                         detailDescription: "Accumulating grime seems to be a superpower of hard surfaces.  While there is no miracle to keep them clean forever, with our refined C3PO process you'll get the longest lasting results possible.",
-                        detailImageURL: "/OSW_Surface4.png",
+                        detailImageURL: "/OSW_Surface7.png",
                         detailImageAlt: "Clean Driveway",
                         detailImageClass: "",
                     },
