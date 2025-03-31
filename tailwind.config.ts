@@ -74,7 +74,7 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         backgroundImage: {
-          'footer-img': "url('/OSW_Surface_Washing_1.jpg')",
+          'footer-img': "url('/OSW_Surface_Washing_1.webp')",
         },
 
       },

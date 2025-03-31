@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import Image from "next/image";
 import { ButtonStandard } from './ButtonStandard';
 
-const bgTest: String = '/OSW_Locations.png'
+const bgTest: String = '/OSW_Locations.webp'
 
 let bgString: string;
 let classNameString: string;

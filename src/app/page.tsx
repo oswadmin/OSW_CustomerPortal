@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	title: "Orange Soft Wash",
 	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
-		images: ['/OSW_Logo_3_Transparent.png'],
+		images: ['/OSW_Logo_3_Transparent.webp'],
 	},
 };
 
@@ -43,7 +43,7 @@ export default function HomePage() {
 				{/*****************************************************************/}
 				<PageTitleSection
 					title="Power Washing Central Ohio"
-					imgURL="/OSW_Surface1.png"
+					imgURL="/OSW_Surface1.webp"
 					imgAlt="Pressure Washing Walkway"
 				/>
 
@@ -108,8 +108,8 @@ export default function HomePage() {
 						<ReactCompareSlider
 							className="rounded-2xl shadow-lg h-[349px] w-[545px]"
 							position={95}
-							itemOne={<ReactCompareSliderImage src="./OSW_Driveway_Before.png" alt="Image one" />}
-							itemTwo={<ReactCompareSliderImage src="./OSW_Driveway_After.png" alt="Image two" />}
+							itemOne={<ReactCompareSliderImage src="./OSW_Driveway_Before.webp" alt="Image one" />}
+							itemTwo={<ReactCompareSliderImage src="./OSW_Driveway_After.webp" alt="Image two" />}
 						/>
 					</div>
 
@@ -123,7 +123,7 @@ export default function HomePage() {
 							className="text-wrap"
 						>
 							<Image
-								src="/MediaIcon_Instagram.png"
+								src="/MediaIcon_Instagram.webp"
 								alt="Instagram"
 								width={40}
 								height={40}
@@ -160,7 +160,7 @@ export default function HomePage() {
 
 						<div className="flex-1">
 							<Image
-								src="/OSW_Locations.png"
+								src="/OSW_Locations.webp"
 								alt="Locations Map"
 								width={800}
 								height={588}
@@ -189,9 +189,9 @@ export default function HomePage() {
 					sectionID="About"
 					title="About us"
 					subtitle=" "
-					backgroundImage="/OSW_Surface1.jpg"
+					backgroundImage="/OSW_Surface1.webp"
 					parallax={true}
-					className="bg-[#fed7aa]/70 bg-blend-overlay"
+					className="bg-[#fed7aa]/70 bg-blend-overlay bg-min-h-[400px]"
 				>
 					{/*****************************************************************/}
 					{/* OWNERS MESSAGE */}

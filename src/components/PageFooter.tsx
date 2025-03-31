@@ -151,7 +151,7 @@ export default function PageFooter({
                 {/* INSTAGRAM BUTTON */}
                 <a href={siteConfig.OSW_Links.Instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" >
                   <Image
-                    src="/MediaIcon_Instagram.png"
+                    src="/MediaIcon_Instagram.webp"
                     alt="Instagram"
                     width={40}
                     height={40}
@@ -162,7 +162,7 @@ export default function PageFooter({
                 {/* FACEBOOK BUTTON */}
                 <a href="https://www.facebook.com/profile.php?id=61570206387732#" aria-label='Facebook' target="_blank" rel="noopener noreferrer"  >
                   <Image
-                    src="/MediaIcon_Facebook.png"
+                    src="/MediaIcon_Facebook.webp"
                     alt="Facebook"
                     width={40}
                     height={40}
@@ -172,7 +172,7 @@ export default function PageFooter({
                 {/* NEXTDOOR BUTTON */}
                 <a href="https://nextdoor.com/pages/orange-soft-washing-westerville-oh/" aria-label='Facebook' target="_blank" rel="noopener noreferrer" >
                   <Image
-                    src="/MediaIcon_NextDoor.png"
+                    src="/MediaIcon_NextDoor.webp"
                     alt="NextDoor"
                     width={40}
                     height={40}

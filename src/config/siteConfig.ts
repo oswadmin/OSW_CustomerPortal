@@ -3,7 +3,7 @@
 export const siteConfig = {
     debug: true,
 
-    
+
 
     name: 'My Next.js App',
     description: 'Description for SEO',
@@ -17,68 +17,67 @@ export const siteConfig = {
         Instagram: "https://www.instagram.com/orangesoftwash/",
         Facebook: "https://www.facebook.com/profile.php?id=61550292202306",
     },
-    
+
 
 
     //Site Images
     OSW_IMG: {
-        LOGO: "/OSW_Logo_3_Transparent.png",
-        LOCATIONS: "/OSW_Locations.png",
-    
-    
-    
-        Birdbath1: "/OSW_Birdbath1.png",
+        LOGO: "/OSW_Logo_3_Transparent.webp",
+        LOCATIONS: "/OSW_Locations.webp",
 
-        Commercial1: "/OSW_Commercial1.png",
 
-        DECK1: "/OSW_Deck1.png",
 
-        Edger1: "/OSW_Edger1.png",
-    
-        Fence1: "/OSW_Fence1.jpg",
-        Fence2: "/OSW_Fence2.jpg",
-        Fence3: "/OSW_Fence3.jpg",        
-        FenceMetal: "/OSW_FenceMetal.jpg",
-        FenceVinyl: "/OSW_FenceVinyl.jpg",
-        FenceWood: "/OSW_FenceWood.jpg",
-        FENCEMETAL: "/OSW_FenceMetal.jpg",
+        Birdbath1: "/OSW_Birdbath1.webp",
 
-        Gutters1: "/OSW_Gutters1.jpg",
-    
-        IconLightning: "/OSW_Icon_Lightning.png",
-        IconDollarSign: "/OSW_Icon_DollarSign.png",
-        IconPenPaper: "/OSW_Icon_PenPaper.png",
-        IconShield: "/OSW_Icon_Shield.png",
-        IconLeaf: "/OSW_Icon_Leaf.png",
-        IconEco: "/OSW_Icon_Eco1.png",
-        IconSatisfaction: "/OSW_Icon_Satisfaction.png",
+        Commercial1: "/OSW_Commercial1.webp",
 
-        Paver1: "/OSW_Paver1.png",
+        DECK1: "/OSW_Deck1.webp",
 
-        Roof1: "/OSW_Roof1.png",
-        SIDING1: "/OSW_Siding1.jpg",
+        Edger1: "/OSW_Edger1.webp",
 
-        SURFACE1: "/OSW_Surface1.jpg",
-        SURFACE2: "/OSW_Surface2.jpg",
-        SURFACE3: "/OSW_Surface3.jpg",
-        SURFACE4: "/OSW_Surface4.jpg",
-        SURFACE5: "/OSW_Surface5.jpg",
-        SURFACE6: "/OSW_Surface6.jpg",
-        SURFACE7: "/OSW_Surface7.png",
-        SURFACE8: "/OSW_Surface8.png",
-        
-        WasteBin1: "/OSW_WasteBin1.png",
-        WasteBinBlue: "/OSW_WasteBinBlue.jpg",
-        WasteBinBrown: "/OSW_WasteBinBrown.jpg",
-        WasteBinGreen: "/OSW_WasteBinGreen.jpg",
-        WasteBinCommercial: "/OSW_WasteBinCommercial.jpg",
+        Fence1: "/OSW_Fence1.webp",
+        Fence2: "/OSW_Fence2.webp",
+        Fence3: "/OSW_Fence3.webp",
+        FenceMetal: "/OSW_FenceMetal.webp",
+        FenceVinyl: "/OSW_FenceVinyl.webp",
+        FenceWood: "/OSW_FenceWood.webp",
+        FENCEMETAL: "/OSW_FenceMetal.webp",
 
-        PROFILE_DYLAN: "/OSW_Profile_Dylan.jpg",
-        REVIEWER: "/OSW_Reviewer1.jpg",
+        Gutters1: "/OSW_Gutters1.webp",
+
+        IconLightning: "/OSW_Icon_Lightning.webp",
+        IconDollarSign: "/OSW_Icon_DollarSign.webp",
+        IconPenPaper: "/OSW_Icon_PenPaper.webp",
+        IconShield: "/OSW_Icon_Shield.webp",
+        IconLeaf: "/OSW_Icon_Leaf.webp",
+        IconEco: "/OSW_Icon_Eco1.webp",
+        IconSatisfaction: "/OSW_Icon_Satisfaction.webp",
+
+        Paver1: "/OSW_Paver1.webp",
+
+        Roof1: "/OSW_Roof1.webp",
+        SIDING1: "/OSW_Siding1.webp",
+
+        SURFACE1: "/OSW_Surface1.webp",
+        SURFACE2: "/OSW_Surface2.webp",
+        SURFACE3: "/OSW_Surface3.webp",
+        SURFACE4: "/OSW_Surface4.webp",
+        SURFACE5: "/OSW_Surface5.webp",
+        SURFACE6: "/OSW_Surface6.webp",
+        SURFACE7: "/OSW_Surface7.webp",
+        SURFACE8: "/OSW_Surface8.webp",
+
+        WasteBin1: "/OSW_WasteBin1.webp",
+        WasteBinBlue: "/OSW_WasteBinBlue.webp",
+        WasteBinBrown: "/OSW_WasteBinBrown.webp",
+        WasteBinGreen: "/OSW_WasteBinGreen.webp",
+        WasteBinCommercial: "/OSW_WasteBinCommercial.webp",
+
+        PROFILE_DYLAN: "/OSW_Profile_Dylan.webp",
+        REVIEWER: "/OSW_Reviewer1.webp",
     },
 
-  } as const;
-  
-  
-  
-  
+} as const;
+
+
+

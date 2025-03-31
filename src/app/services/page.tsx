@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	title: "Services Page",
 	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
-		images: ['/OSW_Logo_3_Transparent.png'],
+		images: ['/OSW_Logo_3_Transparent.webp'],
 	},
 };
 
@@ -35,7 +35,7 @@ function ServicePage() {
 			{/*****************************************************************/}
 			{/* TITLE SECTION*/}
 			{/*****************************************************************/}
-			<PageTitleSection title="Our Services" imgURL="/OSW_Surface8.png" />
+			<PageTitleSection title="Our Services" imgURL="/OSW_Surface8.webp" />
 
 			{serviceData.map((obj, index) => {
 				if (obj.activeService) {

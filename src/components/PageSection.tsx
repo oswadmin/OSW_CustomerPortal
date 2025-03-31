@@ -24,8 +24,9 @@ export function PageSection({
     backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
     backgroundAttachment: parallax ? 'fixed' : 'scroll', // Apply fixed for parallax
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
+    backgroundPosition: 'center bottom',
     backgroundRepeat: 'no-repeat',
+
   };
 
   return (
@@ -37,7 +38,7 @@ export function PageSection({
       <div className="container mx-auto px-1">
         <div className="text-center mb-1">
           {title && <h2 className="desktop:text-5xl text-4xl font-bold text-blue pb-2">{title}</h2>}
-          {subtitle && <h4 className="tablet:text-2xl phone:text-lg text-gray-600 pb-10">{subtitle}</h4>}
+          {subtitle && <h4 className="phone:text-lg text-gray-600 pb-10">{subtitle}</h4>}
         </div>
         <div className="content">
           {children}
