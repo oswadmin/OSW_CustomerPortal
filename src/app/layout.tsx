@@ -67,6 +67,7 @@ export default function RootLayout({
           </>
         )}
       </head>
+
       <body className={cn(" bg-background min-h-screen font-sans antialiased", inter.variable)}>
 
 
