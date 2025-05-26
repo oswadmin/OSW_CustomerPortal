@@ -49,6 +49,11 @@
             "source": "/roof-washing",
             "destination": "/services",
             "permanent": true
+        },
+        {
+            "source": "/estimate",
+            "destination": "/estimate",
+            "permanent": true
         }
     ]
 }
