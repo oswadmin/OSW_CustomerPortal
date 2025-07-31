@@ -2,37 +2,29 @@ import { servicesConfig } from "@/config/servicesConfig";
 
 export default function sitemap() {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-    
-    const services = servicesConfig.OSW_Services.map((obj, index) => {
-                  
-        if (obj.activeService === false) {
-            return null;
-        }
 
+    // 1. Generate URLs for each active service slug page
+    const serviceUrls = servicesConfig.OSW_Services
+        .filter(service => service.activeService) // First, filter for only active services
+        .map(service => {
+            return {
+                url: `${baseUrl}/services/${service.slug}`, // Construct the URL with the slug
+                lastModified: new Date(),
+            };
+        });
+
+    // 2. Define your static page routes
+    const staticRoutes = ['/', '/services', '/estimate'];
+    const staticUrls = staticRoutes.map(route => {
         return {
-            url: `${baseUrl}${obj.url}`,
+            url: route === '/' ? baseUrl : `${baseUrl}${route}`,
             lastModified: new Date(),
-        }
-    
-    }).filter(service => service != null); //Filter out null entries
+        };
+    });
 
-
+    // 3. Combine the static and dynamic URLs into a single array
     return [
-        {
-            url: baseUrl,
-            lastModified: new Date(),
-        },
-        // ...services.map(service => ({
-        //     ...service,
-        //     lastModified: service.lastModified.toISOString()
-        // })),
-        {
-            url: `${baseUrl}/services`,
-            lastModified: new Date(),
-        },
-        {
-            url: `${baseUrl}/estimate`,
-            lastModified: new Date(),
-        },
-    ]
+        ...staticUrls,
+        ...serviceUrls
+    ];
 }

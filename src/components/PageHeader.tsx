@@ -1,6 +1,5 @@
 "use client"
 
-import * as React from "react"
 import Link from 'next/link';
 import Image from "next/image";
 import { cn } from "@/lib/utils"
@@ -32,7 +31,7 @@ function NavMenu() {
 
                   obj.activeService ? (
 
-                    <Link href={obj.url} key={`MenuDesktopLink${index}`} legacyBehavior passHref >
+                    <Link href={`/services/${obj.slug}`} key={`MenuDesktopLink_${obj.slug}`} legacyBehavior passHref >
                       <NavigationMenuLink key={`MenuDesktopNavMenuLink${index}`} className={` ${navigationMenuTriggerStyle()} !text-lg !font-bold hover:underline`}>
                         {obj.name}
                       </NavigationMenuLink>

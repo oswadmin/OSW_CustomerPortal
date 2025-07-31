@@ -73,7 +73,7 @@ export default function MenuMobileTop() {
 
                     obj.activeService ? (
                       <li key={`navLi${index}`} className="hover:bg-gray-700  py-2" >
-                        <Link key={`navLiLink${index}`} href={obj.url} legacyBehavior passHref >
+                        <Link key={`MenuDesktopLink_${obj.slug}`} href={`/services/${obj.slug}`} legacyBehavior passHref >
                           <span key={`navLidLinkSpan${index}`} onClick={hideMenu}>{obj.name}</span>
                         </Link>
                       </li>

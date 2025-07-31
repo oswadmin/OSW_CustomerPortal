@@ -62,15 +62,15 @@ export default function HomePage() {
 								return (
 									<CardServicesv4
 										cardTitle={obj.name}
-										cardURL={obj.url}
-										key={`ServiceLing_${obj.name}`}
+										cardURL={`/services/${obj.slug}`}
+										key={`ServiceLink_${obj.slug}`}
 									>
 										<Image
-											src={obj.src}
+											src={obj.cardImageURL}
 											alt=""
 											width={600}
 											height={600}
-											className={obj.className}
+										//className={obj.className}
 										/>
 									</CardServicesv4>
 								)

@@ -1,38 +1,14 @@
 import { siteConfig } from "./siteConfig";
 
-
-export interface ServiceDetail {
-    detailSummary: string;
-    detailDescription: string;
-    detailImageURL: string;
-    detailImageClass?: string;
-}
-
-export interface Service {
-    name: string;
-    slug: string; // The URL-friendly identifier
-    activeService: boolean;
-    metaTitle: string; // For the <title> tag
-    metaDescription: string; // For the <meta name="description"> tag
-    cardImageURL: string;
-    service: {
-        titleMsg: string;
-        subTitleMsg: string;
-        estimateMsg: string;
-        details: ServiceDetail[];
-    };
-}
-
 export const servicesConfig = {
     OSW_Services: [
         {
-
-            name: 'Surfaces',
-            slug: "surface-pressure-washing",
             activeService: true,
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
-            cardImageURL: "/OSW_Surface3.webp",
+            name: 'Surfaces',
+            url: '/services#Surfaces',
+            aria_label: "Surface Pressure Washing",
+            src: "/OSW_Surface3.webp",
+            className: "",
             service: {
                 titleMsg: "Surface Pressure Washing",
                 subTitleMsg: "Driveways, Patios, Pool Decks, Porches, Stoops, Walkways",
@@ -64,14 +40,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Siding',
-            slug: "siding-soft-washing",
             activeService: true,
-            cardImageURL: "/OSW_Siding1.webp",
+            name: 'Siding',
+            url: '/services#Siding',
+            aria_label: "Siding Soft Washing",
+            src: "/OSW_Siding1.webp",
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Siding Soft Washing",
                 subTitleMsg: "Gentle whole-home cleaning.",
@@ -103,14 +77,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Decks',
-            slug: "deck-soft-washing",
             activeService: true,
-            cardImageURL: siteConfig.OSW_IMG.DECK1,
+            name: 'Decks',
+            url: '/services#Decks',
+            aria_label: "Surface Pressure Washing",
+            src: siteConfig.OSW_IMG.DECK1,
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Deck Soft Washing",
                 subTitleMsg: "Restore your deck's natural beauty.",
@@ -135,14 +107,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Fences',
-            slug: "fence-soft-washing",
             activeService: true,
-            cardImageURL: "/OSW_Fence1.webp",
+            name: 'Fences',
+            url: '/services#Fences',
+            aria_label: "Surface Pressure Washing",
+            src: "/OSW_Fence1.webp",
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Fence Washing",
                 subTitleMsg: "Clean, Beautiful, Protected",
@@ -167,14 +137,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Roofs',
-            slug: "roof-soft-washing",
             activeService: true,
-            cardImageURL: siteConfig.OSW_IMG.Roof1,
+            name: 'Roofs',
+            url: '/services#Roofs',
+            aria_label: "Surface Pressure Washing",
+            src: siteConfig.OSW_IMG.Roof1,
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Roof Soft Washing",
                 subTitleMsg: "A natural clean for a lasting roof",
@@ -192,14 +160,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Gutters',
-            slug: "gutter-rejuvenation",
             activeService: true,
-            cardImageURL: "/OSW_Gutters2.webp",
+            name: 'Gutters',
+            url: '/services#Gutters',
+            aria_label: "Surface Pressure Washing",
+            src: "/OSW_Gutters2.webp",
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Gutters Rejuvenation",
                 subTitleMsg: "Reviving Curb Appeal, Restoring Flow.",
@@ -232,14 +198,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Boats & RVs',
-            slug: "boats-&-rvs",
             activeService: false,
-            cardImageURL: siteConfig.OSW_IMG.SURFACE2,
+            name: 'Boats & RVs',
+            url: '/services#Boat & RVs',
+            aria_label: "Surface Pressure Washing",
+            src: siteConfig.OSW_IMG.SURFACE2,
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Siding Soft Washing",
                 subTitleMsg: "Hey",
@@ -250,14 +214,12 @@ export const servicesConfig = {
         },
 
         {
-
-            name: 'Graffiti',
-            slug: "graffiti-removal",
             activeService: false,
-            cardImageURL: siteConfig.OSW_IMG.SURFACE2,
+            name: 'Graffiti',
+            url: '/services#Graffiti',
+            aria_label: "Surface Pressure Washing",
+            src: siteConfig.OSW_IMG.SURFACE2,
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Siding Soft Washing",
                 subTitleMsg: "Hey",
@@ -267,14 +229,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Commercial',
-            slug: "commercial-power-washing",
             activeService: true,
-            cardImageURL: "/OSW_Commercial1.webp",
+            name: 'Commercial',
+            url: '/services#Commercial',
+            aria_label: "Surface Pressure Washing",
+            src: "/OSW_Commercial1.webp",
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Commercial Services",
                 subTitleMsg: "Cost Effective, Time Efficient, Highest Quality, Best Value",
@@ -301,14 +261,12 @@ export const servicesConfig = {
             },
         },
         {
-
-            name: 'Windows',
-            slug: "windows",
             activeService: false,
-            cardImageURL: siteConfig.OSW_IMG.SIDING1,
+            name: 'Windows',
+            url: '/services?service=siding',
+            aria_label: "Surface Pressure Washing",
+            src: siteConfig.OSW_IMG.SIDING1,
             className: "",
-            metaTitle: "House Washing Services | Your Company Name",
-            metaDescription: "Professional soft wash house washing services in Westerville, Sunbury, and surrounding Ohio areas. Safely remove dirt, grime, and algae.",
             service: {
                 titleMsg: "Siding Soft Washing",
                 tsubTitleMsg: "Hey",
@@ -340,5 +298,4 @@ export const servicesConfig = {
             },
         },
     ],
-} as const;
-
+} as const;   

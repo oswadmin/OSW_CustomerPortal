@@ -205,7 +205,7 @@ export default function PageFooter({
                   servicesConfig.OSW_Services.map((obj, index) => (
 
                     obj.activeService ? (
-                      <Link href={obj.url} key={`MenuFooterServiceLink${index}`} className='hover:scale-105' aria-label={obj.aria_label}>{obj.name}</Link>
+                      <Link href={`/services/${obj.slug}`} key={`MenuFooterServiceLink_${obj.slug}`} className='hover:scale-105' >{obj.name}</Link>
                     ) : null
 
                   ))
