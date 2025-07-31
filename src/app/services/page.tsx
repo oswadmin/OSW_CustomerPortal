@@ -7,7 +7,7 @@ import { PageSection } from "@/components/PageSection"
 import { PageTitleSection } from "@/components/PageSection-Title"
 import { servicesConfig } from "@/config/servicesConfig"
 import Image from "next/image"
-import { useSearchParams } from "next/navigation"
+//import { useSearchParams } from "next/navigation"
 import { Suspense } from "react"
 import { Metadata } from "next"
 
