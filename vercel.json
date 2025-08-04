@@ -29,6 +29,6 @@
             "source": "/roof-washing",
             "destination": "/services/roof-soft-washing",
             "permanent": true
-        },
+        }
     ]
 }
