@@ -61,6 +61,7 @@ export default function IndividualServicePage({ params }: { params: { slug: stri
                 <ModalMenu />
                 <PageHeader />
 
+
                 <PageSection
                     sectionID={serviceData.name}
                     title={serviceData.service.titleMsg} // Or maybe a more detailed title
