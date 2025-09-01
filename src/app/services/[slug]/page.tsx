@@ -77,7 +77,7 @@ export default function IndividualServicePage({ params }: { params: { slug: stri
                                 <Image
                                     src={detail.detailImageURL}
                                     alt={detail.detailSummary} // IMPORTANT: Add descriptive alt text for SEO
-                                    width={250}
+                                    width={350}
                                     height={400}
                                     className={detail.detailImageClass}
                                 // Consider removing layout="responsive" and objectFit="cover" for Next 13+ Image,
