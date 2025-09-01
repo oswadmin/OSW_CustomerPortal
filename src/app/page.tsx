@@ -27,7 +27,7 @@ function test(somdata: any) {
 }
 
 export const metadata: Metadata = {
-	title: "Orange Soft Wash",
+	title: "Professional Exterior Cleaning Experts",
 	description: "Premier soft washing, pressure washing and power washing experts. We offer driveway, house, roof, deck, fence, patio, and waste bin washing. Currently serving thes Ohio cities: Westerville, Sunbury, New Albany, Lewis Center, Worthington and surrounding areas. Visit our website to see how our delightful orange-scented soft washing sets us apart and request a free estimate.",
 	openGraph: {
 		images: ['/OSW_Logo_3_Transparent.webp'],
